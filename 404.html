@@ -167,7 +167,9 @@ section{padding:clamp(64px,10vh,120px) 0;position:relative}
 .metodo .tarjeta dt{color:var(--suave)}
 .metodo .tarjeta dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
 
-/* MI CONCLUSIÓN: la mirada de Gabriel, resumida */
+/* MI CONCLUSIÓN: la mirada de Gabriel, en texto corrido (o en puntos, si los datos traen "puntos") */
+.conclusion-final .prosa{margin-top:36px;display:grid;gap:22px;max-width:760px}
+.conclusion-final .prosa p{font-size:clamp(19px,2.1vw,23px);line-height:1.5;letter-spacing:-.01em}
 .conclusion-final .puntos{list-style:none;padding:0;margin-top:40px;max-width:820px}
 .conclusion-final .puntos li{display:grid;grid-template-columns:34px 1fr;gap:6px;padding:20px 0;border-top:1px solid var(--linea);font-size:clamp(19px,2.2vw,25px);letter-spacing:-.02em;line-height:1.25}
 .conclusion-final .puntos li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acento);margin-top:.55em}
@@ -302,8 +304,7 @@ const cifras = (l) => `<div class="cifras">${l.map((c, i) => `<div class="cifra 
 const BLOQUES = {
   portada: (b, d) => { const v = archivo(d.video), f = archivo(d.foto), [lugar, fecha] = String(d.bajada || "").split("·").map((x) => x.trim());
     return `<section class="portada">${v || f ? `<div class="media ${d.foto_entera ? "plano" : ""}">${v ? `<video src="${v}" ${f ? `poster="${f}"` : ""} muted loop playsinline autoplay></video>` : `<img src="${f}" alt="">`}</div>` : "<div></div>"}
-      <div class="base"><h1>${mix(d.titulo)}</h1><div class="tira"><span>${e(d.tipo)}</span><span>${e(lugar || "")}</span><span>${e(fecha || "")}</span><span>Gabriel Victorica · Asesor inmobiliario</span></div>
-      <a class="sigue" href="#p2">Bajá para leer el informe</a></div></section>`; },
+      <div class="base"><h1>${mix(d.titulo)}</h1><div class="tira"><span>${e(d.tipo)}</span><span>${e(lugar || "")}</span><span>${e(fecha || "")}</span><span>Gabriel Victorica · Asesor inmobiliario</span></div></div></section>`; },
 
   // Un texto grande. "grande: true" para una frase corta. Puede llevar cifras, párrafos y un caso.
   escribe: (b) => `<section class="escribe"><div class="ancho">${b.rotulo ? `<p class="rotulo entra">${e(b.rotulo)}</p>` : ""}<p class="${b.grande ? "grande" : "medio"} entra">${mix(b.texto)}</p>
@@ -334,7 +335,8 @@ const BLOQUES = {
 
   // Mi conclusión: la mirada de Gabriel, resumida en pocos puntos y una frase final. Va siempre.
   conclusion: (b) => `<section class="conclusion-final"><div class="ancho">${cabeza(b, b.rotulo)}${intro(b)}
-    <ul class="puntos">${(b.puntos || []).map((x, i) => `<li class="entra" style="--i:${Math.min(i, 4)}"><span>${mix(x)}</span></li>`).join("")}</ul>
+    ${b.parrafos ? `<div class="prosa">${b.parrafos.map((p) => `<p class="entra">${mix(p)}</p>`).join("")}</div>` : ""}
+    ${b.puntos ? `<ul class="puntos">${b.puntos.map((x, i) => `<li class="entra" style="--i:${Math.min(i, 4)}"><span>${mix(x)}</span></li>`).join("")}</ul>` : ""}
     ${b.frase ? `<p class="frase entra">${mix(b.frase)}</p>` : ""}</div></section>`,
 
   tiempo: (b) => `<section class="tiempo"><div class="ancho"><div class="al-centro">${cabeza(b, b.rotulo)}${intro(b)}</div>
@@ -409,10 +411,12 @@ function animar() {
   const marcar = (s) => { paso.textContent = `${dos(+s.dataset.n)} / ${dos(secciones.length)}`; nombre.textContent = s.dataset.nombre; };
   const donde = new IntersectionObserver((xs) => xs.forEach((x) => x.isIntersecting && marcar(x.target)), { rootMargin: "-45% 0px -50% 0px" });
   secciones.forEach((s) => donde.observe(s)); if (secciones[0]) marcar(secciones[0]);
-  document.getElementById("lista-indice").innerHTML = secciones.map((s) => `<li><a href="#${s.id}"><span>${dos(+s.dataset.n)}</span>${e(s.dataset.nombre)}</a></li>`).join("");
+  // El índice no usa direcciones: baja hasta la parte elegida sin salir de la página (un link «#parte» llevaría a la raíz del sitio).
+  document.getElementById("lista-indice").innerHTML = secciones.map((s) => `<li><a href="${e(location.pathname + location.search)}" data-ir="${s.id}"><span>${dos(+s.dataset.n)}</span>${e(s.dataset.nombre)}</a></li>`).join("");
   document.getElementById("abrir").onclick = () => indice.classList.add("abierto");
   document.getElementById("cerrar").onclick = () => indice.classList.remove("abierto");
-  indice.addEventListener("click", (ev) => { if (ev.target.closest("a")) indice.classList.remove("abierto"); });
+  indice.addEventListener("click", (ev) => { const a = ev.target.closest("a[data-ir]"); if (!a) return; ev.preventDefault(); indice.classList.remove("abierto");
+    const destino = document.getElementById(a.dataset.ir); if (destino) scrollTo({ top: destino.getBoundingClientRect().top + scrollY - 44, behavior: quieto ? "auto" : "smooth" }); });
 
   const verVideo = new IntersectionObserver((xs) => xs.forEach((x) => (x.isIntersecting ? x.target.play().catch(() => {}) : x.target.pause())), { threshold: 0.25 });
   $$("[data-video]").forEach((v) => verVideo.observe(v));
