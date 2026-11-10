@@ -1,0 +1,189 @@
+{
+  "tipo": "Pretasación",
+  "titulo": "Casa en *Barrio Ejemplo*",
+  "bajada": "General Roca · Noviembre 2026",
+  "bloques": [
+    {
+      "tipo": "portada"
+    },
+    {
+      "tipo": "escribe",
+      "rotulo": "Quién soy",
+      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Hace más de cuatro años que acompaño a propietarios a vender su propiedad *a valor de mercado.*",
+      "cifras": [
+        {
+          "numero": "+4",
+          "texto": "años en el rubro, en Roca"
+        },
+        {
+          "numero": "+20",
+          "texto": "propiedades vendidas en los últimos 12 meses"
+        },
+        {
+          "numero": "90",
+          "texto": "días: nuestro promedio de venta"
+        }
+      ]
+    },
+    {
+      "tipo": "escribe",
+      "grande": true,
+      "texto": "Estar en venta no es lo mismo que *vender.*",
+      "parrafos": [
+        "Si una inmobiliaria te da un precio y otra te da uno más alto, es lógico elegir el más alto. Todos queremos vender al mejor precio, y eso se respeta.",
+        "El problema es que valor de mercado hay uno solo. No existe otro.",
+        "Por eso hoy se ven tantas propiedades publicadas y parece que todo Roca está en venta. Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
+      ],
+      "caso": "Un caso real: siete departamentos tasados más alto por otra inmobiliaria estuvieron seis meses sin una visita. A valor de mercado y con buen marketing, se vendieron los siete en cuatro meses."
+    },
+    {
+      "tipo": "destacado",
+      "cita": "«El mercado *no se mueve*»",
+      "texto": "El mercado siempre se mueve, en baja o en suba. Lo que frena una venta es lo mismo en los dos casos: el valor.",
+      "numero": "+20",
+      "pie": "propiedades vendimos en los últimos 12 meses"
+    },
+    {
+      "tipo": "pilares",
+      "rotulo": "El método",
+      "titulo": "Una propiedad se vende cuando tiene *las dos cosas*",
+      "items": [
+        {
+          "n": "1",
+          "titulo": "Valor de mercado",
+          "texto": "El precio que el mercado está dispuesto a pagar hoy."
+        },
+        {
+          "n": "2",
+          "titulo": "Buena comercialización",
+          "texto": "Que la vea quien la puede comprar, todas las semanas."
+        }
+      ],
+      "pie": "Si falla una de las dos, *no se vende.*"
+    },
+    {
+      "tipo": "tiempo",
+      "rotulo": "Cómo trabajo",
+      "titulo": "Qué pasa con tu propiedad, *semana a semana*",
+      "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
+      "items": [
+        {
+          "cuando": "Día 1 al 3",
+          "titulo": "Relevamiento de la propiedad",
+          "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
+        },
+        {
+          "cuando": "Publicación",
+          "titulo": "Sale a la venta",
+          "texto": "A valor de mercado, en Instagram y Facebook, con fotos, videos y pauta. Sin carteles ni portales."
+        },
+        {
+          "cuando": "A las 2 semanas de publicada",
+          "titulo": "Tu primer informe",
+          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron de tu propiedad."
+        },
+        {
+          "cuando": "Cada dos semanas",
+          "titulo": "Contenido nuevo e informe",
+          "texto": "Siempre recibís un informe cada dos semanas, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
+        },
+        {
+          "cuando": "A los 90 días de publicada",
+          "titulo": "Nuestro promedio de venta",
+          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+        },
+        {
+          "cuando": "120 días desde la firma",
+          "titulo": "El plazo de la autorización de venta",
+          "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
+        }
+      ]
+    },
+    {
+      "tipo": "lista",
+      "rotulo": "Mi mirada",
+      "titulo": "El *barrio*",
+      "items": [
+        "Punto de vista de ejemplo sobre el barrio, escrito por Gabriel para esta propiedad.",
+        "Segundo punto de ejemplo: qué busca la gente que compra en esta zona.",
+        "Tercer punto de ejemplo: qué se está moviendo y qué no."
+      ]
+    },
+    {
+      "tipo": "comparador",
+      "rotulo": "La zona",
+      "titulo": "Con qué se compara *tu propiedad*",
+      "texto": "Las casas parecidas a la tuya, en esta zona, hoy se mueven en este rango.",
+      "desde": 85000,
+      "hasta": 110000,
+      "moneda": "USD",
+      "items": [
+        {
+          "titulo": "Casa 2 dormitorios",
+          "barrio": "Barrio Ejemplo",
+          "m2": 95,
+          "precio": 87000,
+          "dias": 210,
+          "fuente": "Marketplace",
+          "link": "#",
+          "nota": "Lleva meses sin venderse"
+        },
+        {
+          "titulo": "Casa 3 dormitorios",
+          "barrio": "Barrio Ejemplo",
+          "m2": 120,
+          "precio": 98000,
+          "dias": 45,
+          "fuente": "Zonaprop",
+          "link": "#"
+        },
+        {
+          "titulo": "Casa 3 dormitorios con patio",
+          "barrio": "Barrio Vecino",
+          "m2": 130,
+          "precio": 110000,
+          "dias": 20,
+          "fuente": "Inmobiliaria local",
+          "link": "#"
+        },
+        {
+          "titulo": "Casa 3 dormitorios a refaccionar",
+          "barrio": "Barrio Ejemplo",
+          "m2": 115,
+          "precio": 79000,
+          "dias": 60,
+          "fuente": "Zonaprop",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "tipo": "videos",
+      "rotulo": "Resultados",
+      "titulo": "Lo que *vendimos*",
+      "numero": "+20",
+      "pie": "vendidas en los últimos 12 meses"
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "El próximo *paso*",
+      "texto": "Con lo que vi hoy preparo la tasación completa de tu propiedad.",
+      "pasos": [
+        {
+          "cuando": "Hoy",
+          "titulo": "Conozco tu propiedad"
+        },
+        {
+          "cuando": "En 3 días",
+          "titulo": "Te presento la tasación completa"
+        },
+        {
+          "cuando": "Ese día",
+          "titulo": "Si estás de acuerdo, firmamos la autorización"
+        }
+      ]
+    }
+  ],
+  "video": "vendidas/casa-carlos.mp4",
+  "foto": "vendidas/casa-carlos.jpg"
+}

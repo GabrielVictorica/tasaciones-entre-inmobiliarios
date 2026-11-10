@@ -1,0 +1,306 @@
+{
+  "tipo": "Tasación",
+  "titulo": "Casa en *Barrio Ejemplo*",
+  "bajada": "General Roca · Noviembre 2026",
+  "video": "vendidas/casa-carlos.mp4",
+  "foto": "vendidas/casa-carlos.jpg",
+  "bloques": [
+    {
+      "tipo": "portada"
+    },
+    {
+      "tipo": "escribe",
+      "rotulo": "Quién soy",
+      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Hace más de cuatro años que acompaño a propietarios a vender su propiedad *a valor de mercado.*",
+      "cifras": [
+        {
+          "numero": "+4",
+          "texto": "años en el rubro, en Roca"
+        },
+        {
+          "numero": "+20",
+          "texto": "propiedades vendidas en los últimos 12 meses"
+        },
+        {
+          "numero": "90",
+          "texto": "días: nuestro promedio de venta"
+        }
+      ]
+    },
+    {
+      "tipo": "escribe",
+      "grande": true,
+      "texto": "Estar en venta no es lo mismo que *vender.*",
+      "parrafos": [
+        "El problema es que valor de mercado hay uno solo. No existe otro.",
+        "Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
+      ]
+    },
+    {
+      "tipo": "foda",
+      "rotulo": "Análisis",
+      "titulo": "Tu propiedad y el mercado *que la rodea*",
+      "texto": "Lo bueno y lo que hay que tener en cuenta, dicho con claridad.",
+      "fortalezas": [
+        "Ejemplo: buena orientación y luz natural",
+        "Ejemplo: patio amplio"
+      ],
+      "debilidades": [
+        "Ejemplo: baño a actualizar",
+        "Ejemplo: sin cochera cubierta"
+      ],
+      "oportunidades": [
+        "Ejemplo: zona con demanda sostenida",
+        "Ejemplo: pocas casas parecidas publicadas"
+      ],
+      "amenazas": [
+        "Ejemplo: propiedades nuevas en el barrio vecino",
+        "Ejemplo: compradores que dependen de crédito"
+      ]
+    },
+    {
+      "tipo": "staging",
+      "rotulo": "Antes de publicar",
+      "titulo": "Cómo preparar *tu propiedad*",
+      "texto": "Sin obra. Son detalles que hacen que guste más en las fotos y en la visita.",
+      "items": [
+        {
+          "titulo": "Iluminar",
+          "puntos": [
+            "Ejemplo: cambiar las lámparas quemadas del living",
+            "Ejemplo: luces cálidas, prendidas en cada visita"
+          ]
+        },
+        {
+          "titulo": "Limpiar y ordenar",
+          "puntos": [
+            "Ejemplo: mesada de la cocina despejada",
+            "Ejemplo: baño sin objetos a la vista"
+          ]
+        },
+        {
+          "titulo": "Reparar",
+          "puntos": [
+            "Ejemplo: la persiana del dormitorio",
+            "Ejemplo: la mancha de humedad, pintada"
+          ]
+        },
+        {
+          "titulo": "Despersonalizar",
+          "puntos": [
+            "Ejemplo: paredes lo más neutras posible",
+            "Ejemplo: guardar fotos y adornos personales"
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "comparador",
+      "rotulo": "La zona",
+      "titulo": "Los *comparables*",
+      "texto": "Vendidas y publicadas hoy, en la misma zona.",
+      "desde": 85000,
+      "hasta": 110000,
+      "moneda": "USD",
+      "items": [
+        {
+          "titulo": "Casa 3 dormitorios",
+          "barrio": "Barrio Ejemplo",
+          "m2": 120,
+          "precio": 98000,
+          "dias": null,
+          "fuente": "Zonaprop",
+          "link": "#",
+          "vendida": true,
+          "nota": "Dato de venta que aportó Gabriel"
+        },
+        {
+          "titulo": "Casa 2 dormitorios",
+          "barrio": "Barrio Ejemplo",
+          "m2": 95,
+          "precio": 87000,
+          "dias": 210,
+          "fuente": "Marketplace",
+          "link": "#",
+          "nota": "Lleva meses sin venderse"
+        },
+        {
+          "titulo": "Casa 3 dormitorios con patio",
+          "barrio": "Barrio Vecino",
+          "m2": 130,
+          "precio": 110000,
+          "dias": 20,
+          "fuente": "Inmobiliaria local",
+          "link": "#"
+        },
+        {
+          "titulo": "Casa 3 dormitorios a refaccionar",
+          "barrio": "Barrio Ejemplo",
+          "m2": 115,
+          "precio": 79000,
+          "dias": 60,
+          "fuente": "Zonaprop",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "tipo": "videos",
+      "rotulo": "Resultados",
+      "titulo": "Lo que *vendimos*",
+      "numero": "+20",
+      "pie": "vendidas en los últimos 12 meses"
+    },
+    {
+      "tipo": "cuenta",
+      "rotulo": "La cuenta",
+      "titulo": "Cómo se llega *al valor*",
+      "texto": "Cada comparable se ajusta por lo que tiene distinto de tu propiedad.",
+      "items": [
+        {
+          "titulo": "Casa 3 dormitorios",
+          "detalle": "Vendida · Barrio Ejemplo · 120 m²",
+          "precio": 98000,
+          "ajustes": [
+            {
+              "cuanto": "+3 %",
+              "por": "tu patio es más grande"
+            }
+          ],
+          "da": 101000
+        },
+        {
+          "titulo": "Casa 2 dormitorios",
+          "detalle": "Publicada hace 210 días · 95 m²",
+          "precio": 87000,
+          "ajustes": [
+            {
+              "cuanto": "+12 %",
+              "por": "un dormitorio más"
+            },
+            {
+              "cuanto": "+4 %",
+              "por": "superficie"
+            }
+          ],
+          "da": 101000
+        },
+        {
+          "titulo": "Casa 3 dormitorios con patio",
+          "detalle": "Publicada hace 20 días · Barrio Vecino",
+          "precio": 110000,
+          "ajustes": [
+            {
+              "cuanto": "−5 %",
+              "por": "margen de negociación"
+            },
+            {
+              "cuanto": "−5 %",
+              "por": "barrio"
+            }
+          ],
+          "da": 99000
+        }
+      ],
+      "resultado": 100000,
+      "nota": "Ejemplo con números inventados. Los ajustes de cada tasación los define Gabriel."
+    },
+    {
+      "tipo": "precios",
+      "rotulo": "El valor",
+      "titulo": "Los tres *precios*",
+      "publicacion": 105000,
+      "cierre": 100000,
+      "neto": 97000,
+      "moneda": "USD"
+    },
+    {
+      "tipo": "tiempo",
+      "rotulo": "Cómo trabajo",
+      "titulo": "Qué pasa con tu propiedad, *semana a semana*",
+      "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
+      "items": [
+        {
+          "cuando": "Día 1 al 3",
+          "titulo": "Relevamiento de la propiedad",
+          "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
+        },
+        {
+          "cuando": "Publicación",
+          "titulo": "Sale a la venta",
+          "texto": "A valor de mercado, en Instagram y Facebook, con fotos, videos y pauta. Sin carteles ni portales."
+        },
+        {
+          "cuando": "A las 2 semanas de publicada",
+          "titulo": "Tu primer informe",
+          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron de tu propiedad."
+        },
+        {
+          "cuando": "Cada dos semanas",
+          "titulo": "Contenido nuevo e informe",
+          "texto": "Siempre recibís un informe cada dos semanas, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
+        },
+        {
+          "cuando": "A los 90 días de publicada",
+          "titulo": "Nuestro promedio de venta",
+          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+        },
+        {
+          "cuando": "120 días desde la firma",
+          "titulo": "El plazo de la autorización de venta",
+          "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
+        }
+      ]
+    },
+    {
+      "tipo": "lista",
+      "rotulo": "Cómo trabajamos",
+      "titulo": "Condiciones de *trabajo*",
+      "items": [
+        {
+          "titulo": "Valor de mercado",
+          "texto": "El valor de una propiedad lo define el mercado. Esta tasación es mi lectura de ese valor. Si en las primeras semanas la respuesta del mercado indica otra cosa, te lo informo con los datos y te propongo el ajuste."
+        },
+        {
+          "titulo": "Exclusividad por 120 días",
+          "texto": "90 de promedio para vender y 30 para escriturar."
+        },
+        {
+          "titulo": "Honorarios: 3 %",
+          "texto": "A través del martillero."
+        },
+        {
+          "titulo": "Seguimiento",
+          "texto": "Cada dos semanas recibís un informe con las consultas, las visitas y los comentarios de quienes vieron tu propiedad."
+        },
+        {
+          "titulo": "Continuidad",
+          "texto": "Trabajo únicamente propiedades a valor de mercado. Si no llegamos a un acuerdo sobre el valor, prefiero decírtelo a tiempo y dejar de trabajarla antes que mantenerla publicada sin posibilidad de venta."
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Hoy firmamos *la autorización de venta*",
+      "texto": "Si estás de acuerdo con el valor y con la forma de trabajo, este es el camino.",
+      "pasos": [
+        {
+          "cuando": "Hoy",
+          "titulo": "Firmamos la autorización de venta"
+        },
+        {
+          "cuando": "Día 1 al 3",
+          "titulo": "Relevamiento: fotos, videos y todo lo necesario para las primeras dos semanas"
+        },
+        {
+          "cuando": "A las 2 semanas de publicada",
+          "titulo": "Recibís tu primer informe, y después uno cada dos semanas"
+        },
+        {
+          "cuando": "A los 90 días de publicada",
+          "titulo": "Nuestro promedio de venta"
+        }
+      ]
+    }
+  ]
+}
