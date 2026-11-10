@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#070706">
+<!-- Todo se pide desde la raíz, para que /<código> encuentre los datos y los videos (en GitHub Pages esta misma página se sirve como 404.html) -->
+<base href="/">
+<title>Tasación · Gabriel Victorica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+/* Cada informe es un archivo de datos (datos/<código>.json) hecho de bloques. Esta página los dibuja:
+   la cantidad de comparables, de puntos o de etapas puede cambiar y cada bloque se acomoda solo.
+   Estilo (referencia de Gabriel, 10/11/2026): fondo casi negro, letra de palo seco grande y apretada, mezclada con
+   una cursiva con serifa para la palabra que importa; rótulos chicos en mayúscula, líneas finas y luces cálidas de fondo.
+   En los textos, lo que va entre *asteriscos* sale en la cursiva. */
+:root{
+  --fondo:#070706; --papel:rgba(255,255,255,.04); --tinta:#f0eee4; --suave:#a09e94; --tenue:#4b4a45; --linea:rgba(240,238,228,.16); --acento:#d9df9c; --rojo:#9d1f1f;
+  --sans:"Inter Tight",system-ui,sans-serif; --ital:"Instrument Serif",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0}
+html{background:var(--fondo)}
+body{background:var(--fondo);color:var(--tinta);font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:52px;overflow-x:clip}
+/* luces cálidas, muy suaves, fijas detrás de todo */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:
+  radial-gradient(46vmax 34vmax at 88% 30%,rgba(150,84,22,.20),transparent 68%),
+  radial-gradient(40vmax 30vmax at 6% 68%,rgba(74,88,46,.20),transparent 70%)}
+main{position:relative;z-index:1}
+h1,h2,h3{font-family:var(--sans);font-weight:500;letter-spacing:-.045em;line-height:.98;text-wrap:balance}
+em{font-family:var(--ital);font-style:italic;font-weight:400;letter-spacing:-.015em;font-size:1.07em}
+p{text-wrap:pretty}
+a{color:inherit}
+.ancho{width:min(1180px,100% - 40px);margin-inline:auto}
+section{padding:clamp(84px,14vh,160px) 0;position:relative}
+.rotulo{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta);margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.rotulo::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acento)}
+.titulo{font-size:clamp(38px,6.2vw,84px);max-width:15ch}
+.texto{color:var(--suave);max-width:50ch;font-size:17px}
+.al-centro{text-align:center}.al-centro .rotulo{justify-content:center}.al-centro .titulo,.al-centro .texto{margin-inline:auto}
+.llamada{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding-bottom:6px;border-bottom:1px solid var(--tinta);transition:gap .3s,color .3s,border-color .3s}
+.llamada::after{content:"→";font-weight:400}
+.llamada:hover{gap:16px;color:var(--acento);border-color:var(--acento)}
+
+#avance{position:fixed;inset:0 auto auto 0;height:2px;width:100%;background:var(--acento);transform-origin:0 50%;transform:scaleX(0);z-index:40}
+#pie{position:fixed;inset:auto 0 0 0;z-index:35;background:rgba(7,7,6,.82);backdrop-filter:blur(10px);border-top:1px solid var(--linea);
+  font-size:10.5px;line-height:1.4;letter-spacing:.02em;color:var(--suave);padding:9px 18px;text-align:center}
+
+.entra{opacity:0;transform:translate(var(--dx,0),28px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*110ms)}
+.entra.visto{opacity:1;transform:none}
+.fija{position:sticky;top:0;height:100svh;overflow:hidden}
+
+/* PORTADA: la imagen ocupa arriba y se expande; el título, enorme, queda siempre abajo y se lee */
+.expande{height:200vh;padding:0}
+.expande.sola{height:auto}
+.expande .fija{background:var(--fondo)}
+.expande.sola .fija{position:relative}
+.expande .media{position:absolute;left:50%;top:0;transform:translateX(-50%);overflow:hidden;will-change:width,height,top}
+.expande .media img,.expande .media video{width:100%;height:100%;object-fit:cover;display:block}
+.expande .media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,6,.96) 0%,rgba(7,7,6,.55) 26%,rgba(7,7,6,0) 58%);opacity:var(--p,0)}
+.expande .arriba{position:absolute;left:0;right:0;top:0;z-index:3;display:flex;justify-content:space-between;gap:16px;padding:18px 20px;font-size:12px;font-weight:500}
+.expande .arriba a{text-decoration:none;opacity:.85}
+.expande .base{position:absolute;left:0;right:0;bottom:66px;z-index:3;padding:0 20px}
+.expande h1{font-size:clamp(46px,13vw,120px);white-space:nowrap;transform-origin:0 100%;line-height:.92}
+.expande .tira{display:flex;justify-content:space-between;gap:12px;margin-top:14px;padding-top:14px;border-top:1px solid var(--linea);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.expande .tira span:nth-child(2){text-align:center}.expande .tira span:last-child{text-align:right}
+.expande .punto-luz{position:absolute;z-index:3;width:14px;height:14px;border-radius:50%;background:var(--tinta);box-shadow:0 0 0 6px rgba(240,238,228,.18);opacity:calc(var(--p,0)*1.4 - .4);animation:pulso 2.6s ease-in-out infinite}
+@keyframes pulso{50%{box-shadow:0 0 0 12px rgba(240,238,228,.06)}}
+
+/* TEXTO QUE SE REDACTA AL BAJAR */
+.escribe{padding:0}
+.escribe .pista{height:var(--largo,190vh)}
+.escribe .fija{display:grid;align-content:center}
+.escribe .palabras span{color:var(--tenue);transition:color .35s}
+.escribe .palabras span.on{color:var(--tinta)}
+.escribe .palabras span.it{font-family:var(--ital);font-style:italic;letter-spacing:-.015em;font-size:1.07em}
+.escribe .grande{font-weight:500;font-size:clamp(46px,9.4vw,138px);line-height:.95;letter-spacing:-.05em;max-width:12ch;margin-inline:auto;text-align:center;text-wrap:balance}
+.escribe .grande span.it.on{color:var(--acento)}
+.escribe .medio{font-weight:500;font-size:clamp(28px,4.6vw,62px);line-height:1.04;letter-spacing:-.04em;max-width:22ch;text-wrap:balance}
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:30px 40px;border-top:1px solid var(--linea);padding-top:34px}
+.cifra b{display:block;font-weight:500;font-size:clamp(56px,8.4vw,112px);line-height:.9;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
+.cifra span{display:block;margin-top:12px;font-size:13px;color:var(--suave);max-width:20ch}
+.desarrollo{display:grid;gap:30px;padding-bottom:clamp(84px,14vh,160px)}
+.desarrollo p{font-size:clamp(21px,2.5vw,31px);line-height:1.18;letter-spacing:-.025em;max-width:27ch}
+.desarrollo p:nth-child(even){margin-left:auto}
+.desarrollo .caso{font-size:15.5px;line-height:1.55;letter-spacing:0;color:var(--suave);border-left:1px solid var(--acento);padding-left:22px;max-width:46ch;margin-left:0!important}
+
+/* DESTACADO, PILARES, LISTAS */
+.destacado .caja{display:grid;gap:44px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:end;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:clamp(40px,7vw,90px) 0}
+.destacado .cita{font-size:clamp(34px,5vw,66px)}
+.destacado .texto{margin-top:20px}
+.destacado .numero{font-weight:500;font-size:clamp(110px,20vw,270px);line-height:.8;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
+.destacado .pie{font-size:13px;color:var(--suave);margin-top:18px}
+.grilla-auto{display:grid;gap:1px;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));margin-top:54px;padding:1px}
+.tarjeta{box-shadow:0 0 0 1px var(--linea);padding:clamp(26px,3.4vw,42px)}
+.tarjeta .n{font-family:var(--ital);font-style:italic;font-size:64px;line-height:.9;color:var(--acento)}
+.tarjeta h3{font-size:clamp(25px,2.8vw,34px);margin:22px 0 10px}
+.tarjeta p{color:var(--suave);font-size:15.5px}
+.remate{margin-top:42px;font-size:clamp(24px,3.2vw,40px);letter-spacing:-.035em;line-height:1.05}
+.filas{list-style:none;padding:0;margin-top:54px}
+.filas li{display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1.15fr);gap:8px 28px;padding:28px 0;border-top:1px solid var(--linea);align-items:baseline}
+.filas li:last-child{border-bottom:1px solid var(--linea)}
+.filas b{font-family:var(--ital);font-style:italic;font-weight:400;color:var(--acento);font-size:24px}
+.filas h3{font-size:clamp(23px,2.7vw,34px);line-height:1.02}
+.filas p{color:var(--suave);font-size:15.5px}
+.filas.simple li{grid-template-columns:64px 1fr;font-size:clamp(19px,2.2vw,25px);letter-spacing:-.02em;line-height:1.2}
+
+/* LÍNEA DE TIEMPO */
+.tiempo .via{position:relative;margin-top:70px}
+.tiempo .via::before,.tiempo .trazo{content:"";position:absolute;left:50%;top:6px;bottom:6px;width:1px;background:var(--linea)}
+.tiempo .trazo{background:var(--acento);transform-origin:50% 0;transform:scaleY(var(--p,0));box-shadow:0 0 14px rgba(217,223,156,.5)}
+.hito{position:relative;width:50%;padding:0 56px clamp(44px,8vh,80px) 0;--lado:-34px;text-align:right}
+.hito:nth-of-type(even){margin-left:50%;padding:0 0 clamp(44px,8vh,80px) 56px;--lado:34px;text-align:left}
+.hito:last-of-type{padding-bottom:0}
+.hito::before{content:"";position:absolute;right:-6px;top:10px;width:11px;height:11px;border-radius:50%;background:var(--fondo);border:1px solid var(--tenue);transition:background .4s,border-color .4s,box-shadow .4s;z-index:1}
+.hito:nth-of-type(even)::before{right:auto;left:-5px}
+.hito.on::before{background:var(--tinta);border-color:var(--tinta);box-shadow:0 0 0 7px rgba(240,238,228,.14)}
+.hito .cuadro{opacity:.2;transform:translateX(var(--lado));transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.hito.on .cuadro{opacity:1;transform:none}
+.hito .cuando{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--acento)}
+.hito h3{font-size:clamp(27px,3.6vw,48px);margin:10px 0 12px}
+.hito p{color:var(--suave);font-size:15.5px;max-width:38ch;display:inline-block}
+
+/* RUEDA EN ARCO */
+.rueda{padding:0;height:calc(100svh + var(--n,3)*46vh)}
+.rueda .dos{height:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,5vw,70px);align-items:center}
+.aro{position:relative;height:100%;--R:660px;--cw:310px;-webkit-mask-image:linear-gradient(transparent 2%,#000 22%,#000 78%,transparent 98%);mask-image:linear-gradient(transparent 2%,#000 22%,#000 78%,transparent 98%)}
+.radio{position:absolute;left:calc(var(--R)*-1 + 4px);top:50%;width:0;height:0;transform-origin:0 0;will-change:transform,opacity}
+.ficha{position:absolute;left:var(--R);top:0;width:var(--cw);transform:translateY(-50%);background:#0e0e0c;border:1px solid var(--linea);padding:24px 26px;display:grid;gap:10px;transition:border-color .4s,background .4s}
+.radio.on .ficha{border-color:var(--tinta);background:#151512}
+.ficha .fuente{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--acento)}
+.ficha h3{font-size:22px;line-height:1.05;letter-spacing:-.03em}
+.ficha .precio{font-weight:500;font-size:36px;line-height:.95;letter-spacing:-.045em}
+.ficha img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.lado-fijo .rango{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;margin-top:26px;font-weight:500;font-size:clamp(44px,6.2vw,92px);line-height:.92;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
+.lado-fijo .rango i{font-family:var(--ital);font-style:italic;color:var(--acento);font-size:.5em;letter-spacing:0}
+.lado-fijo .aclara{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--suave);margin-top:14px}
+.escala{position:relative;height:74px;margin-top:38px}
+.escala .eje{position:absolute;left:0;right:0;top:36px;height:1px;background:var(--tenue)}
+.escala .banda{position:absolute;top:28px;height:17px;background:rgba(217,223,156,.14);border-inline:1px solid var(--acento)}
+.escala .punto{position:absolute;top:36px;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;background:var(--fondo);border:1px solid var(--suave);transition:transform .45s cubic-bezier(.2,.7,.2,1),background .45s,border-color .45s,box-shadow .45s}
+.escala .punto.on{background:var(--tinta);border-color:var(--tinta);transform:scale(1.7);box-shadow:0 0 0 5px rgba(240,238,228,.16)}
+.escala .marca{position:absolute;top:54px;font-size:11px;color:var(--suave);transform:translateX(-50%);white-space:nowrap;font-variant-numeric:tabular-nums}
+.activo{margin-top:22px;min-height:168px;border-top:1px solid var(--linea);padding-top:20px}
+.activo small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--acento)}
+.activo strong{display:block;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-.04em;line-height:1;margin:8px 0}
+.activo span{display:block;font-size:14.5px;color:var(--suave)}
+.activo .llamada{margin-top:14px;font-size:12px}
+
+/* FODA */
+.foda .tres{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,290px) minmax(0,1fr);gap:clamp(24px,4.4vw,64px);align-items:center;margin-top:64px}
+.foda .lado{display:grid;gap:52px}
+.foda .lado.izq{text-align:right}
+.foda .item{--dx:-34px}.foda .lado.der .item{--dx:34px}
+.foda .sello{font-family:var(--ital);font-style:italic;font-size:54px;line-height:.8;color:var(--acento)}
+.foda .item h3{font-size:clamp(26px,3vw,38px);margin:10px 0 6px}
+.foda .item small{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--suave)}
+.foda .item ul{list-style:none;padding:0;margin-top:16px;color:var(--suave);font-size:15.5px;display:grid;gap:8px}
+.foda .medio{aspect-ratio:3/4.6;border-radius:999px 999px 0 0;overflow:hidden;border:1px solid var(--linea);display:grid;place-items:center;text-align:center;padding:26px;
+  background:radial-gradient(120% 70% at 50% 100%,rgba(150,84,22,.34),transparent 70%),#0d0d0b}
+.foda .medio img{width:calc(100% + 52px);height:calc(100% + 52px);margin:-26px;object-fit:cover}
+.foda .medio b{font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1;letter-spacing:-.04em;display:block}
+.foda .medio span{display:block;margin-top:14px;font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--suave)}
+
+/* PREPARAR LA PROPIEDAD (home staging): una tarjeta por tema, con foto si la hay */
+.staging .tarjeta img{width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:22px;display:block}
+.staging .tarjeta ul{list-style:none;padding:0;color:var(--suave);font-size:15.5px;display:grid;gap:9px}
+.staging .tarjeta li{padding-left:16px;position:relative}
+.staging .tarjeta li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1px;background:var(--acento)}
+
+/* CÓMO SE LLEGA AL VALOR: cada comparable, sus ajustes y lo que da */
+.cuenta .renglones{margin-top:54px}
+.cuenta .renglon{display:grid;grid-template-columns:minmax(0,1.2fr) auto minmax(0,1.5fr) auto;gap:10px 28px;align-items:center;padding:24px 0;border-top:1px solid var(--linea)}
+.cuenta .renglon h3{font-size:clamp(20px,2.2vw,27px);line-height:1.05}
+.cuenta .renglon small{display:block;font-size:12.5px;color:var(--suave);margin-top:6px}
+.cuenta .parte,.cuenta .da{font-weight:500;font-size:clamp(20px,2.3vw,30px);letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cuenta .parte{color:var(--suave)}
+.cuenta .ajustes{display:flex;flex-wrap:wrap;gap:8px}
+.cuenta .ajuste{font-size:12.5px;border:1px solid var(--linea);border-radius:999px;padding:6px 12px;color:var(--suave);white-space:nowrap}
+.cuenta .ajuste b{font-weight:600;color:var(--tinta);margin-right:6px}
+.cuenta .total{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px 30px;border-top:1px solid var(--tinta);padding-top:26px}
+.cuenta .total span{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--acento)}
+.cuenta .total b{font-weight:500;font-size:clamp(44px,6.4vw,92px);line-height:.9;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
+
+/* VALOR TAPADO: hasta que Gabriel lo muestre en la reunión */
+.tapado{text-align:center}
+.tapado .titulo{margin-inline:auto}.tapado .texto{margin:22px auto 0}.tapado .rotulo{justify-content:center}
+
+/* PASOS DEL CIERRE */
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1px;margin:56px 0 0;padding:1px;text-align:left}
+.pasos div{box-shadow:0 0 0 1px var(--linea);padding:24px}
+.pasos small{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--acento)}
+.pasos b{display:block;font-weight:500;font-size:21px;letter-spacing:-.03em;line-height:1.1;margin-top:10px}
+
+/* VENDIDAS: carrusel sin fin. Se mueve al bajar la página; se puede arrastrar, deslizar con el dedo o mover con las flechas */
+.carrusel{overflow:hidden}
+.carrusel .cabeza{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px 40px}
+.carrusel .cabeza .texto{margin-top:18px}
+.carrusel .flechas{display:flex;gap:10px}
+.carrusel .flechas button{width:54px;height:54px;border-radius:50%;border:1px solid var(--linea);background:none;color:var(--tinta);font:400 19px var(--sans);cursor:pointer;transition:border-color .3s,background .3s,color .3s}
+.carrusel .flechas button:hover{border-color:var(--tinta);background:var(--tinta);color:var(--fondo)}
+.cinta{display:flex;gap:16px;margin-top:56px;padding:0 max(20px,calc((100vw - 1180px)/2));overflow-x:auto;scrollbar-width:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.cinta::-webkit-scrollbar{display:none}
+.cinta.arrastra{cursor:grabbing}
+.pieza{flex:none;width:clamp(214px,24vw,300px)}
+.pieza .marco{position:relative;overflow:hidden;background:#12110f}
+.pieza video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;pointer-events:none}
+.cartel{position:absolute;left:-14%;right:-14%;top:50%;transform:translateY(-50%) rotate(-10deg);background:var(--rojo);color:#f6f2ea;font-weight:600;font-size:clamp(13px,1.3vw,17px);letter-spacing:.34em;text-indent:.34em;
+  text-align:center;padding:10px 0;border-block:1px solid rgba(246,242,234,.4);box-shadow:0 12px 30px -10px rgba(0,0,0,.7)}
+.pieza b{display:block;font-weight:500;font-size:20px;letter-spacing:-.03em;line-height:1.1;margin-top:16px}
+.pieza span.dato{display:block;font-size:13.5px;color:var(--suave);margin-top:4px}
+
+/* PRECIOS */
+.precios .tarjeta h3{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin:0;color:var(--suave);line-height:1.3}
+.precios .tarjeta .precio{font-weight:500;font-size:clamp(50px,6.6vw,96px);line-height:.9;letter-spacing:-.055em;margin:26px 0 16px;font-variant-numeric:tabular-nums}
+.precios .tarjeta.medio{background:#12120f}
+.precios .tarjeta.medio h3{color:var(--acento)}
+.nota{font-size:13px;color:var(--suave);margin-top:28px;max-width:72ch}
+
+.cierre{text-align:center;padding-bottom:clamp(110px,18vh,200px)}
+.cierre .titulo{max-width:14ch;margin-inline:auto;font-size:clamp(46px,8.6vw,124px)}
+.cierre .texto{margin:26px auto 0}
+.botones{display:flex;flex-wrap:wrap;gap:22px 38px;justify-content:center;margin-top:44px}
+.aviso{min-height:100svh;display:grid;place-items:center;text-align:center;padding:40px;color:var(--suave)}
+
+@media (max-width:860px){
+  .filas li{grid-template-columns:44px 1fr}.filas li p{grid-column:2}
+  .desarrollo p:nth-child(even){margin-left:0}
+  .tiempo .via::before,.tiempo .trazo{left:5px}
+  .hito,.hito:nth-of-type(even){width:auto;margin-left:0;padding:0 0 40px 34px;--lado:26px;text-align:left}
+  .hito::before,.hito:nth-of-type(even)::before{left:0;right:auto}
+  .rueda .dos{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr);gap:0;align-items:stretch;padding-top:16px}
+  .lado-fijo{order:-1;position:relative;z-index:2}.lado-fijo .rotulo,.lado-fijo .texto,.lado-fijo .aclara{display:none}
+  .lado-fijo .titulo{font-size:26px}.lado-fijo .rango{font-size:38px;margin-top:8px}
+  .escala{margin-top:4px;height:66px}.activo{margin-top:2px;min-height:132px;padding-top:12px}.activo strong{font-size:26px;margin:4px 0}.activo span{font-size:13.5px}
+  .aro{--R:430px;--cw:238px}.ficha{padding:18px 20px}.ficha .precio{font-size:30px}
+  .foda .tres{grid-template-columns:1fr}.foda .medio{max-width:190px;margin-inline:auto;order:-1}
+  .foda .lado.izq{text-align:left}.foda .lado{gap:38px}
+  .expande h1{white-space:normal;font-size:clamp(46px,15vw,84px)}
+  .expande .tira{font-size:10px}.expande .arriba span.medio-arriba{display:none}
+  .pieza b{font-size:17px}.carrusel .flechas button{width:46px;height:46px}.cinta{margin-top:40px}
+  .cuenta .renglon{grid-template-columns:1fr auto;gap:8px 16px}.cuenta .renglon .ajustes{grid-column:1}.cuenta .renglon .da{grid-column:2;grid-row:2}
+  #pie{font-size:9.5px;padding:7px 12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .entra{opacity:1;transform:none;transition:none}.expande .punto-luz{animation:none}
+  .escribe .pista,.expande,.rueda{height:auto}.fija{position:static;height:auto;overflow:visible}
+  .escribe .fija{padding:90px 0}.escribe .palabras span{color:var(--tinta)}
+  .hito .cuadro{opacity:1;transform:none}.tiempo .trazo{transform:none}
+  .expande .fija{min-height:100svh;position:relative}.expande .media{width:100%!important;height:100%!important;top:0!important}.expande .media::after{opacity:1}
+  .rueda .dos{display:block;padding:90px 0}.aro{height:auto;display:grid;gap:14px;margin-bottom:30px;-webkit-mask-image:none;mask-image:none}
+  .radio{position:static;width:auto;height:auto;transform:none!important;opacity:1!important}.ficha{position:static;transform:none;width:auto}
+  .cinta{cursor:auto}
+}
+</style>
+</head>
+<body>
+<div id="avance"></div>
+<main id="informe"><div class="aviso">Cargando…</div></main>
+<div id="pie">Gabriel Victorica, asesor inmobiliario bajo representación de Martillero y Corredor Público Nelson Eduardo Medina · Matrícula N° 127-RPC-13 F° 206 L° I</div>
+
+<script>
+const WHATSAPP = "5492920279076", INSTAGRAM = "soy.gabrielvictorica";
+const VENDIDAS = [
+  ["dpto-leo-los-olmos","Departamento de Leo","Reservado en 2 semanas"],
+  ["dpto-amalia","Departamento de Amalia, en torre","Vendido en 82 días"],
+  ["quincho-peumayen","Quincho con pileta","Vendido en unos 70 días"],
+  ["terreno-el-palmar","Terreno","Vendido"],
+  ["casa-nilda","Casa","Reservada"],["dpto-nilda","Departamento","Vendido"],["casa-carlos","Casa","Vendida"],
+  ["terreno-mendoza","Terreno","Vendido"],["local-mendoza","Local comercial","Vendido"],["casa-a-remodelar","Casa a remodelar","Vendida"],
+];
+const e = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const mix = (s) => e(s).replace(/\*(.+?)\*/g, "<em>$1</em>");          // *así* sale en cursiva
+const liso = (s) => String(s ?? "").replace(/\*/g, "");
+const plata = (n) => Number(n).toLocaleString("es-AR");
+const link = (u) => (/^https?:\/\//.test(u || "") ? e(u) : "#");
+const archivo = (u) => (/^(https?:\/\/|vendidas\/|fotos\/)[\w./%-]+$/.test(u || "") ? e(u) : "");
+const dos = (n) => String(n).padStart(2, "0");
+// una palabra por <span>, para encenderlas de a una; respeta la cursiva entre asteriscos
+const palabras = (t) => { let it = false; return String(t).split(" ").map((w) => { if (w.startsWith("*")) it = true; const c = it ? ' class="it"' : ""; if (/\*[.,;:!?»”)]*$/.test(w)) it = false; return `<span${c}>${e(w.replace(/\*/g, ""))}</span>`; }).join(" "); };
+const cabeza = (b, rotulo) => `${rotulo ? `<p class="rotulo entra">${e(rotulo)}</p>` : ""}<h2 class="titulo entra">${mix(b.titulo)}</h2>`;
+const cifras = (l) => `<div class="cifras">${l.map((c, i) => `<div class="cifra entra" style="--i:${i}"><b data-cuenta="${e(c.numero)}">${e(c.numero)}</b><span>${e(c.texto)}</span></div>`).join("")}</div>`;
+
+const BLOQUES = {
+  // Con foto o video, la imagen se expande al bajar. Sin ninguno, queda la portada de texto sobre las luces.
+  portada: (b, d) => { const v = archivo(d.video), f = archivo(d.foto), hay = v || f, [lugar, fecha] = String(d.bajada || "").split("·").map((x) => x.trim());
+    return `<section class="expande ${hay ? "" : "sola"}" ${hay ? "data-expande" : ""}><div class="fija" ${hay ? "" : 'style="height:100svh"'}>
+      ${hay ? `<div class="media" data-media>${v ? `<video src="${v}" ${f ? `poster="${f}"` : ""} muted loop playsinline autoplay></video>` : `<img src="${f}" alt="">`}</div>
+        <i class="punto-luz" style="left:26%;top:30%"></i><i class="punto-luz" style="left:71%;top:38%;animation-delay:.8s"></i>` : ""}
+      <div class="arriba"><span>Gabriel Victorica</span><span class="medio-arriba">Asesor inmobiliario · General Roca</span><a href="https://www.instagram.com/${INSTAGRAM}/" target="_blank" rel="noopener">@${INSTAGRAM}</a></div>
+      <div class="base"><h1 data-ajusta>${mix(d.titulo)}</h1><div class="tira"><span>${e(d.tipo)}</span><span>${e(lugar || "")}</span><span>${e(fecha || "")}</span></div></div></div></section>`; },
+
+  escribe: (b) => `<section class="escribe"><div class="pista" data-escribe style="--largo:${b.grande ? 180 : 200}vh"><div class="fija"><div class="ancho">
+      ${b.rotulo ? `<p class="rotulo">${e(b.rotulo)}</p>` : ""}<p class="palabras ${b.grande ? "grande" : "medio"}">${palabras(b.texto)}</p></div></div></div>
+    ${b.cifras ? `<div class="ancho" style="padding-bottom:clamp(84px,14vh,160px)">${cifras(b.cifras)}</div>` : ""}
+    ${b.parrafos || b.caso ? `<div class="ancho desarrollo">${(b.parrafos || []).map((p) => `<p class="entra">${mix(p)}</p>`).join("")}${b.caso ? `<p class="caso entra">${e(b.caso)}</p>` : ""}</div>` : ""}</section>`,
+
+  destacado: (b) => `<section class="destacado"><div class="ancho"><div class="caja"><div><h2 class="cita entra">${mix(b.cita)}</h2><p class="texto entra" style="--i:1">${e(b.texto)}</p></div>
+    ${b.numero ? `<div class="entra" style="--i:2"><div class="numero" data-cuenta="${e(b.numero)}">${e(b.numero)}</div><p class="pie">${e(b.pie)}</p></div>` : ""}</div></div></section>`,
+
+  pilares: (b) => `<section><div class="ancho">${cabeza(b, b.rotulo)}<div class="grilla-auto">${b.items.map((x, i) => `<div class="tarjeta entra" style="--i:${i}"><div class="n">${e(x.n ?? i + 1)}</div><h3>${mix(x.titulo)}</h3><p>${e(x.texto)}</p></div>`).join("")}</div>
+    ${b.pie ? `<p class="remate entra">${mix(b.pie)}</p>` : ""}</div></section>`,
+
+  lista: (b) => { const simple = b.items.every((x) => typeof x === "string");
+    return `<section><div class="ancho">${cabeza(b, b.rotulo)}<ul class="filas ${simple ? "simple" : ""}">${b.items.map((x, i) => `<li class="entra" style="--i:${Math.min(i, 4)}"><b>${dos(i + 1)}</b>${simple ? `<span>${e(x)}</span>` : `<h3>${mix(x.titulo)}</h3><p>${e(x.texto)}</p>`}</li>`).join("")}</ul></div></section>`; },
+
+  tiempo: (b) => `<section class="tiempo"><div class="ancho"><div class="al-centro">${cabeza(b, b.rotulo)}${b.texto ? `<p class="texto entra" style="margin-top:22px">${e(b.texto)}</p>` : ""}</div>
+    <div class="via" data-via><i class="trazo"></i>${b.items.map((x) => `<div class="hito"><div class="cuadro"><span class="cuando">${e(x.cuando)}</span><h3>${mix(x.titulo)}</h3><p>${e(x.texto)}</p></div></div>`).join("")}</div></div></section>`,
+
+  comparador: (b) => { const ps = b.items.map((x) => x.precio), lo = Math.min(b.desde, ...ps), hi = Math.max(b.hasta, ...ps), m = (hi - lo) * 0.12 || 1, a = lo - m, z = hi + m, pos = (v) => ((v - a) / (z - a)) * 100;
+    return `<section class="rueda" data-rueda style="--n:${b.items.length}"><div class="fija"><div class="ancho dos">
+      <div class="aro">${b.items.map((x, i) => `<div class="radio" data-ficha data-precio="USD ${plata(x.precio)}" data-titulo="${e(x.titulo)}" data-link="${link(x.link)}"
+          data-detalle="${e(x.barrio)} · ${e(x.m2)} m²${x.dias != null ? ` · publicada hace ${e(x.dias)} días` : ""}${x.vendida ? " · vendida" : ""}" data-nota="${e(x.nota || "")}">
+          <div class="ficha"><span class="fuente">${dos(i + 1)} · ${e(x.fuente)}${x.vendida ? " · vendida" : ""}</span><h3>${e(x.titulo)}</h3><div class="precio">USD ${plata(x.precio)}</div></div></div>`).join("")}</div>
+      <div class="lado-fijo">${b.rotulo ? `<p class="rotulo">${e(b.rotulo)}</p>` : ""}<h2 class="titulo">${mix(b.titulo)}</h2>${b.texto ? `<p class="texto" style="margin-top:18px">${e(b.texto)}</p>` : ""}
+        <div class="rango"><span>${plata(b.desde)}</span><i>a</i><span>${plata(b.hasta)}</span></div><p class="aclara">${e(b.moneda || "USD")} · rango de la zona, no es el precio de tu propiedad</p>
+        <div class="escala"><div class="eje"></div><div class="banda" style="left:${pos(b.desde)}%;width:${pos(b.hasta) - pos(b.desde)}%"></div>
+          <span class="marca" style="left:${pos(b.desde)}%">${plata(b.desde)}</span><span class="marca" style="left:${pos(b.hasta)}%">${plata(b.hasta)}</span>
+          ${b.items.map((x) => `<i class="punto" style="left:${pos(x.precio)}%"></i>`).join("")}</div>
+        <div class="activo" data-activo></div></div></div></div></section>`; },
+
+  foda: (b, d) => { const item = (letra, t, sub, l) => `<div class="item entra"><div class="sello">${letra}</div><h3>${t}</h3><small>${sub}</small><ul>${(l || []).map((x) => `<li>${e(x)}</li>`).join("")}</ul></div>`, f = archivo(b.foto);
+    return `<section class="foda"><div class="ancho"><div class="al-centro">${cabeza(b, b.rotulo)}${b.texto ? `<p class="texto entra" style="margin-top:22px">${e(b.texto)}</p>` : ""}</div>
+      <div class="tres"><div class="lado izq">${item("F", "Fortalezas", "De la propiedad", b.fortalezas)}${item("D", "Debilidades", "De la propiedad", b.debilidades)}</div>
+      <div class="medio entra">${f ? `<img src="${f}" alt="">` : `<div><b>${e(liso(d.titulo))}</b><span>${e(d.bajada)}</span></div>`}</div>
+      <div class="lado der">${item("O", "Oportunidades", "Del mercado", b.oportunidades)}${item("A", "Amenazas", "Del mercado", b.amenazas)}</div></div></div></section>`; },
+
+  // Carrusel de vendidas, cada una con su cartel. "numero" y "pie" son opcionales (la línea debajo del título).
+  videos: (b) => { const una = VENDIDAS.map(([id, t, dato]) => `<div class="pieza"><div class="marco"><video src="vendidas/${id}.mp4" poster="vendidas/${id}.jpg" muted loop playsinline preload="none" data-video></video><span class="cartel">${/^Reservad/.test(dato) ? "RESERVADO" : "VENDIDO"}</span></div><b>${e(t)}</b><span class="dato">${e(dato)}</span></div>`).join("");
+    return `<section class="carrusel" data-carrusel><div class="ancho"><div class="cabeza"><div>${cabeza(b, b.rotulo)}${b.numero ? `<p class="texto entra" style="--i:1">${e(b.numero)} ${e(b.pie || "")}</p>` : ""}</div>
+      <div class="flechas entra" style="--i:2"><button type="button" data-mover="-1" aria-label="Anterior">←</button><button type="button" data-mover="1" aria-label="Siguiente">→</button></div></div></div>
+      <div class="cinta" data-cinta>${una}${una}</div></section>`; },
+
+  precios: (b) => `<section class="precios"><div class="ancho">${cabeza(b, b.rotulo)}<div class="grilla-auto">
+      <div class="tarjeta entra"><h3>Valor de publicación sugerido</h3><div class="precio" data-cuenta="${b.publicacion}">${plata(b.publicacion)}</div><p>Con lo que salimos al mercado.</p></div>
+      <div class="tarjeta medio entra" style="--i:1"><h3>Precio de cierre esperado</h3><div class="precio" data-cuenta="${b.cierre}">${plata(b.cierre)}</div><p>Es la tasación.</p></div>
+      <div class="tarjeta entra" style="--i:2"><h3>Lo que te queda</h3><div class="precio" data-cuenta="${b.neto}">${plata(b.neto)}</div><p>El cierre menos el 3 % de honorarios.</p></div></div>
+      <p class="nota entra">Valores en ${e(b.moneda || "USD")}. Aparte, si corresponde: la verificación del estado parcelario, a cargo de un agrimensor. Los gastos de escritura, en General Roca, los paga el comprador.</p></div></section>`,
+
+  texto: (b) => `<section><div class="ancho">${cabeza(b, b.rotulo)}${(b.parrafos || []).map((p) => `<p class="texto entra" style="margin-top:22px">${e(p)}</p>`).join("")}</div></section>`,
+
+  // Preparar la propiedad: una tarjeta por tema (iluminar, limpiar y ordenar, reparar, despersonalizar; en un terreno, solo limpiar).
+  staging: (b) => `<section class="staging"><div class="ancho">${cabeza(b, b.rotulo)}${b.texto ? `<p class="texto entra" style="margin-top:22px">${e(b.texto)}</p>` : ""}
+    <div class="grilla-auto">${b.items.map((x, i) => `<div class="tarjeta entra" style="--i:${i}">${archivo(x.foto) ? `<img src="${archivo(x.foto)}" alt="">` : ""}<div class="n">${dos(i + 1)}</div><h3>${mix(x.titulo)}</h3><ul>${(x.puntos || []).map((p) => `<li>${e(p)}</li>`).join("")}</ul></div>`).join("")}</div></div></section>`,
+
+  // Cómo se llega al valor: de cada comparable, su precio, los ajustes que indicó Gabriel y lo que da; abajo, el resultado.
+  cuenta: (b) => `<section class="cuenta"><div class="ancho">${cabeza(b, b.rotulo)}${b.texto ? `<p class="texto entra" style="margin-top:22px">${e(b.texto)}</p>` : ""}
+    <div class="renglones">${b.items.map((x, i) => `<div class="renglon entra" style="--i:${Math.min(i, 4)}"><div><h3>${e(x.titulo)}</h3>${x.detalle ? `<small>${e(x.detalle)}</small>` : ""}</div><div class="parte">${plata(x.precio)}</div>
+      <div class="ajustes">${(x.ajustes || []).map((a) => `<span class="ajuste"><b>${e(a.cuanto)}</b>${e(a.por)}</span>`).join("") || `<span class="ajuste">Sin ajustes</span>`}</div><div class="da">${plata(x.da)}</div></div>`).join("")}
+      <div class="total entra"><span>${e(b.resultado_rotulo || "Precio de cierre esperado")}</span><b data-cuenta="${b.resultado}">${plata(b.resultado)}</b></div></div>
+    ${b.nota ? `<p class="nota entra">${e(b.nota)}</p>` : ""}</div></section>`,
+
+  cierre: (b) => `<section class="cierre"><div class="ancho"><h2 class="titulo entra">${mix(b.titulo)}</h2><p class="texto entra" style="--i:1">${e(b.texto)}</p>
+    ${b.pasos ? `<div class="pasos entra" style="--i:2">${b.pasos.map((x) => `<div><small>${e(x.cuando)}</small><b>${e(x.titulo)}</b></div>`).join("")}</div>` : ""}
+    <div class="botones entra" style="--i:2"><a class="llamada" href="https://wa.me/${WHATSAPP}" target="_blank" rel="noopener">Escribime por WhatsApp</a>
+    <a class="llamada" href="https://www.instagram.com/${INSTAGRAM}/" target="_blank" rel="noopener">Instagram · @${INSTAGRAM}</a></div></div></section>`,
+};
+
+function animar() {
+  const quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const ver = new IntersectionObserver((xs) => xs.forEach((x) => {
+    if (!x.isIntersecting) return;
+    const el = x.target; ver.unobserve(el);
+    if (el.classList.contains("entra")) el.classList.add("visto");
+    if (el.dataset.cuenta && !quieto) contar(el);
+  }), { threshold: 0.18 });
+  document.querySelectorAll(".entra,[data-cuenta]").forEach((el) => ver.observe(el));
+
+  const $$ = (s) => [...document.querySelectorAll(s)];
+  const avance = document.getElementById("avance"), textos = $$("[data-escribe]"), vias = $$("[data-via]"), expandes = $$("[data-expande]"), ajustes = $$("[data-ajusta]");
+  const ruedas = $$("[data-rueda]").map((s) => ({ s, fichas: [...s.querySelectorAll("[data-ficha]")], puntos: [...s.querySelectorAll(".punto")], caja: s.querySelector("[data-activo]"), a: -1 }));
+  // los videos se reproducen solo mientras están en pantalla
+  const verVideo = new IntersectionObserver((xs) => xs.forEach((x) => (x.isIntersecting ? x.target.play().catch(() => {}) : x.target.pause())), { threshold: 0.25 });
+  $$("[data-video]").forEach((v) => verVideo.observe(v));
+
+  // carrusel de vendidas: se mueve mientras se baja la página; además se puede arrastrar, deslizar con el dedo o mover con las flechas
+  const carruseles = $$("[data-carrusel]").map((sec) => { const cinta = sec.querySelector("[data-cinta]"), piezas = cinta.children, n = piezas.length / 2, c = { extra: 0, ultimo: 0 };
+    const vuelta = () => piezas[n].offsetLeft - piezas[0].offsetLeft;
+    c.poner = () => { const v = vuelta(), r = sec.getBoundingClientRect(), p = (innerHeight - r.top) / (innerHeight + r.height); let x = (c.extra + p * v * 0.55) % v; if (x < 0) x += v; cinta.scrollLeft = x; c.ultimo = cinta.scrollLeft; };
+    let arrastre = null;
+    cinta.addEventListener("pointerdown", (ev) => { if (ev.pointerType !== "mouse") return; arrastre = ev.clientX; cinta.classList.add("arrastra"); cinta.setPointerCapture(ev.pointerId); });
+    cinta.addEventListener("pointermove", (ev) => { if (arrastre == null) return; c.extra -= ev.clientX - arrastre; arrastre = ev.clientX; c.poner(); });
+    const soltar = () => { arrastre = null; cinta.classList.remove("arrastra"); };
+    cinta.addEventListener("pointerup", soltar); cinta.addEventListener("pointercancel", soltar);
+    // si la movieron con el dedo, ese corrimiento se suma y no se pierde al seguir bajando
+    cinta.addEventListener("scroll", () => { const d = cinta.scrollLeft - c.ultimo; if (Math.abs(d) > 1 && Math.abs(d) < vuelta() / 2) c.extra += d; c.ultimo = cinta.scrollLeft; }, { passive: true });
+    sec.querySelectorAll("[data-mover]").forEach((b) => b.addEventListener("click", () => { const de = c.extra, a = de + +b.dataset.mover * (piezas[1].offsetLeft - piezas[0].offsetLeft), t0 = performance.now();
+      const ir = (t) => { const k = Math.min(1, (t - t0) / 450); c.extra = de + (a - de) * (1 - Math.pow(1 - k, 3)); c.poner(); if (k < 1) requestAnimationFrame(ir); }; requestAnimationFrame(ir); }));
+    return c; });
+  const prog = (el) => { const r = el.getBoundingClientRect(), t = r.height - innerHeight; return t > 0 ? Math.min(1, Math.max(0, -r.top / t)) : 0; };
+
+  // el título de la portada ocupa todo el ancho en una sola línea (en pantallas anchas)
+  const ajustar = () => ajustes.forEach((h) => { h.style.fontSize = ""; if (innerWidth < 860) return; const libre = h.parentElement.clientWidth - 40; h.style.fontSize = "100px"; h.style.display = "inline-block"; const w = h.getBoundingClientRect().width; h.style.display = ""; h.style.fontSize = Math.min(230, Math.floor((100 * libre) / w)) + "px"; });
+  ajustar(); document.fonts?.ready.then(ajustar);
+
+  const activar = (r, i) => { r.a = i; r.puntos.forEach((p, k) => p.classList.toggle("on", k === i)); const f = r.fichas[i]; if (!f) return;
+    r.caja.innerHTML = `<small>Comparable ${dos(i + 1)} de ${dos(r.fichas.length)}</small><strong>${f.dataset.precio}</strong><span>${f.dataset.titulo}</span><span>${f.dataset.detalle}</span>${f.dataset.nota ? `<span>${f.dataset.nota}</span>` : ""}${f.dataset.link !== "#" ? `<a class="llamada" href="${f.dataset.link}" target="_blank" rel="noopener">Ver el aviso</a>` : ""}`; };
+  if (quieto) ruedas.forEach((r) => activar(r, 0));
+
+  let pedido = false;
+  const alScroll = () => { pedido = false;
+    const alto = document.documentElement.scrollHeight - innerHeight;
+    avance.style.transform = `scaleX(${alto > 0 ? scrollY / alto : 0})`;
+    if (quieto) return;
+    for (const x of expandes) { const p = Math.min(1, prog(x) / 0.85), k = 1 - Math.pow(1 - p, 2), caja = x.firstElementChild, W = caja.clientWidth, H = caja.clientHeight, m = x.querySelector("[data-media]"),
+        w0 = innerWidth < 860 ? W - 40 : Math.min(W * 0.5, 620), h0 = H * (innerWidth < 860 ? 0.5 : 0.56), t0 = innerWidth < 860 ? 56 : 62;
+      m.style.width = w0 + (W - w0) * k + "px"; m.style.height = h0 + (H - h0) * k + "px"; m.style.top = t0 * (1 - k) + "px"; x.style.setProperty("--p", k); }
+    for (const c of carruseles) c.poner();
+    for (const t of textos) { const p = prog(t), ps = t.querySelectorAll(".palabras span"); ps.forEach((s, i) => s.classList.toggle("on", i < Math.ceil(p * 1.35 * ps.length))); }
+    for (const v of vias) { const r = v.getBoundingClientRect(), corte = innerHeight * 0.62;
+      v.style.setProperty("--p", Math.min(1, Math.max(0, (corte - r.top) / r.height))); v.querySelectorAll(".hito").forEach((h) => h.classList.toggle("on", h.getBoundingClientRect().top + 14 < corte)); }
+    for (const r of ruedas) { const n = r.fichas.length, pos = prog(r.s) * (n - 1), paso = innerWidth < 860 ? 26 : 21;
+      r.fichas.forEach((f, i) => { const d = i - pos; f.style.transform = `rotate(${d * paso}deg)`; f.style.opacity = Math.max(0, 1 - Math.abs(d) * 0.5); f.classList.toggle("on", Math.abs(d) < 0.5); });
+      const a = Math.round(pos); if (a !== r.a) activar(r, a); }
+  };
+  addEventListener("scroll", () => { if (!pedido) { pedido = true; requestAnimationFrame(alScroll); } }, { passive: true });
+  addEventListener("resize", () => { ajustar(); alScroll(); });
+  alScroll();
+}
+
+function contar(el) {
+  const crudo = el.dataset.cuenta, n = parseFloat(String(crudo).replace(/[^\d.]/g, "")), signo = /^\+/.test(crudo) ? "+" : "";
+  if (!isFinite(n)) return;
+  const t0 = performance.now(), dura = 1300;
+  const paso = (t) => { const k = Math.min(1, (t - t0) / dura), s = 1 - Math.pow(1 - k, 3);
+    el.textContent = signo + plata(Math.round(n * s)); if (k < 1) requestAnimationFrame(paso); };
+  requestAnimationFrame(paso);
+}
+
+async function iniciar() {
+  const caja = document.getElementById("informe"), q = new URLSearchParams(location.search);
+  // El código del informe sale de la dirección: tasacion.entreinmobiliarios.com/<código>  (o ?i=<código> al probar en la compu)
+  const codigo = (q.get("i") || location.pathname.split("/").filter(Boolean).pop() || "").replace(/[^a-z0-9-]/gi, "");
+  try {
+    if (!codigo || codigo === "index.html") throw new Error("sin código");
+    const r = await fetch(`datos/${codigo}.json`, { cache: "no-store" });
+    if (!r.ok) throw new Error("no está");
+    const d = await r.json();
+    document.title = `${d.tipo} · ${liso(d.titulo)}`;
+    // Valor tapado: si los datos traen "clave", la cuenta y los precios se ven solo abriendo la dirección con ?ver=<clave>
+    // (así se puede mandar el link antes de la reunión sin que el dueño vaya directo al número).
+    const tapado = d.clave && q.get("ver") !== String(d.clave); let avisado = false;
+    caja.innerHTML = d.bloques.map((b) => { if (tapado && (b.tipo === "precios" || b.tipo === "cuenta")) { if (avisado) return ""; avisado = true;
+        return `<section class="tapado"><div class="ancho"><p class="rotulo entra">El valor</p><h2 class="titulo entra">El valor te lo presento <em>en persona</em></h2><p class="texto entra" style="--i:1">Lo vemos juntos en la reunión, con la cuenta completa.</p></div></section>`; }
+      return BLOQUES[b.tipo] ? BLOQUES[b.tipo](b, d) : ""; }).join("");
+    animar();
+  } catch {
+    caja.innerHTML = `<div class="aviso"><div><h2 class="titulo" style="margin:0 auto 18px">Este informe no está <em>disponible</em></h2><p>Revisá la dirección que te pasó Gabriel.</p></div></div>`;
+  }
+}
+iniciar();
+</script>
+</body>
+</html>
