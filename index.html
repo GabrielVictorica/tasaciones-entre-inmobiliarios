@@ -299,7 +299,7 @@ const cifras = (l) => `<div class="cifras">${l.map((c, i) => `<div class="cifra 
 const BLOQUES = {
   portada: (b, d) => { const v = archivo(d.video), f = archivo(d.foto), [lugar, fecha] = String(d.bajada || "").split("·").map((x) => x.trim());
     return `<section class="portada">${v || f ? `<div class="media ${d.foto_entera ? "plano" : ""}">${v ? `<video src="${v}" ${f ? `poster="${f}"` : ""} muted loop playsinline autoplay></video>` : `<img src="${f}" alt="">`}</div>` : "<div></div>"}
-      <div class="base"><h1>${mix(d.titulo)}</h1><div class="tira"><span>${e(d.tipo)}</span><span>${e(lugar || "")}</span><span>${e(fecha || "")}</span><span>Gabriel Victorica · Asesor inmobiliario</span></div></div></section>`; },
+      <div class="base"><h1>${mix(d.titulo)}</h1><div class="tira"><span>${e(d.tipo)}</span><span>${e(lugar || "")}</span><span>${e(fecha || "")}</span></div></div></section>`; },
 
   // Un texto grande. "grande: true" para una frase corta. Puede llevar cifras, párrafos y un caso.
   escribe: (b) => `<section class="escribe"><div class="ancho">${b.rotulo ? `<p class="rotulo entra">${e(b.rotulo)}</p>` : ""}<p class="${b.grande ? "grande" : "medio"} entra">${mix(b.texto)}</p>
