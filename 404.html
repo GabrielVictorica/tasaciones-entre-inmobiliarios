@@ -83,9 +83,9 @@ section{padding:clamp(64px,10vh,120px) 0;position:relative}
 .escribe .grande{font-weight:500;font-size:clamp(42px,8vw,118px);line-height:.96;letter-spacing:-.05em;max-width:13ch;text-wrap:balance}
 .escribe .grande em{color:var(--acento)}
 .escribe .medio{font-weight:500;font-size:clamp(27px,4.2vw,56px);line-height:1.06;letter-spacing:-.04em;max-width:23ch;text-wrap:balance}
-.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px 40px;border-top:1px solid var(--linea);padding-top:30px;margin-top:48px}
-.cifra b{display:block;font-weight:500;font-size:clamp(54px,7.6vw,104px);line-height:.9;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
-.cifra span{display:block;margin-top:12px;font-size:14px;color:var(--suave);max-width:22ch}
+.cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,3.4vw,40px);border-top:1px solid var(--linea);padding-top:30px;margin-top:48px}
+.cifra b{display:block;font-weight:500;font-size:clamp(40px,13vw,104px);line-height:.9;letter-spacing:-.055em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cifra span{display:block;margin-top:12px;font-size:clamp(12.5px,1.5vw,14px);line-height:1.4;color:var(--suave);max-width:22ch}
 .desarrollo{display:grid;gap:24px;margin-top:44px}
 .desarrollo p{font-size:clamp(20px,2.3vw,28px);line-height:1.22;letter-spacing:-.02em;max-width:30ch}
 .desarrollo .caso{font-size:16px;line-height:1.55;letter-spacing:0;color:var(--suave);border-left:1px solid var(--acento);padding-left:20px;max-width:48ch}
@@ -147,10 +147,6 @@ section{padding:clamp(64px,10vh,120px) 0;position:relative}
 .comp .ver{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border:1px solid var(--linea);border-radius:999px;padding:9px 14px;white-space:nowrap;transition:background .3s,color .3s,border-color .3s}
 .comp .ver:hover{background:var(--tinta);color:var(--fondo);border-color:var(--tinta)}
 .comp .ver.sin{visibility:hidden}
-.comp.propia{margin-top:52px;border:1px solid var(--acento);padding:24px 22px;background:rgba(217,223,156,.06)}
-.comp.propia .que b{font-size:24px}
-.comp.propia .que small{color:var(--acento);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:11px;margin:0 0 8px}
-.comp.propia .dato .tira i{background:var(--acento)}
 .comp .ajustes{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;margin-top:-4px}
 .comp .ajuste{font-size:13px;border:1px solid var(--linea);border-radius:999px;padding:5px 12px;color:var(--suave)}
 .comp .ajuste b{font-weight:600;color:var(--tinta);margin-right:6px}
@@ -259,7 +255,6 @@ section{padding:clamp(64px,10vh,120px) 0;position:relative}
   .comp .dato .et{display:block}
   .comp .ver{grid-column:1/-1;text-align:center;padding:14px;font-size:13px}
   .comp .ver.sin{display:none}
-  .comp.propia{padding:22px 18px}
   .pieza b{font-size:17px}.carrusel .flechas button{width:46px;height:46px}.cinta{margin-top:34px}
   #pie{font-size:9.5px;padding:7px 12px}
 }
@@ -344,15 +339,16 @@ const BLOQUES = {
 
   // Comparables, en una sola tabla. Cada renglón es una propiedad; el botón abre su aviso. Si "por_m2" es true se compara
   // por precio del metro; si un renglón trae "ajustes" y "da", se muestra lo que da llevado a la propiedad de Gabriel.
+  // La propiedad del dueño no va en esta tabla: su valor se da una sola vez, en los tres precios.
   comparables: (b) => { const m2 = !!b.por_m2, todos = (b.grupos || []).flatMap((g) => g.items), valor = (x) => (m2 ? x.precio / x.m2 : x.da ?? x.precio), u = e(b.moneda || "USD"),
-      tope = Math.max(...todos.map(valor), b.propia ? valor(b.propia) : 0) || 1, col4 = m2 ? "Precio por m²" : "Llevado a tu propiedad";
-    const fila = (x, propia) => `<div class="comp ${propia ? "propia" : ""} entra">
-        <div class="que">${propia ? `<small>${e(x.rotulo || "Tu propiedad")}</small>` : ""}<b>${e(x.titulo)}</b>${propia ? "" : `<small>${[x.fuente, x.vendida ? "Vendida" : "", x.nota].filter(Boolean).map(e).join(" · ")}</small>`}${propia && x.nota ? `<small style="color:var(--suave);text-transform:none;letter-spacing:0;font-weight:400;font-size:14.5px;margin:6px 0 0">${e(x.nota)}</small>` : ""}</div>
+      tope = Math.max(...todos.map(valor)) || 1, col4 = m2 ? "Precio por m²" : "Llevado a tu propiedad";
+    const fila = (x) => `<div class="comp entra">
+        <div class="que"><b>${e(x.titulo)}</b><small>${[x.fuente, x.vendida ? "Vendida" : "", x.nota].filter(Boolean).map(e).join(" · ")}</small></div>
         <div class="dato"><span class="et">Superficie</span>${x.m2 != null ? `${num(x.m2, 2)} m²` : "s/d"}</div>
-        <div class="dato"><span class="et">${propia ? e(x.precio_rotulo || "Precio de cierre esperado") : x.vendida ? "Precio de venta" : "Precio publicado"}</span>${u} ${plata(x.precio)}</div>
+        <div class="dato"><span class="et">${x.vendida ? "Precio de venta" : "Precio publicado"}</span>${u} ${plata(x.precio)}</div>
         <div class="dato clave"><span class="et">${col4}</span>${u} ${m2 ? num(valor(x)) : plata(valor(x))}<span class="tira"><i style="--w:${Math.round((valor(x) / tope) * 100)}%"></i></span></div>
-        <div class="dato"><span class="et">${propia ? "" : "Publicada hace"}</span>${propia ? "" : x.dias != null ? `${e(x.dias)} días` : "s/d"}</div>
-        ${propia ? "<span></span>" : `<a class="ver ${link(x.link) === "#" ? "sin" : ""}" href="${link(x.link)}" target="_blank" rel="noopener">Ver el aviso</a>`}
+        <div class="dato"><span class="et">Publicada hace</span>${x.dias != null ? `${e(x.dias)} días` : "s/d"}</div>
+        <a class="ver ${link(x.link) === "#" ? "sin" : ""}" href="${link(x.link)}" target="_blank" rel="noopener">Ver el aviso</a>
         ${x.ajustes ? `<div class="ajustes">${x.ajustes.map((a) => `<span class="ajuste"><b>${e(a.cuanto)}</b>${e(a.por)}</span>`).join("")}</div>` : ""}</div>`;
     return `<section class="comparables"><div class="ancho">${cabeza(b, b.rotulo)}${intro(b)}
       <div class="ayuda entra"><b>Cómo leer esta tabla</b><p>${e(b.ayuda || (m2 ? "Cada renglón es un lote publicado hoy. Como no todos miden lo mismo, se comparan por el precio de cada metro cuadrado: el precio dividido por la superficie. Con «Ver el aviso» abrís la publicación." : "Cada renglón es una propiedad parecida a la tuya. Con «Ver el aviso» abrís la publicación."))}</p></div>
@@ -360,8 +356,7 @@ const BLOQUES = {
         return `<div class="grupo"><div class="grupo-cab entra"><h3>${mix(g.titulo)}</h3><span>${g.items.length} ${g.items.length === 1 ? "propiedad" : "propiedades"} · promedio <b>${u} ${m2 ? num(prom) + " por m²" : plata(prom)}</b></span></div>
           ${g.texto ? `<p class="entra">${e(g.texto)}</p>` : ""}
           <div class="comp-cab"><span>Propiedad</span><span>Superficie</span><span>Precio publicado</span><span>${col4}</span><span>Publicada hace</span><span></span></div>
-          ${g.items.map((x) => fila(x, false)).join("")}</div>`; }).join("")}
-      ${b.propia ? fila(b.propia, true) : ""}
+          ${g.items.map(fila).join("")}</div>`; }).join("")}
       ${b.conclusion ? `<p class="conclusion entra">${mix(b.conclusion)}</p>` : ""}${b.nota ? `<p class="nota entra">${e(b.nota)}</p>` : ""}</div></section>`; },
 
   foda: (b, d) => { const item = (letra, t, sub, l) => `<div class="item entra"><div class="sello">${letra}</div><h3>${t}</h3><small>${sub}</small><ul>${(l || []).map((x) => `<li>${e(x)}</li>`).join("")}</ul></div>`, f = archivo(b.foto);
