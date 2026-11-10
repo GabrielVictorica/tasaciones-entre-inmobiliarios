@@ -62,44 +62,6 @@
       "pie": "Si falla una de las dos, *no se vende.*"
     },
     {
-      "tipo": "tiempo",
-      "rotulo": "Cómo trabajo",
-      "titulo": "Qué pasa con tu propiedad, *semana a semana*",
-      "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
-      "items": [
-        {
-          "cuando": "Día 1 al 3",
-          "titulo": "Relevamiento de la propiedad",
-          "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
-        },
-        {
-          "cuando": "Publicación",
-          "titulo": "Sale a la venta",
-          "texto": "A valor de mercado, en Instagram y Facebook, con fotos, videos y pauta. Sin carteles ni portales."
-        },
-        {
-          "cuando": "A las 2 semanas de publicada",
-          "titulo": "Tu primer informe",
-          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron de tu propiedad."
-        },
-        {
-          "cuando": "Cada dos semanas",
-          "titulo": "Contenido nuevo e informe",
-          "texto": "Siempre recibís un informe cada dos semanas, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
-        },
-        {
-          "cuando": "A los 90 días de publicada",
-          "titulo": "Nuestro promedio de venta",
-          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
-        },
-        {
-          "cuando": "120 días desde la firma",
-          "titulo": "El plazo de la autorización de venta",
-          "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
-        }
-      ]
-    },
-    {
       "tipo": "lista",
       "rotulo": "Mi mirada",
       "titulo": "El *barrio*",
@@ -150,11 +112,50 @@
       "nota": "Ejemplo con datos inventados. Son precios publicados, no de venta."
     },
     {
+      "tipo": "tiempo",
+      "rotulo": "Cómo trabajo",
+      "titulo": "Qué pasa con tu propiedad, *semana a semana*",
+      "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
+      "items": [
+        {
+          "cuando": "Día 1 al 3",
+          "titulo": "Relevamiento de la propiedad",
+          "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
+        },
+        {
+          "cuando": "Publicación",
+          "titulo": "Sale a la venta",
+          "texto": "A valor de mercado, en Instagram y Facebook, con fotos, videos y pauta. Sin carteles ni portales."
+        },
+        {
+          "cuando": "A las 2 semanas de publicada",
+          "titulo": "Tu primer informe",
+          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron de tu propiedad."
+        },
+        {
+          "cuando": "Cada dos semanas",
+          "titulo": "Contenido nuevo e informe",
+          "texto": "Siempre recibís un informe cada dos semanas, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
+        },
+        {
+          "cuando": "A los 90 días de publicada",
+          "titulo": "Nuestro promedio de venta",
+          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+        },
+        {
+          "cuando": "120 días desde la firma",
+          "titulo": "El plazo de la autorización de venta",
+          "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
+        }
+      ]
+    },
+    {
       "tipo": "videos",
       "rotulo": "Resultados",
-      "titulo": "Lo que *vendimos*",
+      "titulo": "Lo que *vendimos* trabajando así",
       "numero": "+20",
-      "pie": "vendidas en los últimos 12 meses"
+      "pie": "vendidas en los últimos 12 meses",
+      "nombre": "Lo que vendimos"
     },
     {
       "tipo": "cierre",

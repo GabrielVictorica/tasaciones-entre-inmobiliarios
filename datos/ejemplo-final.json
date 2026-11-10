@@ -87,42 +87,6 @@
       ]
     },
     {
-      "tipo": "staging",
-      "rotulo": "Antes de publicar",
-      "titulo": "Cómo preparar *tu propiedad*",
-      "texto": "Sin obra. Son detalles que hacen que guste más en las fotos y en la visita.",
-      "items": [
-        {
-          "titulo": "Iluminar",
-          "puntos": [
-            "Ejemplo: cambiar las lámparas quemadas del living",
-            "Ejemplo: luces cálidas, prendidas en cada visita"
-          ]
-        },
-        {
-          "titulo": "Limpiar y ordenar",
-          "puntos": [
-            "Ejemplo: mesada de la cocina despejada",
-            "Ejemplo: baño sin objetos a la vista"
-          ]
-        },
-        {
-          "titulo": "Reparar",
-          "puntos": [
-            "Ejemplo: la persiana del dormitorio",
-            "Ejemplo: la mancha de humedad, pintada"
-          ]
-        },
-        {
-          "titulo": "Despersonalizar",
-          "puntos": [
-            "Ejemplo: paredes lo más neutras posible",
-            "Ejemplo: guardar fotos y adornos personales"
-          ]
-        }
-      ]
-    },
-    {
       "tipo": "metodo",
       "rotulo": "El método",
       "titulo": "Cómo se *tasó*",
@@ -246,13 +210,6 @@
       "nota": "Ejemplo con datos inventados. Los ajustes de cada tasación los define Gabriel."
     },
     {
-      "tipo": "videos",
-      "rotulo": "Resultados",
-      "titulo": "Lo que *vendimos*",
-      "numero": "+20",
-      "pie": "vendidas en los últimos 12 meses"
-    },
-    {
       "tipo": "conclusion",
       "rotulo": "Mi mirada",
       "titulo": "Mi *conclusión*",
@@ -272,6 +229,42 @@
       "neto": 97000,
       "moneda": "USD",
       "como": "Sale de los tres comparables, llevados a tu casa."
+    },
+    {
+      "tipo": "staging",
+      "rotulo": "El primer paso",
+      "titulo": "Cómo preparar *tu propiedad*",
+      "texto": "Sin obra. Son detalles que hacen que guste más en las fotos y en la visita.",
+      "items": [
+        {
+          "titulo": "Iluminar",
+          "puntos": [
+            "Ejemplo: cambiar las lámparas quemadas del living",
+            "Ejemplo: luces cálidas, prendidas en cada visita"
+          ]
+        },
+        {
+          "titulo": "Limpiar y ordenar",
+          "puntos": [
+            "Ejemplo: mesada de la cocina despejada",
+            "Ejemplo: baño sin objetos a la vista"
+          ]
+        },
+        {
+          "titulo": "Reparar",
+          "puntos": [
+            "Ejemplo: la persiana del dormitorio",
+            "Ejemplo: la mancha de humedad, pintada"
+          ]
+        },
+        {
+          "titulo": "Despersonalizar",
+          "puntos": [
+            "Ejemplo: paredes lo más neutras posible",
+            "Ejemplo: guardar fotos y adornos personales"
+          ]
+        }
+      ]
     },
     {
       "tipo": "tiempo",
@@ -310,6 +303,14 @@
           "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
         }
       ]
+    },
+    {
+      "tipo": "videos",
+      "rotulo": "Resultados",
+      "titulo": "Lo que *vendimos* trabajando así",
+      "numero": "+20",
+      "pie": "vendidas en los últimos 12 meses",
+      "nombre": "Lo que vendimos"
     },
     {
       "tipo": "lista",

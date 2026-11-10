@@ -102,21 +102,6 @@
       ]
     },
     {
-      "tipo": "staging",
-      "rotulo": "Antes de publicar",
-      "titulo": "Cómo preparar *tu lote*",
-      "texto": "Sin obra. Un lote limpio se ve mejor en las fotos y en la visita.",
-      "items": [
-        {
-          "titulo": "Limpiar",
-          "puntos": [
-            "Pasto corto y sin yuyos.",
-            "Sin basura ni escombros a la vista."
-          ]
-        }
-      ]
-    },
-    {
       "tipo": "metodo",
       "rotulo": "El método",
       "titulo": "Cómo se *tasó*",
@@ -232,13 +217,6 @@
       "nota": "Son precios publicados, no de venta. En Pecini el metro es más barato y en el Óvalo, más caro. El lote 15 de este loteo lleva más de cuatro meses publicado a 103,50 USD/m² sin venderse: el valor de tu lote queda por debajo de ese techo."
     },
     {
-      "tipo": "videos",
-      "rotulo": "Resultados",
-      "titulo": "Lo que *vendimos*",
-      "numero": "+20",
-      "pie": "vendidas en los últimos 12 meses"
-    },
-    {
       "tipo": "conclusion",
       "rotulo": "Mi mirada",
       "titulo": "Mi *conclusión*",
@@ -259,6 +237,21 @@
       "neto": 31040,
       "moneda": "USD",
       "como": "Son 327,66 m² a USD 97,7 el metro."
+    },
+    {
+      "tipo": "staging",
+      "rotulo": "El primer paso",
+      "titulo": "Cómo preparar *tu lote*",
+      "texto": "Sin obra. Un lote limpio se ve mejor en las fotos y en la visita.",
+      "items": [
+        {
+          "titulo": "Limpiar",
+          "puntos": [
+            "Pasto corto y sin yuyos.",
+            "Sin basura ni escombros a la vista."
+          ]
+        }
+      ]
     },
     {
       "tipo": "tiempo",
@@ -297,6 +290,14 @@
           "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
         }
       ]
+    },
+    {
+      "tipo": "videos",
+      "rotulo": "Resultados",
+      "titulo": "Lo que *vendimos* trabajando así",
+      "numero": "+20",
+      "pie": "vendidas en los últimos 12 meses",
+      "nombre": "Lo que vendimos"
     },
     {
       "tipo": "lista",
