@@ -11,7 +11,7 @@
     {
       "tipo": "escribe",
       "rotulo": "Quién soy",
-      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Hace más de cuatro años que acompaño a propietarios a vender su propiedad *a valor de mercado.*",
+      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Acompaño a propietarios a vender su propiedad *a valor de mercado.*",
       "cifras": [
         {
           "numero": "+4",
@@ -19,11 +19,11 @@
         },
         {
           "numero": "+20",
-          "texto": "propiedades vendidas en los últimos 12 meses"
+          "texto": "propiedades vendidas en 12 meses"
         },
         {
           "numero": "90",
-          "texto": "días: nuestro promedio de venta"
+          "texto": "días de venta promedio, desde que se publica"
         }
       ]
     },
@@ -32,8 +32,8 @@
       "grande": true,
       "texto": "Estar en venta no es lo mismo que *vender.*",
       "parrafos": [
-        "El problema es que valor de mercado hay uno solo. No existe otro.",
-        "Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
+        "Pero valor de mercado hay uno solo.",
+        "Publicar es el primer paso. Las que se venden son las que están a valor de mercado y bien comercializadas."
       ]
     },
     {
@@ -68,7 +68,7 @@
       "tipo": "foda",
       "rotulo": "Análisis",
       "titulo": "Tu propiedad y el mercado *que la rodea*",
-      "texto": "Lo bueno y lo que hay que tener en cuenta, dicho con claridad.",
+      "texto": "Lo que juega a favor y lo que conviene tener en cuenta.",
       "fortalezas": [
         "Ejemplo: buena orientación y luz natural",
         "Ejemplo: patio amplio"
@@ -200,13 +200,6 @@
           ]
         }
       ],
-      "propia": {
-        "rotulo": "Tu casa, a valor de mercado",
-        "titulo": "Tu casa",
-        "m2": 125,
-        "precio": 100000,
-        "da": 100000
-      },
       "nota": "Ejemplo con datos inventados. Los ajustes de cada tasación los define Gabriel."
     },
     {
@@ -296,12 +289,7 @@
         {
           "cuando": "Cada dos semanas",
           "titulo": "Contenido nuevo e informe",
-          "texto": "Siempre recibís un informe, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
-        },
-        {
-          "cuando": "A los 90 días de publicada",
-          "titulo": "Nuestro promedio de venta",
-          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+          "texto": "Te paso un informe y se renuevan las fotos y los videos para que siga activa, hasta que se venda."
         }
       ]
     },
@@ -313,12 +301,12 @@
     },
     {
       "tipo": "lista",
-      "rotulo": "Cómo trabajamos",
+      "rotulo": "El acuerdo",
       "titulo": "Condiciones de *trabajo*",
       "items": [
         {
           "titulo": "Valor de mercado",
-          "texto": "El valor de una propiedad lo define el mercado. Esta tasación es mi lectura de ese valor. Si en las primeras semanas la respuesta del mercado indica otra cosa, te lo informo con los datos y te propongo el ajuste."
+          "texto": "El valor lo define el mercado; esta tasación es mi lectura de ese valor. Si los compradores muestran otra cosa, lo revisamos juntos con los datos. Y si en algún momento no coincidimos, lo hablamos a tiempo y vemos juntos cómo seguir."
         },
         {
           "titulo": "Exclusividad por 120 días",
@@ -327,10 +315,6 @@
         {
           "titulo": "Honorarios: 3 %",
           "texto": "A través del martillero."
-        },
-        {
-          "titulo": "Continuidad",
-          "texto": "Trabajo únicamente propiedades a valor de mercado. Si no llegamos a un acuerdo sobre el valor, prefiero decírtelo a tiempo y dejar de trabajarla antes que mantenerla publicada sin posibilidad de venta."
         }
       ]
     },

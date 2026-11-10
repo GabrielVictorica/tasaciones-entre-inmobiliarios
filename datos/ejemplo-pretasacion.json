@@ -9,7 +9,7 @@
     {
       "tipo": "escribe",
       "rotulo": "Quién soy",
-      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Hace más de cuatro años que acompaño a propietarios a vender su propiedad *a valor de mercado.*",
+      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Acompaño a propietarios a vender su propiedad *a valor de mercado.*",
       "cifras": [
         {
           "numero": "+4",
@@ -17,11 +17,11 @@
         },
         {
           "numero": "+20",
-          "texto": "propiedades vendidas en los últimos 12 meses"
+          "texto": "propiedades vendidas en 12 meses"
         },
         {
           "numero": "90",
-          "texto": "días: nuestro promedio de venta"
+          "texto": "días de venta promedio, desde que se publica"
         }
       ]
     },
@@ -31,17 +31,15 @@
       "texto": "Estar en venta no es lo mismo que *vender.*",
       "parrafos": [
         "Si una inmobiliaria te da un precio y otra te da uno más alto, es lógico elegir el más alto. Todos queremos vender al mejor precio, y eso se respeta.",
-        "El problema es que valor de mercado hay uno solo. No existe otro.",
-        "Por eso hoy se ven tantas propiedades publicadas y parece que todo Roca está en venta. Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
+        "Pero valor de mercado hay uno solo.",
+        "Por eso hoy se ven tantas propiedades publicadas y parece que todo Roca está en venta. Publicar es el primer paso. Las que se venden son las que están a valor de mercado y bien comercializadas."
       ],
       "caso": "Un caso real: siete departamentos tasados más alto por otra inmobiliaria estuvieron seis meses sin una visita. A valor de mercado y con buen marketing, se vendieron los siete en cuatro meses."
     },
     {
       "tipo": "destacado",
       "cita": "«El mercado *no se mueve*»",
-      "texto": "El mercado siempre se mueve, en baja o en suba. Lo que frena una venta es lo mismo en los dos casos: el valor.",
-      "numero": "+20",
-      "pie": "propiedades vendimos en los últimos 12 meses"
+      "texto": "El mercado siempre se mueve, en baja o en suba. Lo que frena una venta es lo mismo en los dos casos: el valor."
     },
     {
       "tipo": "pilares",
@@ -140,12 +138,7 @@
         {
           "cuando": "Cada dos semanas",
           "titulo": "Contenido nuevo e informe",
-          "texto": "Siempre recibís un informe, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
-        },
-        {
-          "cuando": "A los 90 días de publicada",
-          "titulo": "Nuestro promedio de venta",
-          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+          "texto": "Te paso un informe y se renuevan las fotos y los videos para que siga activa, hasta que se venda."
         }
       ],
       "nombre": "Cómo trabajo"

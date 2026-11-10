@@ -10,7 +10,7 @@
     {
       "tipo": "escribe",
       "rotulo": "Quién soy",
-      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Hace más de cuatro años que acompaño a propietarios a vender su propiedad *a valor de mercado.*",
+      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Acompaño a propietarios a vender su propiedad *a valor de mercado.*",
       "cifras": [
         {
           "numero": "+4",
@@ -18,11 +18,11 @@
         },
         {
           "numero": "+20",
-          "texto": "propiedades vendidas en los últimos 12 meses"
+          "texto": "propiedades vendidas en 12 meses"
         },
         {
           "numero": "90",
-          "texto": "días: nuestro promedio de venta"
+          "texto": "días de venta promedio, desde que se publica"
         }
       ]
     },
@@ -31,8 +31,8 @@
       "grande": true,
       "texto": "Estar en venta no es lo mismo que *vender.*",
       "parrafos": [
-        "El problema es que valor de mercado hay uno solo. No existe otro.",
-        "Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
+        "Pero valor de mercado hay uno solo.",
+        "Publicar es el primer paso. Las que se venden son las que están a valor de mercado y bien comercializadas."
       ]
     },
     {
@@ -55,20 +55,12 @@
           "valor": "Oeste"
         },
         {
-          "que": "Forma",
-          "valor": "Irregular: el frente tiene un ángulo leve"
-        },
-        {
           "que": "Calle",
           "valor": "Asfaltada"
         },
         {
           "que": "Servicios",
           "valor": "Luz, gas, agua, cloacas y alumbrado público"
-        },
-        {
-          "que": "Fondo",
-          "valor": "Linda con una empresa"
         }
       ],
       "foto_pie": "Plano del loteo con el lote marcado"
@@ -77,28 +69,26 @@
       "tipo": "foda",
       "rotulo": "Análisis",
       "titulo": "Tu lote y el mercado *que lo rodea*",
-      "texto": "Lo bueno y lo que hay que tener en cuenta, dicho con claridad.",
+      "texto": "Lo que juega a favor y lo que conviene tener en cuenta.",
       "fortalezas": [
         "Está frente a la Plaza del Óvalo: un espacio verde para salir con chicos, con mascotas o a tomar mate.",
-        "Tiene todos los servicios: luz, gas, agua, cloacas y alumbrado público.",
-        "La calle está asfaltada. Pecini, el barrio de al lado, es de ripio.",
-        "Está en una zona céntrica."
+        "Está en una zona céntrica, con todos los servicios.",
+        "La calle está asfaltada; Pecini, el barrio de al lado, es de ripio."
       ],
       "debilidades": [
         "La forma es irregular: el frente tiene un ángulo leve.",
-        "El fondo linda con una empresa. Puede haber ruido en horario comercial, y algún comprador puede plantearlo como objeción."
+        "El fondo linda con una empresa: en horario comercial puede haber algo de ruido."
       ],
       "oportunidades": [
         "La calle Güemes, a pocas cuadras, ya está asfaltada.",
         "Pecini es un barrio en crecimiento.",
         "En la zona ya se vendieron varios lotes.",
-        "A valor de mercado, es la opción más conveniente de la zona Óvalo: quien busca ahí lo mira primero."
+        "Muchos lotes de la zona están publicados por encima de lo que paga el mercado: uno a valor de mercado se destaca frente a ellos."
       ],
       "amenazas": [
-        "Pecini compite directo: el metro es más barato y, con la misma plata, se compra un lote más grande.",
-        "En Roca hay muchos lotes en venta y poca demanda. El comprador compara por precio y por ubicación.",
-        "En la zona suelen juntarse jóvenes con autos y música, y eso puede molestar a los vecinos.",
-        "Muchos lotes de la zona salen a un precio más alto del que paga el mercado. El lote 15 de este mismo loteo lleva más de cuatro meses publicado."
+        "Pecini compite por el mismo comprador: el metro es más barato y, con la misma plata, el lote es más grande.",
+        "En Roca hay muchos lotes en venta y poca demanda.",
+        "En la zona suelen juntarse jóvenes con autos y música."
       ]
     },
     {
@@ -144,8 +134,7 @@
               "precio": 41000,
               "dias": 119,
               "fuente": "Zonaprop",
-              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/vecltrin-venta-excelente-terreno-zona-ovalo-general-roca-60642568.html",
-              "nota": "Lleva más de cuatro meses publicado"
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/vecltrin-venta-excelente-terreno-zona-ovalo-general-roca-60642568.html"
             },
             {
               "titulo": "Lote de 26 × 18 m",
@@ -158,7 +147,7 @@
         },
         {
           "titulo": "*Pecini*",
-          "texto": "El barrio de al lado. El metro es más barato: con la misma plata, el lote es más grande.",
+          "texto": "El barrio de al lado.",
           "items": [
             {
               "titulo": "Lote sobre Los Durazneros",
@@ -207,14 +196,7 @@
           ]
         }
       ],
-      "propia": {
-        "rotulo": "Tu lote, a valor de mercado",
-        "titulo": "Tu lote",
-        "m2": 327.66,
-        "precio": 32000,
-        "nota": "A este valor, es la opción más conveniente de la zona Óvalo."
-      },
-      "nota": "Son precios publicados, no de venta. El lote 15 de este mismo loteo lleva más de cuatro meses publicado a USD 103,5 el metro sin venderse: es la referencia de hasta dónde responde hoy el mercado en la zona."
+      "nota": "Son precios publicados, no de venta."
     },
     {
       "tipo": "conclusion",
@@ -222,9 +204,8 @@
       "titulo": "Mi *conclusión*",
       "frase": "A *valor de mercado*, tu lote es el primero que mira quien busca en la zona.",
       "parrafos": [
-        "Tu lote está en una de las mejores ubicaciones de la zona: frente a la Plaza del Óvalo, en una zona céntrica, sobre calle asfaltada y con todos los servicios. Y la zona tiene futuro: la calle Güemes, a pocas cuadras, ya está asfaltada, y Pecini sigue creciendo. En unos años va a estar todavía mejor ubicado.",
-        "Hoy en Roca hay muchos lotes en venta y pocos compradores. Quien compra un lote compara por precio y por ubicación, y busca según su presupuesto: quien tiene 35 mil dólares mira lo que está publicado hasta 35 mil. Pecini, el barrio de al lado, es la otra opción que ese comprador tiene a mano: ahí el metro es más barato y, con la misma plata, el lote es más grande.",
-        "Por eso el valor que te propongo reconoce lo que tu lote tiene de mejor (la ubicación, el asfalto, la plaza) y lo deja como la opción más conveniente para quien busca en la zona Óvalo."
+        "Tu lote tiene lo que más valora quien busca en la zona: la plaza enfrente, el asfalto y todos los servicios. Y es una zona con futuro: en unos años va a estar todavía mejor ubicado.",
+        "Quien compra un lote compara por precio y por ubicación, y busca según su presupuesto: quien tiene 35 mil dólares mira lo que está publicado hasta 35 mil. Por eso el valor que te propongo reconoce todo lo que tu lote tiene a favor y lo deja dentro de la búsqueda de esos compradores."
       ]
     },
     {
@@ -246,8 +227,8 @@
         {
           "titulo": "Limpiar",
           "puntos": [
-            "Pasto corto y sin yuyos.",
-            "Sin basura ni escombros a la vista."
+            "Pasto corto y parejo.",
+            "Sin restos de poda ni escombros a la vista."
           ]
         }
       ]
@@ -282,12 +263,7 @@
         {
           "cuando": "Cada dos semanas",
           "titulo": "Contenido nuevo e informe",
-          "texto": "Siempre recibís un informe, haya o no resultados, y se renuevan las fotos y los videos para que siga activo."
-        },
-        {
-          "cuando": "A los 90 días de publicada",
-          "titulo": "Nuestro promedio de venta",
-          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+          "texto": "Te paso un informe y se renuevan las fotos y los videos para que siga activo, hasta que se venda."
         }
       ]
     },
@@ -299,12 +275,12 @@
     },
     {
       "tipo": "lista",
-      "rotulo": "Cómo trabajamos",
+      "rotulo": "El acuerdo",
       "titulo": "Condiciones de *trabajo*",
       "items": [
         {
           "titulo": "Valor de mercado",
-          "texto": "El valor de una propiedad lo define el mercado. Esta tasación es mi lectura de ese valor. Si en las primeras semanas la respuesta del mercado indica otra cosa, te lo informo con los datos y te propongo el ajuste."
+          "texto": "El valor lo define el mercado; esta tasación es mi lectura de ese valor. Si los compradores muestran otra cosa, lo revisamos juntos con los datos. Y si en algún momento no coincidimos, lo hablamos a tiempo y vemos juntos cómo seguir."
         },
         {
           "titulo": "Exclusividad por 120 días",
@@ -313,10 +289,6 @@
         {
           "titulo": "Honorarios: 3 %",
           "texto": "A través del martillero."
-        },
-        {
-          "titulo": "Continuidad",
-          "texto": "Trabajo únicamente propiedades a valor de mercado. Si no llegamos a un acuerdo sobre el valor, prefiero decírtelo a tiempo y dejar de trabajarla antes que mantenerla publicada sin posibilidad de venta."
         }
       ],
       "nombre": "Condiciones de trabajo"
