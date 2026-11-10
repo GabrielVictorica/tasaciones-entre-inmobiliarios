@@ -110,52 +110,44 @@
       ]
     },
     {
-      "tipo": "comparador",
+      "tipo": "comparables",
       "rotulo": "La zona",
       "titulo": "Con qué se compara *tu propiedad*",
-      "texto": "Las casas parecidas a la tuya, en esta zona, hoy se mueven en este rango.",
-      "desde": 85000,
-      "hasta": 110000,
-      "moneda": "USD",
-      "items": [
+      "texto": "Las casas parecidas a la tuya, en esta zona, hoy se publican entre USD 85.000 y USD 110.000.",
+      "grupos": [
         {
-          "titulo": "Casa 2 dormitorios",
-          "barrio": "Barrio Ejemplo",
-          "m2": 95,
-          "precio": 87000,
-          "dias": 210,
-          "fuente": "Marketplace",
-          "link": "#",
-          "nota": "Lleva meses sin venderse"
-        },
-        {
-          "titulo": "Casa 3 dormitorios",
-          "barrio": "Barrio Ejemplo",
-          "m2": 120,
-          "precio": 98000,
-          "dias": 45,
-          "fuente": "Zonaprop",
-          "link": "#"
-        },
-        {
-          "titulo": "Casa 3 dormitorios con patio",
-          "barrio": "Barrio Vecino",
-          "m2": 130,
-          "precio": 110000,
-          "dias": 20,
-          "fuente": "Inmobiliaria local",
-          "link": "#"
-        },
-        {
-          "titulo": "Casa 3 dormitorios a refaccionar",
-          "barrio": "Barrio Ejemplo",
-          "m2": 115,
-          "precio": 79000,
-          "dias": 60,
-          "fuente": "Zonaprop",
-          "link": "#"
+          "titulo": "Barrio *Ejemplo*",
+          "items": [
+            {
+              "titulo": "Casa 3 dormitorios",
+              "fuente": "Zonaprop",
+              "m2": 120,
+              "precio": 98000,
+              "dias": 45,
+              "link": "https://www.zonaprop.com.ar/"
+            },
+            {
+              "titulo": "Casa 2 dormitorios",
+              "fuente": "Marketplace",
+              "m2": 95,
+              "precio": 87000,
+              "dias": 210,
+              "nota": "Lleva meses sin venderse",
+              "link": "https://www.facebook.com/marketplace/"
+            },
+            {
+              "titulo": "Casa 3 dormitorios con patio",
+              "fuente": "Inmobiliaria local",
+              "m2": 130,
+              "precio": 110000,
+              "dias": 20,
+              "link": "https://www.zonaprop.com.ar/"
+            }
+          ]
         }
-      ]
+      ],
+      "conclusion": "El valor de tu propiedad lo vemos en la *próxima reunión.*",
+      "nota": "Ejemplo con datos inventados. Son precios publicados, no de venta."
     },
     {
       "tipo": "videos",

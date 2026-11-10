@@ -37,6 +37,34 @@
       ]
     },
     {
+      "tipo": "ficha",
+      "rotulo": "La propiedad",
+      "titulo": "Tu *casa*",
+      "texto": "Los datos con los que se hizo esta tasación.",
+      "datos": [
+        {
+          "que": "Superficie cubierta",
+          "valor": "125 m²"
+        },
+        {
+          "que": "Terreno",
+          "valor": "300 m²"
+        },
+        {
+          "que": "Ambientes",
+          "valor": "3 dormitorios, 2 baños"
+        },
+        {
+          "que": "Estado",
+          "valor": "Bueno"
+        },
+        {
+          "que": "Ubicación",
+          "valor": "Barrio Ejemplo"
+        }
+      ]
+    },
+    {
       "tipo": "foda",
       "rotulo": "Análisis",
       "titulo": "Tu propiedad y el mercado *que la rodea*",
@@ -95,54 +123,82 @@
       ]
     },
     {
-      "tipo": "comparador",
+      "tipo": "comparables",
       "rotulo": "La zona",
       "titulo": "Los *comparables*",
-      "texto": "Vendidas y publicadas hoy, en la misma zona.",
-      "desde": 85000,
-      "hasta": 110000,
-      "moneda": "USD",
-      "items": [
+      "texto": "Cada propiedad se ajusta por lo que tiene distinto de la tuya.",
+      "grupos": [
         {
-          "titulo": "Casa 3 dormitorios",
-          "barrio": "Barrio Ejemplo",
-          "m2": 120,
-          "precio": 98000,
-          "dias": null,
-          "fuente": "Zonaprop",
-          "link": "#",
-          "vendida": true,
-          "nota": "Dato de venta que aportó Gabriel"
-        },
-        {
-          "titulo": "Casa 2 dormitorios",
-          "barrio": "Barrio Ejemplo",
-          "m2": 95,
-          "precio": 87000,
-          "dias": 210,
-          "fuente": "Marketplace",
-          "link": "#",
-          "nota": "Lleva meses sin venderse"
-        },
-        {
-          "titulo": "Casa 3 dormitorios con patio",
-          "barrio": "Barrio Vecino",
-          "m2": 130,
-          "precio": 110000,
-          "dias": 20,
-          "fuente": "Inmobiliaria local",
-          "link": "#"
-        },
-        {
-          "titulo": "Casa 3 dormitorios a refaccionar",
-          "barrio": "Barrio Ejemplo",
-          "m2": 115,
-          "precio": 79000,
-          "dias": 60,
-          "fuente": "Zonaprop",
-          "link": "#"
+          "titulo": "Barrio *Ejemplo*",
+          "items": [
+            {
+              "titulo": "Casa 3 dormitorios",
+              "fuente": "Zonaprop",
+              "m2": 120,
+              "precio": 98000,
+              "dias": null,
+              "link": "https://www.zonaprop.com.ar/",
+              "vendida": true,
+              "nota": "Dato de venta que aportó Gabriel",
+              "ajustes": [
+                {
+                  "cuanto": "+3 %",
+                  "por": "tu patio es más grande"
+                }
+              ],
+              "da": 101000
+            },
+            {
+              "titulo": "Casa 2 dormitorios",
+              "fuente": "Marketplace",
+              "m2": 95,
+              "precio": 87000,
+              "dias": 210,
+              "nota": "Lleva meses sin venderse",
+              "link": "https://www.facebook.com/marketplace/",
+              "ajustes": [
+                {
+                  "cuanto": "+12 %",
+                  "por": "un dormitorio más"
+                },
+                {
+                  "cuanto": "+4 %",
+                  "por": "superficie"
+                }
+              ],
+              "da": 101000
+            },
+            {
+              "titulo": "Casa 3 dormitorios con patio",
+              "fuente": "Inmobiliaria local",
+              "m2": 130,
+              "precio": 110000,
+              "dias": 20,
+              "link": "https://www.zonaprop.com.ar/",
+              "ajustes": [
+                {
+                  "cuanto": "−5 %",
+                  "por": "margen de negociación"
+                },
+                {
+                  "cuanto": "−5 %",
+                  "por": "barrio"
+                }
+              ],
+              "da": 99000
+            }
+          ]
         }
-      ]
+      ],
+      "propia": {
+        "rotulo": "Tu casa, a valor de mercado",
+        "titulo": "Tu casa",
+        "m2": 125,
+        "precio": 100000,
+        "da": 100000
+      },
+      "conclusion": "Las tres, llevadas a tu casa, dan *alrededor de USD 100.000.*",
+      "nota": "Ejemplo con datos inventados. Los ajustes de cada tasación los define Gabriel."
     },
     {
       "tipo": "videos",
@@ -152,67 +208,14 @@
       "pie": "vendidas en los últimos 12 meses"
     },
     {
-      "tipo": "cuenta",
-      "rotulo": "La cuenta",
-      "titulo": "Cómo se llega *al valor*",
-      "texto": "Cada comparable se ajusta por lo que tiene distinto de tu propiedad.",
-      "items": [
-        {
-          "titulo": "Casa 3 dormitorios",
-          "detalle": "Vendida · Barrio Ejemplo · 120 m²",
-          "precio": 98000,
-          "ajustes": [
-            {
-              "cuanto": "+3 %",
-              "por": "tu patio es más grande"
-            }
-          ],
-          "da": 101000
-        },
-        {
-          "titulo": "Casa 2 dormitorios",
-          "detalle": "Publicada hace 210 días · 95 m²",
-          "precio": 87000,
-          "ajustes": [
-            {
-              "cuanto": "+12 %",
-              "por": "un dormitorio más"
-            },
-            {
-              "cuanto": "+4 %",
-              "por": "superficie"
-            }
-          ],
-          "da": 101000
-        },
-        {
-          "titulo": "Casa 3 dormitorios con patio",
-          "detalle": "Publicada hace 20 días · Barrio Vecino",
-          "precio": 110000,
-          "ajustes": [
-            {
-              "cuanto": "−5 %",
-              "por": "margen de negociación"
-            },
-            {
-              "cuanto": "−5 %",
-              "por": "barrio"
-            }
-          ],
-          "da": 99000
-        }
-      ],
-      "resultado": 100000,
-      "nota": "Ejemplo con números inventados. Los ajustes de cada tasación los define Gabriel."
-    },
-    {
       "tipo": "precios",
       "rotulo": "El valor",
       "titulo": "Los tres *precios*",
       "publicacion": 105000,
       "cierre": 100000,
       "neto": 97000,
-      "moneda": "USD"
+      "moneda": "USD",
+      "como": "Sale de los tres comparables, llevados a tu casa."
     },
     {
       "tipo": "tiempo",
