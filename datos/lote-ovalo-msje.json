@@ -1,0 +1,383 @@
+{
+  "tipo": "Tasación",
+  "titulo": "Lote en *zona Óvalo*",
+  "bajada": "General Roca · Noviembre 2026",
+  "foto": "fotos/lote-ovalo-msje.jpg",
+  "bloques": [
+    {
+      "tipo": "portada"
+    },
+    {
+      "tipo": "escribe",
+      "rotulo": "Quién soy",
+      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Hace más de cuatro años que acompaño a propietarios a vender su propiedad *a valor de mercado.*",
+      "cifras": [
+        {
+          "numero": "+4",
+          "texto": "años en el rubro, en Roca"
+        },
+        {
+          "numero": "+20",
+          "texto": "propiedades vendidas en los últimos 12 meses"
+        },
+        {
+          "numero": "90",
+          "texto": "días: nuestro promedio de venta"
+        }
+      ]
+    },
+    {
+      "tipo": "escribe",
+      "grande": true,
+      "texto": "Estar en venta no es lo mismo que *vender.*",
+      "parrafos": [
+        "El problema es que valor de mercado hay uno solo. No existe otro.",
+        "Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
+      ]
+    },
+    {
+      "tipo": "foda",
+      "rotulo": "Análisis",
+      "titulo": "Tu lote y el mercado *que lo rodea*",
+      "texto": "Lo bueno y lo que hay que tener en cuenta, dicho con claridad.",
+      "fortalezas": [
+        "Está frente a la Plaza del Óvalo: un espacio verde para salir con chicos, con mascotas o a tomar mate.",
+        "Tiene todos los servicios: luz, gas, agua, cloacas y alumbrado público.",
+        "La calle está asfaltada. Pecini, el barrio de al lado, es de ripio.",
+        "Está en una zona céntrica."
+      ],
+      "debilidades": [
+        "La forma es irregular: el frente tiene un ángulo leve.",
+        "El fondo linda con una empresa. Puede haber ruido en horario comercial, y algún comprador puede plantearlo como objeción."
+      ],
+      "oportunidades": [
+        "La calle Güemes, a pocas cuadras, ya está asfaltada.",
+        "Pecini es un barrio en crecimiento.",
+        "En la zona ya se vendieron varios lotes.",
+        "A valor de mercado, queda por debajo de los otros dos lotes publicados en la zona Óvalo."
+      ],
+      "amenazas": [
+        "Pecini compite directo: el metro es más barato y, con la misma plata, se compra un lote más grande.",
+        "En Roca hay muchos lotes en venta y poca demanda. El comprador compara por precio y por ubicación.",
+        "En la zona suelen juntarse jóvenes con autos y música, y eso puede molestar a los vecinos.",
+        "Muchos lotes de la zona salen a un precio más alto del que paga el mercado. El lote 15 de este mismo loteo lleva más de cuatro meses publicado."
+      ]
+    },
+    {
+      "tipo": "staging",
+      "rotulo": "Antes de publicar",
+      "titulo": "Cómo preparar *tu lote*",
+      "texto": "Sin obra. Un lote limpio se ve mejor en las fotos y en la visita.",
+      "items": [
+        {
+          "titulo": "Limpiar",
+          "puntos": [
+            "Pasto corto y sin yuyos.",
+            "Sin basura ni escombros a la vista."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "comparador",
+      "rotulo": "La zona",
+      "titulo": "Los *comparables*",
+      "texto": "Lotes publicados hoy en la zona Óvalo y en Pecini. En Pecini el metro es más barato: con la misma plata, el lote es más grande.",
+      "desde": 30000,
+      "hasta": 50000,
+      "moneda": "USD",
+      "items": [
+        {
+          "titulo": "Lote 15 de este mismo loteo",
+          "barrio": "Zona Óvalo",
+          "m2": 396,
+          "precio": 41000,
+          "dias": 119,
+          "fuente": "Zonaprop",
+          "link": "https://www.zonaprop.com.ar/propiedades/clasificado/vecltrin-venta-excelente-terreno-zona-ovalo-general-roca-60642568.html",
+          "nota": "103,50 USD/m². Lleva más de cuatro meses publicado."
+        },
+        {
+          "titulo": "Lote de 26 × 18 m",
+          "barrio": "Zona Óvalo",
+          "m2": 468,
+          "precio": 50000,
+          "dias": null,
+          "fuente": "Marketplace",
+          "link": "https://www.facebook.com/marketplace/item/957239807066765/",
+          "nota": "106,84 USD/m²."
+        },
+        {
+          "titulo": "Lote sobre Los Durazneros",
+          "barrio": "Pecini",
+          "m2": 382,
+          "precio": 30000,
+          "dias": 15,
+          "fuente": "Zonaprop",
+          "link": "https://www.zonaprop.com.ar/propiedades/clasificado/vecltrin-lote-residencial-382-m-sup2--en-general-roca-60542422.html",
+          "nota": "78,53 USD/m²."
+        },
+        {
+          "titulo": "Lote en esquina, Durazneros y Eucaliptus",
+          "barrio": "Pecini",
+          "m2": 383,
+          "precio": 30000,
+          "dias": 10,
+          "fuente": "Zonaprop",
+          "link": "https://www.zonaprop.com.ar/propiedades/clasificado/vecltrin-venta-lote-en-esquina-zona-pecini-60594995.html",
+          "nota": "78,33 USD/m²."
+        },
+        {
+          "titulo": "Lote de 16,67 × 30 m",
+          "barrio": "Pecini",
+          "m2": 500,
+          "precio": 40000,
+          "dias": null,
+          "fuente": "Libra Estudio Inmobiliario",
+          "link": "https://www.libraestudioinmobiliario.com.ar/p/8022921-Terreno-en-Venta-en-General-Roca-PECINI--Rio-Negro-y-Los-Vi%C3%B1edos",
+          "nota": "80,00 USD/m²."
+        },
+        {
+          "titulo": "Lote de 17 × 30 m",
+          "barrio": "Pecini",
+          "m2": 510,
+          "precio": 40000,
+          "dias": null,
+          "fuente": "Marketplace",
+          "link": "https://www.facebook.com/marketplace/item/4762837237332173/",
+          "nota": "78,43 USD/m²."
+        },
+        {
+          "titulo": "Lote en esquina, Uruguay y Líbano",
+          "barrio": "Pecini",
+          "m2": 440,
+          "precio": 36000,
+          "dias": null,
+          "fuente": "Indexa",
+          "link": "https://www.indexaprop.com.ar/propiedad/231195_terreno-en-esquina-b-pecini-440m2/",
+          "nota": "81,82 USD/m²."
+        },
+        {
+          "titulo": "Lote en esquina",
+          "barrio": "Pecini",
+          "m2": 510,
+          "precio": 48000,
+          "dias": null,
+          "fuente": "Marketplace",
+          "link": "https://www.facebook.com/marketplace/item/993905770283281/",
+          "nota": "94,12 USD/m²."
+        }
+      ]
+    },
+    {
+      "tipo": "videos",
+      "rotulo": "Resultados",
+      "titulo": "Lo que *vendimos*",
+      "numero": "+20",
+      "pie": "vendidas en los últimos 12 meses"
+    },
+    {
+      "tipo": "cuenta",
+      "rotulo": "La cuenta",
+      "titulo": "Cómo se llega *al valor*",
+      "texto": "El precio por metro de cada comparable, llevado a los 327,66 m² de tu lote.",
+      "items": [
+        {
+          "titulo": "Lote 15 de este mismo loteo",
+          "detalle": "Zona Óvalo · 396 m² · más de cuatro meses publicado",
+          "precio": 41000,
+          "ajustes": [
+            {
+              "cuanto": "103,50 USD/m²",
+              "por": "× 327,66 m²"
+            }
+          ],
+          "da": 33913
+        },
+        {
+          "titulo": "Lote de 26 × 18 m",
+          "detalle": "Zona Óvalo · 468 m²",
+          "precio": 50000,
+          "ajustes": [
+            {
+              "cuanto": "106,84 USD/m²",
+              "por": "× 327,66 m²"
+            }
+          ],
+          "da": 35007
+        },
+        {
+          "titulo": "Lote sobre Los Durazneros",
+          "detalle": "Pecini · 382 m²",
+          "precio": 30000,
+          "ajustes": [
+            {
+              "cuanto": "78,53 USD/m²",
+              "por": "× 327,66 m²"
+            }
+          ],
+          "da": 25731
+        },
+        {
+          "titulo": "Lote en esquina, Durazneros y Eucaliptus",
+          "detalle": "Pecini · 383 m²",
+          "precio": 30000,
+          "ajustes": [
+            {
+              "cuanto": "78,33 USD/m²",
+              "por": "× 327,66 m²"
+            }
+          ],
+          "da": 25666
+        },
+        {
+          "titulo": "Lote de 16,67 × 30 m",
+          "detalle": "Pecini · 500 m²",
+          "precio": 40000,
+          "ajustes": [
+            {
+              "cuanto": "80,00 USD/m²",
+              "por": "× 327,66 m²"
+            }
+          ],
+          "da": 26213
+        },
+        {
+          "titulo": "Lote de 17 × 30 m",
+          "detalle": "Pecini · 510 m²",
+          "precio": 40000,
+          "ajustes": [
+            {
+              "cuanto": "78,43 USD/m²",
+              "por": "× 327,66 m²"
+            }
+          ],
+          "da": 25698
+        },
+        {
+          "titulo": "Lote en esquina, Uruguay y Líbano",
+          "detalle": "Pecini · 440 m²",
+          "precio": 36000,
+          "ajustes": [
+            {
+              "cuanto": "81,82 USD/m²",
+              "por": "× 327,66 m²"
+            }
+          ],
+          "da": 26809
+        },
+        {
+          "titulo": "Lote en esquina",
+          "detalle": "Pecini · 510 m²",
+          "precio": 48000,
+          "ajustes": [
+            {
+              "cuanto": "94,12 USD/m²",
+              "por": "× 327,66 m²"
+            }
+          ],
+          "da": 30839
+        }
+      ],
+      "resultado": 32000,
+      "nota": "Son precios publicados, no de venta. En Pecini el metro es más barato y en el Óvalo, más caro. El lote 15 de este loteo lleva más de cuatro meses publicado a 103,50 USD/m² sin venderse: el valor de tu lote queda por debajo de ese techo."
+    },
+    {
+      "tipo": "precios",
+      "rotulo": "El valor",
+      "titulo": "Los tres *precios*",
+      "publicacion": 33600,
+      "cierre": 32000,
+      "neto": 31040,
+      "moneda": "USD"
+    },
+    {
+      "tipo": "tiempo",
+      "rotulo": "Cómo trabajo",
+      "titulo": "Qué pasa con tu lote, *semana a semana*",
+      "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
+      "items": [
+        {
+          "cuando": "Día 1 al 3",
+          "titulo": "Relevamiento de la propiedad",
+          "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
+        },
+        {
+          "cuando": "Publicación",
+          "titulo": "Sale a la venta",
+          "texto": "A valor de mercado, en Instagram y Facebook, con fotos, videos y pauta. Sin carteles ni portales."
+        },
+        {
+          "cuando": "A las 2 semanas de publicada",
+          "titulo": "Tu primer informe",
+          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron de tu propiedad."
+        },
+        {
+          "cuando": "Cada dos semanas",
+          "titulo": "Contenido nuevo e informe",
+          "texto": "Siempre recibís un informe cada dos semanas, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
+        },
+        {
+          "cuando": "A los 90 días de publicada",
+          "titulo": "Nuestro promedio de venta",
+          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+        },
+        {
+          "cuando": "120 días desde la firma",
+          "titulo": "El plazo de la autorización de venta",
+          "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
+        }
+      ]
+    },
+    {
+      "tipo": "lista",
+      "rotulo": "Cómo trabajamos",
+      "titulo": "Condiciones de *trabajo*",
+      "items": [
+        {
+          "titulo": "Valor de mercado",
+          "texto": "El valor de una propiedad lo define el mercado. Esta tasación es mi lectura de ese valor. Si en las primeras semanas la respuesta del mercado indica otra cosa, te lo informo con los datos y te propongo el ajuste."
+        },
+        {
+          "titulo": "Exclusividad por 120 días",
+          "texto": "Contados desde la firma."
+        },
+        {
+          "titulo": "Honorarios: 3 %",
+          "texto": "A través del martillero."
+        },
+        {
+          "titulo": "Seguimiento",
+          "texto": "Cada dos semanas recibís un informe con las consultas, las visitas y los comentarios de quienes vieron tu propiedad."
+        },
+        {
+          "titulo": "Continuidad",
+          "texto": "Trabajo únicamente propiedades a valor de mercado. Si no llegamos a un acuerdo sobre el valor, prefiero decírtelo a tiempo y dejar de trabajarla antes que mantenerla publicada sin posibilidad de venta."
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "Hoy firmamos *la autorización de venta*",
+      "texto": "Si estás de acuerdo con el valor y con la forma de trabajo, este es el camino.",
+      "pasos": [
+        {
+          "cuando": "Hoy",
+          "titulo": "Firmamos la autorización de venta"
+        },
+        {
+          "cuando": "Día 1 al 3",
+          "titulo": "Relevamiento: fotos, videos y todo lo necesario para las primeras dos semanas"
+        },
+        {
+          "cuando": "A las 2 semanas de publicada",
+          "titulo": "Recibís tu primer informe, y después uno cada dos semanas"
+        },
+        {
+          "cuando": "A los 90 días de publicada",
+          "titulo": "Nuestro promedio de venta"
+        }
+      ]
+    }
+  ]
+}
