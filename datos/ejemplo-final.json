@@ -123,6 +123,52 @@
       ]
     },
     {
+      "tipo": "metodo",
+      "rotulo": "El método",
+      "titulo": "Cómo se *tasó*",
+      "texto": "Hay dos formas de saber cuánto vale una propiedad. En este ejemplo se muestran las dos.",
+      "items": [
+        {
+          "titulo": "Método de *comparables*",
+          "parrafos": [
+            "Se buscan propiedades parecidas a la tuya, en la misma zona, y se mira a cuánto están publicadas o en cuánto se vendieron.",
+            "El valor de la tuya sale de compararla con ellas: si es mejor, vale un poco más; si tiene algo en contra, un poco menos."
+          ],
+          "usado": true
+        },
+        {
+          "titulo": "Método de *recupero*",
+          "parrafos": [
+            "Se mira la propiedad como una inversión: cuánto deja por año si se alquila, comparado con lo que cuesta.",
+            "Responde una pregunta: ¿en cuántos años quien la compra recupera lo que puso?"
+          ],
+          "usado": true,
+          "cuenta": [
+            {
+              "que": "Alquiler por mes (ejemplo)",
+              "valor": "USD 800"
+            },
+            {
+              "que": "Alquiler por año",
+              "valor": "USD 9.600"
+            },
+            {
+              "que": "Precio de cierre esperado",
+              "valor": "USD 100.000"
+            },
+            {
+              "que": "Rinde por año",
+              "valor": "9,6 %"
+            },
+            {
+              "que": "Se recupera en",
+              "valor": "unos 10 años"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "tipo": "comparables",
       "rotulo": "La zona",
       "titulo": "Los *comparables*",
@@ -197,7 +243,6 @@
         "precio": 100000,
         "da": 100000
       },
-      "conclusion": "Las tres, llevadas a tu casa, dan *alrededor de USD 100.000.*",
       "nota": "Ejemplo con datos inventados. Los ajustes de cada tasación los define Gabriel."
     },
     {
@@ -206,6 +251,17 @@
       "titulo": "Lo que *vendimos*",
       "numero": "+20",
       "pie": "vendidas en los últimos 12 meses"
+    },
+    {
+      "tipo": "conclusion",
+      "rotulo": "Mi mirada",
+      "titulo": "Mi *conclusión*",
+      "puntos": [
+        "Ejemplo: lo mejor que tiene la propiedad, en una línea.",
+        "Ejemplo: contra qué compite en la zona.",
+        "Ejemplo: por qué ese valor y no otro."
+      ],
+      "frase": "Ejemplo: la idea final, *en una frase.*"
     },
     {
       "tipo": "precios",

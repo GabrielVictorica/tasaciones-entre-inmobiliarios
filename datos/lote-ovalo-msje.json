@@ -102,35 +102,6 @@
       ]
     },
     {
-      "tipo": "lista",
-      "nombre": "Mi lectura del mercado",
-      "rotulo": "Mi mirada",
-      "titulo": "Mi lectura *del mercado*",
-      "texto": "Lo que veo en esta zona, y por qué importa para el valor.",
-      "items": [
-        {
-          "titulo": "Pecini compite directo con esta zona",
-          "texto": "Es otro estilo de barrio, de ripio y en crecimiento, pero quien tiene la plata para comprar mira los dos. Este lote puede salir un poco por encima de Pecini, sin exagerar."
-        },
-        {
-          "titulo": "El comprador busca por presupuesto",
-          "texto": "Quien tiene 35 mil dólares mira los lotes publicados en 35 o menos. Uno publicado en 42 no lo ve; y quien sí lo ve tiene muchas otras opciones."
-        },
-        {
-          "titulo": "En Roca hay muchos lotes en venta y poca demanda",
-          "texto": "Los lotes se comparan directo, por precio y por ubicación. A más oferta, menor es el valor."
-        },
-        {
-          "titulo": "En esta zona se suele publicar por encima de lo que paga el mercado",
-          "texto": "Por eso hay lotes que llevan meses sin venderse."
-        },
-        {
-          "titulo": "La zona va a quedar mejor ubicada",
-          "texto": "La calle Güemes, a pocas cuadras, ya está asfaltada, y Pecini sigue creciendo."
-        }
-      ]
-    },
-    {
       "tipo": "staging",
       "rotulo": "Antes de publicar",
       "titulo": "Cómo preparar *tu lote*",
@@ -142,6 +113,31 @@
             "Pasto corto y sin yuyos.",
             "Sin basura ni escombros a la vista."
           ]
+        }
+      ]
+    },
+    {
+      "tipo": "metodo",
+      "rotulo": "El método",
+      "titulo": "Cómo se *tasó*",
+      "texto": "Hay dos formas de saber cuánto vale una propiedad. Para tu lote se usó la primera.",
+      "items": [
+        {
+          "titulo": "Método de *comparables*",
+          "parrafos": [
+            "Se buscan propiedades parecidas a la tuya, en la misma zona, y se mira a cuánto están publicadas o en cuánto se vendieron.",
+            "El valor de la tuya sale de compararla con ellas: si es mejor, vale un poco más; si tiene algo en contra, un poco menos."
+          ],
+          "usado": true
+        },
+        {
+          "titulo": "Método de *recupero*",
+          "parrafos": [
+            "Se mira la propiedad como una inversión: cuánto deja por año si se alquila, comparado con lo que cuesta.",
+            "Responde una pregunta: ¿en cuántos años quien la compra recupera lo que puso?"
+          ],
+          "usado": false,
+          "uso": "No se usó: un lote no se alquila"
         }
       ]
     },
@@ -233,7 +229,6 @@
         "precio": 32000,
         "nota": "Queda por debajo de los otros dos lotes del Óvalo y por encima de los de Pecini."
       },
-      "conclusion": "Tu lote sale *por debajo* de los otros dos del Óvalo, y eso lo pone primero en la lista de quien busca en la zona.",
       "nota": "Son precios publicados, no de venta. En Pecini el metro es más barato y en el Óvalo, más caro. El lote 15 de este loteo lleva más de cuatro meses publicado a 103,50 USD/m² sin venderse: el valor de tu lote queda por debajo de ese techo."
     },
     {
@@ -242,6 +237,18 @@
       "titulo": "Lo que *vendimos*",
       "numero": "+20",
       "pie": "vendidas en los últimos 12 meses"
+    },
+    {
+      "tipo": "conclusion",
+      "rotulo": "Mi mirada",
+      "titulo": "Mi *conclusión*",
+      "puntos": [
+        "Tu lote tiene lo mejor de la zona: está frente a la plaza, con asfalto y todos los servicios.",
+        "Pecini, el barrio de al lado, compite directo: el metro es más barato y con la misma plata se compra un lote más grande.",
+        "En Roca hay muchos lotes en venta y poca demanda. Quien compra compara por precio y por ubicación.",
+        "Por eso tiene que salir un poco por encima de Pecini y por debajo de los otros lotes del Óvalo."
+      ],
+      "frase": "A *valor de mercado*, es el primero que mira quien busca en la zona."
     },
     {
       "tipo": "precios",
