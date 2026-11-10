@@ -92,7 +92,7 @@
         "La calle Güemes, a pocas cuadras, ya está asfaltada.",
         "Pecini es un barrio en crecimiento.",
         "En la zona ya se vendieron varios lotes.",
-        "A valor de mercado, queda por debajo de los otros dos lotes publicados en la zona Óvalo."
+        "A valor de mercado, es la opción más conveniente de la zona Óvalo: quien busca ahí lo mira primero."
       ],
       "amenazas": [
         "Pecini compite directo: el metro es más barato y, con la misma plata, se compra un lote más grande.",
@@ -212,21 +212,20 @@
         "titulo": "Tu lote",
         "m2": 327.66,
         "precio": 32000,
-        "nota": "Queda por debajo de los otros dos lotes del Óvalo y por encima de los de Pecini."
+        "nota": "A este valor, es la opción más conveniente de la zona Óvalo."
       },
-      "nota": "Son precios publicados, no de venta. En Pecini el metro es más barato y en el Óvalo, más caro. El lote 15 de este loteo lleva más de cuatro meses publicado a 103,50 USD/m² sin venderse: el valor de tu lote queda por debajo de ese techo."
+      "nota": "Son precios publicados, no de venta. El lote 15 de este mismo loteo lleva más de cuatro meses publicado a USD 103,5 el metro sin venderse: es la referencia de hasta dónde responde hoy el mercado en la zona."
     },
     {
       "tipo": "conclusion",
       "rotulo": "Mi mirada",
       "titulo": "Mi *conclusión*",
-      "puntos": [
-        "Tu lote tiene lo mejor de la zona: está frente a la plaza, con asfalto y todos los servicios.",
-        "Pecini, el barrio de al lado, compite directo: el metro es más barato y con la misma plata se compra un lote más grande.",
-        "En Roca hay muchos lotes en venta y poca demanda. Quien compra compara por precio y por ubicación.",
-        "Por eso tiene que salir un poco por encima de Pecini y por debajo de los otros lotes del Óvalo."
-      ],
-      "frase": "A *valor de mercado*, es el primero que mira quien busca en la zona."
+      "frase": "A *valor de mercado*, tu lote es el primero que mira quien busca en la zona.",
+      "parrafos": [
+        "Tu lote está en una de las mejores ubicaciones de la zona: frente a la Plaza del Óvalo, en una zona céntrica, sobre calle asfaltada y con todos los servicios. Y la zona tiene futuro: la calle Güemes, a pocas cuadras, ya está asfaltada, y Pecini sigue creciendo. En unos años va a estar todavía mejor ubicado.",
+        "Hoy en Roca hay muchos lotes en venta y pocos compradores. Quien compra un lote compara por precio y por ubicación, y busca según su presupuesto: quien tiene 35 mil dólares mira lo que está publicado hasta 35 mil. Pecini, el barrio de al lado, es la otra opción que ese comprador tiene a mano: ahí el metro es más barato y, con la misma plata, el lote es más grande.",
+        "Por eso el valor que te propongo reconoce lo que tu lote tiene de mejor (la ubicación, el asfalto, la plaza) y lo deja como la opción más conveniente para quien busca en la zona Óvalo."
+      ]
     },
     {
       "tipo": "precios",
@@ -255,13 +254,19 @@
     },
     {
       "tipo": "tiempo",
+      "nombre": "Cómo trabajo",
       "rotulo": "Cómo trabajo",
-      "titulo": "Qué pasa con tu lote, *semana a semana*",
+      "titulo": "Qué pasa con tu lote, *desde hoy*",
       "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
       "items": [
         {
+          "cuando": "Hoy",
+          "titulo": "Firmamos la autorización de venta",
+          "texto": "Con eso empiezo a trabajar tu lote."
+        },
+        {
           "cuando": "Día 1 al 3",
-          "titulo": "Relevamiento de la propiedad",
+          "titulo": "Relevamiento",
           "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
         },
         {
@@ -272,22 +277,17 @@
         {
           "cuando": "A las 2 semanas de publicada",
           "titulo": "Tu primer informe",
-          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron de tu propiedad."
+          "texto": "Cuántas personas consultaron, cuántas lo visitaron y qué dijeron."
         },
         {
           "cuando": "Cada dos semanas",
           "titulo": "Contenido nuevo e informe",
-          "texto": "Siempre recibís un informe cada dos semanas, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
+          "texto": "Siempre recibís un informe, haya o no resultados, y se renuevan las fotos y los videos para que siga activo."
         },
         {
           "cuando": "A los 90 días de publicada",
           "titulo": "Nuestro promedio de venta",
           "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
-        },
-        {
-          "cuando": "120 días desde la firma",
-          "titulo": "El plazo de la autorización de venta",
-          "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
         }
       ]
     },
@@ -295,8 +295,6 @@
       "tipo": "videos",
       "rotulo": "Resultados",
       "titulo": "Lo que *vendimos* trabajando así",
-      "numero": "+20",
-      "pie": "vendidas en los últimos 12 meses",
       "nombre": "Lo que vendimos"
     },
     {
@@ -310,15 +308,11 @@
         },
         {
           "titulo": "Exclusividad por 120 días",
-          "texto": "Contados desde la firma."
+          "texto": "Contados desde la firma: dan tiempo para vender y para escriturar."
         },
         {
           "titulo": "Honorarios: 3 %",
           "texto": "A través del martillero."
-        },
-        {
-          "titulo": "Seguimiento",
-          "texto": "Cada dos semanas recibís un informe con las consultas, las visitas y los comentarios de quienes vieron tu propiedad."
         },
         {
           "titulo": "Continuidad",
@@ -329,26 +323,8 @@
     },
     {
       "tipo": "cierre",
-      "titulo": "Hoy firmamos *la autorización de venta*",
-      "texto": "Si estás de acuerdo con el valor y con la forma de trabajo, este es el camino.",
-      "pasos": [
-        {
-          "cuando": "Hoy",
-          "titulo": "Firmamos la autorización de venta"
-        },
-        {
-          "cuando": "Día 1 al 3",
-          "titulo": "Relevamiento: fotos, videos y todo lo necesario para las primeras dos semanas"
-        },
-        {
-          "cuando": "A las 2 semanas de publicada",
-          "titulo": "Recibís tu primer informe, y después uno cada dos semanas"
-        },
-        {
-          "cuando": "A los 90 días de publicada",
-          "titulo": "Nuestro promedio de venta"
-        }
-      ]
+      "titulo": "¿*Avanzamos?*",
+      "texto": "Si estás de acuerdo con el valor y con la forma de trabajo, hoy firmamos la autorización de venta."
     }
   ],
   "foto_entera": true

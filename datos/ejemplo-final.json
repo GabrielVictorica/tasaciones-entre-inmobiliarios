@@ -213,12 +213,12 @@
       "tipo": "conclusion",
       "rotulo": "Mi mirada",
       "titulo": "Mi *conclusión*",
-      "puntos": [
-        "Ejemplo: lo mejor que tiene la propiedad, en una línea.",
-        "Ejemplo: contra qué compite en la zona.",
-        "Ejemplo: por qué ese valor y no otro."
-      ],
-      "frase": "Ejemplo: la idea final, *en una frase.*"
+      "frase": "Ejemplo: la idea final, *en una frase.*",
+      "parrafos": [
+        "Ejemplo: lo mejor que tiene la propiedad y la zona, en dos o tres líneas.",
+        "Ejemplo: cómo está el mercado hoy y contra qué compite, contado sin tecnicismos.",
+        "Ejemplo: por qué el valor propuesto le conviene al dueño."
+      ]
     },
     {
       "tipo": "precios",
@@ -268,13 +268,19 @@
     },
     {
       "tipo": "tiempo",
+      "nombre": "Cómo trabajo",
       "rotulo": "Cómo trabajo",
-      "titulo": "Qué pasa con tu propiedad, *semana a semana*",
+      "titulo": "Qué pasa con tu casa, *desde hoy*",
       "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
       "items": [
         {
+          "cuando": "Hoy",
+          "titulo": "Firmamos la autorización de venta",
+          "texto": "Con eso empiezo a trabajar tu casa."
+        },
+        {
           "cuando": "Día 1 al 3",
-          "titulo": "Relevamiento de la propiedad",
+          "titulo": "Relevamiento",
           "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
         },
         {
@@ -285,22 +291,17 @@
         {
           "cuando": "A las 2 semanas de publicada",
           "titulo": "Tu primer informe",
-          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron de tu propiedad."
+          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron."
         },
         {
           "cuando": "Cada dos semanas",
           "titulo": "Contenido nuevo e informe",
-          "texto": "Siempre recibís un informe cada dos semanas, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
+          "texto": "Siempre recibís un informe, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
         },
         {
           "cuando": "A los 90 días de publicada",
           "titulo": "Nuestro promedio de venta",
           "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
-        },
-        {
-          "cuando": "120 días desde la firma",
-          "titulo": "El plazo de la autorización de venta",
-          "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
         }
       ]
     },
@@ -308,8 +309,6 @@
       "tipo": "videos",
       "rotulo": "Resultados",
       "titulo": "Lo que *vendimos* trabajando así",
-      "numero": "+20",
-      "pie": "vendidas en los últimos 12 meses",
       "nombre": "Lo que vendimos"
     },
     {
@@ -323,15 +322,11 @@
         },
         {
           "titulo": "Exclusividad por 120 días",
-          "texto": "90 de promedio para vender y 30 para escriturar."
+          "texto": "Contados desde la firma: dan tiempo para vender y para escriturar."
         },
         {
           "titulo": "Honorarios: 3 %",
           "texto": "A través del martillero."
-        },
-        {
-          "titulo": "Seguimiento",
-          "texto": "Cada dos semanas recibís un informe con las consultas, las visitas y los comentarios de quienes vieron tu propiedad."
         },
         {
           "titulo": "Continuidad",
@@ -341,26 +336,8 @@
     },
     {
       "tipo": "cierre",
-      "titulo": "Hoy firmamos *la autorización de venta*",
-      "texto": "Si estás de acuerdo con el valor y con la forma de trabajo, este es el camino.",
-      "pasos": [
-        {
-          "cuando": "Hoy",
-          "titulo": "Firmamos la autorización de venta"
-        },
-        {
-          "cuando": "Día 1 al 3",
-          "titulo": "Relevamiento: fotos, videos y todo lo necesario para las primeras dos semanas"
-        },
-        {
-          "cuando": "A las 2 semanas de publicada",
-          "titulo": "Recibís tu primer informe, y después uno cada dos semanas"
-        },
-        {
-          "cuando": "A los 90 días de publicada",
-          "titulo": "Nuestro promedio de venta"
-        }
-      ]
+      "titulo": "¿*Avanzamos?*",
+      "texto": "Si estás de acuerdo con el valor y con la forma de trabajo, hoy firmamos la autorización de venta."
     }
   ]
 }

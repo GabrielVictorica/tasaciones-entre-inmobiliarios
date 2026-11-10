@@ -118,8 +118,13 @@
       "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
       "items": [
         {
+          "cuando": "El día de la firma",
+          "titulo": "Firmamos la autorización de venta",
+          "texto": "Con eso empiezo a trabajar tu propiedad."
+        },
+        {
           "cuando": "Día 1 al 3",
-          "titulo": "Relevamiento de la propiedad",
+          "titulo": "Relevamiento",
           "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
         },
         {
@@ -130,31 +135,25 @@
         {
           "cuando": "A las 2 semanas de publicada",
           "titulo": "Tu primer informe",
-          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron de tu propiedad."
+          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron."
         },
         {
           "cuando": "Cada dos semanas",
           "titulo": "Contenido nuevo e informe",
-          "texto": "Siempre recibís un informe cada dos semanas, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
+          "texto": "Siempre recibís un informe, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
         },
         {
           "cuando": "A los 90 días de publicada",
           "titulo": "Nuestro promedio de venta",
           "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
-        },
-        {
-          "cuando": "120 días desde la firma",
-          "titulo": "El plazo de la autorización de venta",
-          "texto": "La exclusividad es por 120 días, contados desde la firma: da tiempo para vender y para escriturar."
         }
-      ]
+      ],
+      "nombre": "Cómo trabajo"
     },
     {
       "tipo": "videos",
       "rotulo": "Resultados",
       "titulo": "Lo que *vendimos* trabajando así",
-      "numero": "+20",
-      "pie": "vendidas en los últimos 12 meses",
       "nombre": "Lo que vendimos"
     },
     {
