@@ -184,7 +184,8 @@
               "m2": 440,
               "precio": 36000,
               "fuente": "Indexa",
-              "link": "https://www.indexaprop.com.ar/propiedad/231195_terreno-en-esquina-b-pecini-440m2/"
+              "link": "https://www.indexaprop.com.ar/propiedad/231195_terreno-en-esquina-b-pecini-440m2/",
+              "dias": "más de 68"
             },
             {
               "titulo": "Lote en esquina",
@@ -216,7 +217,7 @@
       "cierre": 32000,
       "neto": 31040,
       "moneda": "USD",
-      "como": "Son 327,66 m² a USD 97,7 el metro."
+      "como": "Son 327,66 m² a USD 97,7 el metro: entre lo que se pide en Pecini y en la zona Óvalo, donde el lote 15 lleva 119 días publicado a USD 103,5 sin venderse."
     },
     {
       "tipo": "staging",
@@ -247,7 +248,7 @@
         },
         {
           "cuando": "Día 1 al 3",
-          "titulo": "Relevamiento",
+          "titulo": "Relevamiento y estrategia comercial",
           "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
         },
         {
