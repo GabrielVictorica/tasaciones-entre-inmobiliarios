@@ -32,8 +32,8 @@
       "grande": true,
       "texto": "Estar en venta no es lo mismo que *vender.*",
       "parrafos": [
-        "Pero valor de mercado hay uno solo.",
-        "Publicar es el primer paso. Las que se venden son las que están a valor de mercado y bien comercializadas."
+        "El problema es que valor de mercado hay uno solo. No existe otro.",
+        "Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
       ]
     },
     {
@@ -289,7 +289,12 @@
         {
           "cuando": "Cada dos semanas",
           "titulo": "Contenido nuevo e informe",
-          "texto": "Te paso un informe y se renuevan las fotos y los videos para que siga activa, hasta que se venda."
+          "texto": "Siempre recibís un informe, haya o no resultados, y se renuevan las fotos y los videos para que siga activa."
+        },
+        {
+          "cuando": "A los 90 días de publicada",
+          "titulo": "Nuestro promedio de venta",
+          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
         }
       ]
     },
