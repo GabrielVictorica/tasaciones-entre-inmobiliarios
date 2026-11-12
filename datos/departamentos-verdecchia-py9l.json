@@ -108,7 +108,7 @@
       "tipo": "metodo",
       "rotulo": "El método",
       "titulo": "Cómo se *tasó*",
-      "texto": "Hay dos formas de saber cuánto vale una propiedad.",
+      "texto": "Hay dos formas de saber cuánto vale una propiedad. Para tus departamentos se usaron las dos.",
       "items": [
         {
           "titulo": "Método de *comparables*",
@@ -124,8 +124,25 @@
             "Se mira la propiedad como una inversión: cuánto deja por año si se alquila, comparado con lo que cuesta.",
             "Responde una pregunta: ¿en cuántos años quien la compra recupera lo que puso?"
           ],
-          "usado": false,
-          "uso": "Pendiente: falta el alquiler de la zona"
+          "usado": true,
+          "cuenta": [
+            {
+              "que": "Alquiler por mes, 1 dormitorio",
+              "valor": "$550.000"
+            },
+            {
+              "que": "Alquiler por año",
+              "valor": "$6.600.000 (unos USD 4.244)"
+            },
+            {
+              "que": "Lo que busca quien compra para alquilar",
+              "valor": "Que rinda entre 10 y 11 % por año"
+            },
+            {
+              "que": "Se recupera en",
+              "valor": "9 a 10 años"
+            }
+          ]
         }
       ]
     },
