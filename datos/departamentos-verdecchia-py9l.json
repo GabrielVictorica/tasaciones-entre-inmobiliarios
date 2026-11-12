@@ -48,7 +48,7 @@
         },
         {
           "que": "A la venta",
-          "valor": "5: tres en planta baja y dos en planta alta"
+          "valor": "4, los primeros desde la entrada: dos en planta baja y dos en planta alta"
         },
         {
           "que": "Ubicación",
@@ -64,19 +64,19 @@
         },
         {
           "que": "Patio o terraza",
-          "valor": "10 a 15 m²"
+          "valor": "13 a 15 m²"
         },
         {
           "que": "Superficie para tasar",
-          "valor": "46 a 50 m²: la cubierta más un tercio del patio o la terraza"
+          "valor": "47 a 50 m²: la cubierta más un tercio del patio o la terraza"
         },
         {
           "que": "Ambientes",
           "valor": "Dormitorio, estar-comedor, cocina y baño"
         },
         {
-          "que": "Orientación",
-          "valor": "Norte"
+          "que": "Orientación del terreno",
+          "valor": "Oeste"
         },
         {
           "que": "Construcción",
@@ -99,9 +99,9 @@
       "texto": "Lo que juega a favor y lo que conviene tener en cuenta.",
       "fortalezas": [
         "La calidad de construcción: mejor que la de los departamentos de la zona.",
-        "Muy luminosos.",
+        "Mucha luz: los ventanales dan al norte.",
         "Patios y terrazas grandes, con parrilla.",
-        "Uno tiene entrada de auto.",
+        "Dos tienen entrada de auto.",
         "Están del lado sur del canal. Del lado norte la zona ya es otra, salvo a una o dos cuadras del IUPA."
       ],
       "debilidades": [
@@ -277,22 +277,8 @@
       "cierre": 53000,
       "neto": 51410,
       "moneda": "USD",
-      "como": "Es el mismo para los cinco departamentos: entre USD 1.060 y 1.145 el metro, según la superficie para tasar de cada uno."
-    },
-    {
-      "tipo": "staging",
-      "rotulo": "El primer paso",
-      "titulo": "Cómo preparar *tus departamentos*",
-      "texto": "Sin obra. Un cambio que puede sumar compradores.",
-      "items": [
-        {
-          "titulo": "Dejar el ambiente abierto",
-          "puntos": [
-            "Donde todavía no está la división de durlock, no hacerla: que quede tipo monoambiente.",
-            "Así quien compra decide si la hace, a su gusto."
-          ]
-        }
-      ]
+      "como": "Es el mismo para los cuatro departamentos: entre USD 1.060 y 1.120 el metro, según la superficie para tasar de cada uno.",
+      "nota": "Los gastos de escritura, en General Roca, los paga únicamente el comprador."
     },
     {
       "tipo": "tiempo",
