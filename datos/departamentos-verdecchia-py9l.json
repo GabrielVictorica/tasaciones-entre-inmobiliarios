@@ -1,0 +1,309 @@
+{
+  "tipo": "Tasación",
+  "titulo": "Departamentos en *barrio Verdecchia*",
+  "bajada": "General Roca · Noviembre 2026",
+  "bloques": [
+    {
+      "tipo": "portada"
+    },
+    {
+      "tipo": "escribe",
+      "rotulo": "Quién soy",
+      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Acompaño a propietarios a vender su propiedad *a valor de mercado.*",
+      "cifras": [
+        {
+          "numero": "+4",
+          "texto": "años en el rubro, en Roca"
+        },
+        {
+          "numero": "+20",
+          "texto": "propiedades vendidas en 12 meses"
+        },
+        {
+          "numero": "90",
+          "texto": "días de venta promedio, desde que se publica"
+        }
+      ]
+    },
+    {
+      "tipo": "escribe",
+      "grande": true,
+      "texto": "Estar en venta no es lo mismo que *vender.*",
+      "parrafos": [
+        "El problema es que valor de mercado hay uno solo. No existe otro.",
+        "Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
+      ]
+    },
+    {
+      "tipo": "ficha",
+      "nombre": "Tus departamentos",
+      "rotulo": "La propiedad",
+      "titulo": "Tus *departamentos*",
+      "texto": "Los datos con los que se hizo esta tasación.",
+      "datos": [
+        {
+          "que": "Tipo",
+          "valor": "Departamentos a estrenar"
+        },
+        {
+          "que": "Ubicación",
+          "valor": "Barrio Verdecchia, General Roca"
+        },
+        {
+          "que": "Cerca de",
+          "valor": "El IUPA, la universidad de artes"
+        },
+        {
+          "que": "Superficie cubierta",
+          "valor": "s/d"
+        },
+        {
+          "que": "Semicubierta y patio",
+          "valor": "s/d"
+        },
+        {
+          "que": "Ambientes",
+          "valor": "s/d"
+        },
+        {
+          "que": "Planta",
+          "valor": "s/d"
+        },
+        {
+          "que": "Cochera",
+          "valor": "s/d"
+        },
+        {
+          "que": "Servicios",
+          "valor": "s/d"
+        },
+        {
+          "que": "Papeles",
+          "valor": "s/d"
+        }
+      ]
+    },
+    {
+      "tipo": "foda",
+      "rotulo": "Análisis",
+      "titulo": "Tus departamentos y el mercado *que los rodea*",
+      "texto": "Lo que juega a favor y lo que conviene tener en cuenta.",
+      "fortalezas": [
+        "Son a estrenar.",
+        "Están del lado sur del canal. Del lado norte la zona ya es otra, salvo a una o dos cuadras del IUPA."
+      ],
+      "debilidades": [
+        "Las calles de la zona son de ripio."
+      ],
+      "oportunidades": [
+        "Quien compra un departamento de un dormitorio en la zona lo compra para alquilarlo.",
+        "La zona tiene movimiento: Damas Patricias, una calle principal, tiene muchos comercios."
+      ],
+      "amenazas": [
+        "Los Olmos y San Cayetano buscan al mismo comprador, y mucha gente los ve un escalón más arriba.",
+        "Desde USD 1.300 el metro aparecen departamentos en complejos del centro y, más arriba, en torres con ascensor."
+      ]
+    },
+    {
+      "tipo": "metodo",
+      "rotulo": "El método",
+      "titulo": "Cómo se *tasó*",
+      "texto": "Hay dos formas de saber cuánto vale una propiedad.",
+      "items": [
+        {
+          "titulo": "Método de *comparables*",
+          "parrafos": [
+            "Se buscan propiedades parecidas a la tuya, en la misma zona, y se mira a cuánto están publicadas o en cuánto se vendieron.",
+            "El valor de la tuya sale de compararla con ellas: si es mejor, vale un poco más; si tiene algo en contra, un poco menos."
+          ],
+          "usado": true
+        },
+        {
+          "titulo": "Método de *recupero*",
+          "parrafos": [
+            "Se mira la propiedad como una inversión: cuánto deja por año si se alquila, comparado con lo que cuesta.",
+            "Responde una pregunta: ¿en cuántos años quien la compra recupera lo que puso?"
+          ],
+          "usado": false,
+          "uso": "Pendiente: falta el alquiler de la zona"
+        }
+      ]
+    },
+    {
+      "tipo": "comparables",
+      "rotulo": "La zona",
+      "titulo": "Los *comparables*",
+      "texto": "Departamentos vendidos y publicados en la zona del IUPA y en los barrios de alrededor.",
+      "ayuda": "Cada renglón es un departamento vendido o publicado. Como no todos miden lo mismo, se comparan por el precio de cada metro cubierto: el precio dividido por los metros cubiertos. Con «Ver el aviso» abrís la publicación.",
+      "por_m2": true,
+      "moneda": "USD",
+      "grupos": [
+        {
+          "titulo": "Zona *IUPA*",
+          "texto": "La misma zona que tus departamentos.",
+          "items": [
+            {
+              "titulo": "Departamento de 1 dormitorio en planta baja",
+              "fuente": "Marketplace",
+              "m2": 38,
+              "precio": 42000,
+              "vendida": true,
+              "nota": "Calle asfaltada, a 2 cuadras del IUPA",
+              "link": "https://www.facebook.com/marketplace/item/912113817846874/"
+            },
+            {
+              "titulo": "Departamento de 2 dormitorios en primer piso",
+              "fuente": "Marketplace",
+              "m2": 58,
+              "precio": 55000,
+              "vendida": true,
+              "nota": "2 años de antigüedad",
+              "link": "https://www.facebook.com/marketplace/item/1766969884568900/"
+            },
+            {
+              "titulo": "Departamento de 1 dormitorio sobre O'Higgins",
+              "fuente": "Zonaprop",
+              "m2": 33,
+              "precio": 45000,
+              "dias": 30,
+              "nota": "5 años de antigüedad",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-venta-de-departamento-zona-iupa-60432098.html"
+            }
+          ]
+        },
+        {
+          "titulo": "*Los Olmos*",
+          "items": [
+            {
+              "titulo": "Departamento de 2 dormitorios en primer piso",
+              "fuente": "Marketplace",
+              "m2": 57.67,
+              "precio": 58000,
+              "vendida": true,
+              "link": "https://www.facebook.com/marketplace/item/1402996051308578/"
+            },
+            {
+              "titulo": "Departamento de 1 dormitorio en planta baja",
+              "fuente": "Zonaprop",
+              "m2": 37,
+              "precio": 56000,
+              "dias": 86,
+              "nota": "10 años de antigüedad",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-en-planta-baja-en-barrio-los-59898347.html"
+            }
+          ]
+        },
+        {
+          "titulo": "*San Cayetano*",
+          "items": [
+            {
+              "titulo": "Departamento de 1 dormitorio en planta baja",
+              "fuente": "Marketplace",
+              "m2": 33.51,
+              "precio": 42000,
+              "nota": "Patio y cochera compartida",
+              "link": "https://www.facebook.com/marketplace/item/1465182515633581/"
+            }
+          ]
+        },
+        {
+          "titulo": "*Centro*",
+          "items": [
+            {
+              "titulo": "Departamento de 1 dormitorio en planta baja",
+              "fuente": "Marketplace",
+              "m2": 36,
+              "precio": 42000,
+              "dias": "cerca de 365",
+              "nota": "6 años de antigüedad, sobre Misiones",
+              "link": "https://www.facebook.com/marketplace/item/2103218623929525/"
+            }
+          ]
+        }
+      ],
+      "conclusion": "Lo vendido va de USD 948 a 1.105 el metro cubierto: *cuanto más grande el departamento, más bajo el valor del metro.*",
+      "nota": "Los vendidos muestran el precio real de venta; el resto, el precio publicado."
+    },
+    {
+      "tipo": "conclusion",
+      "rotulo": "Mi mirada",
+      "titulo": "Mi *conclusión*",
+      "parrafos": [
+        "Son departamentos nuevos en una zona que se mueve: cerca de la universidad, con comercio y con compradores que buscan renta.",
+        "Que sean a estrenar suma, pero en esta zona el metro tiene un techo, alrededor de USD 1.200. Más arriba, el comprador ya mira Los Olmos, San Cayetano o el centro.",
+        "Por eso hay que cuidar el valor del metro: a ese valor, tus departamentos son los primeros que mira quien busca en la zona."
+      ],
+      "frase": "En esta zona, *cuidar el metro* es lo que hace que se vendan."
+    },
+    {
+      "tipo": "tiempo",
+      "nombre": "Cómo trabajo",
+      "rotulo": "Cómo trabajo",
+      "titulo": "Qué pasa con tus departamentos, *desde hoy*",
+      "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
+      "items": [
+        {
+          "cuando": "Hoy",
+          "titulo": "Firmamos la autorización de venta",
+          "texto": "Con eso empiezo a trabajar tus departamentos."
+        },
+        {
+          "cuando": "Día 1 al 3",
+          "titulo": "Relevamiento y estrategia comercial",
+          "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
+        },
+        {
+          "cuando": "Publicación",
+          "titulo": "Salen a la venta",
+          "texto": "A valor de mercado, en Instagram y Facebook, con fotos, videos y pauta. Sin carteles ni portales."
+        },
+        {
+          "cuando": "A las 2 semanas de publicados",
+          "titulo": "Tu primer informe",
+          "texto": "Cuántas personas consultaron, cuántas los visitaron y qué dijeron."
+        },
+        {
+          "cuando": "Cada dos semanas",
+          "titulo": "Contenido nuevo e informe",
+          "texto": "Siempre recibís un informe, haya o no resultados, y se renuevan las fotos y los videos para que sigan activos."
+        },
+        {
+          "cuando": "A los 90 días de publicados",
+          "titulo": "Nuestro promedio de venta",
+          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+        }
+      ]
+    },
+    {
+      "tipo": "videos",
+      "rotulo": "Resultados",
+      "titulo": "Lo que *vendimos* trabajando así",
+      "nombre": "Lo que vendimos"
+    },
+    {
+      "tipo": "lista",
+      "nombre": "Condiciones de trabajo",
+      "rotulo": "El acuerdo",
+      "titulo": "Condiciones de *trabajo*",
+      "items": [
+        {
+          "titulo": "Valor de mercado",
+          "texto": "El valor lo define el mercado; esta tasación es mi lectura de ese valor. Si los compradores muestran otra cosa, lo revisamos juntos con los datos. Y si en algún momento no coincidimos, lo hablamos a tiempo y vemos juntos cómo seguir."
+        },
+        {
+          "titulo": "Exclusividad por 120 días",
+          "texto": "Contados desde la firma: dan tiempo para vender y para escriturar."
+        },
+        {
+          "titulo": "Honorarios: 3 %",
+          "texto": "A través del martillero."
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "¿*Avanzamos?*",
+      "texto": "Si estás de acuerdo con el valor y con la forma de trabajo, hoy firmamos la autorización de venta."
+    }
+  ]
+}
