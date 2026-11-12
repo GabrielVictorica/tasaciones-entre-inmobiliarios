@@ -2,6 +2,7 @@
   "tipo": "Tasación",
   "titulo": "Departamentos en *barrio Verdecchia*",
   "bajada": "General Roca · Noviembre 2026",
+  "foto": "fotos/departamentos-verdecchia-py9l.jpg",
   "bloques": [
     {
       "tipo": "portada"
@@ -43,7 +44,11 @@
       "datos": [
         {
           "que": "Tipo",
-          "valor": "Departamentos a estrenar"
+          "valor": "Departamentos de 1 dormitorio, a estrenar"
+        },
+        {
+          "que": "A la venta",
+          "valor": "5: tres en planta baja y dos en planta alta"
         },
         {
           "que": "Ubicación",
@@ -51,35 +56,39 @@
         },
         {
           "que": "Cerca de",
-          "valor": "El IUPA, la universidad de artes"
+          "valor": "A 400 metros del IUPA, la universidad de artes"
         },
         {
           "que": "Superficie cubierta",
-          "valor": "s/d"
+          "valor": "43 a 45 m²"
         },
         {
-          "que": "Semicubierta y patio",
-          "valor": "s/d"
+          "que": "Patio o terraza",
+          "valor": "10 a 15 m²"
+        },
+        {
+          "que": "Superficie para tasar",
+          "valor": "46 a 50 m²: la cubierta más un tercio del patio o la terraza"
         },
         {
           "que": "Ambientes",
-          "valor": "s/d"
+          "valor": "Dormitorio, estar-comedor, cocina y baño"
         },
         {
-          "que": "Planta",
-          "valor": "s/d"
+          "que": "Orientación",
+          "valor": "Norte"
         },
         {
-          "que": "Cochera",
-          "valor": "s/d"
+          "que": "Construcción",
+          "valor": "Doble muro exterior, pisos de porcelanato, mesada de granito y aberturas de aluminio"
         },
         {
-          "que": "Servicios",
-          "valor": "s/d"
+          "que": "Equipamiento",
+          "valor": "Cocina completa, calefactor y termotanque"
         },
         {
           "que": "Papeles",
-          "valor": "s/d"
+          "valor": "Con escritura. Escribano a designar"
         }
       ]
     },
@@ -89,11 +98,16 @@
       "titulo": "Tus departamentos y el mercado *que los rodea*",
       "texto": "Lo que juega a favor y lo que conviene tener en cuenta.",
       "fortalezas": [
-        "Son a estrenar.",
+        "La calidad de construcción: mejor que la de los departamentos de la zona.",
+        "Muy luminosos.",
+        "Patios y terrazas grandes, con parrilla.",
+        "Uno tiene entrada de auto.",
         "Están del lado sur del canal. Del lado norte la zona ya es otra, salvo a una o dos cuadras del IUPA."
       ],
       "debilidades": [
-        "Las calles de la zona son de ripio."
+        "El dormitorio es justo: a algunos compradores les puede parecer chico.",
+        "Las calles de la zona son de ripio.",
+        "Todavía no tienen subdivisión ni final de obra. Conviene saber pronto qué dice la municipalidad sobre los cambios al plano."
       ],
       "oportunidades": [
         "Quien compra un departamento de un dormitorio en la zona lo compra para alquilarlo.",
@@ -127,20 +141,24 @@
           "usado": true,
           "cuenta": [
             {
-              "que": "Alquiler por mes, 1 dormitorio",
-              "valor": "$550.000"
+              "que": "Alquiler por mes",
+              "valor": "$600.000"
             },
             {
               "que": "Alquiler por año",
-              "valor": "$6.600.000 (unos USD 4.244)"
+              "valor": "$7.200.000 (unos USD 4.630)"
             },
             {
-              "que": "Lo que busca quien compra para alquilar",
-              "valor": "Que rinda entre 10 y 11 % por año"
+              "que": "Precio de cierre esperado",
+              "valor": "USD 53.000"
+            },
+            {
+              "que": "Rinde por año",
+              "valor": "8,7 %"
             },
             {
               "que": "Se recupera en",
-              "valor": "9 a 10 años"
+              "valor": "unos 11 años y medio"
             }
           ]
         }
@@ -246,11 +264,35 @@
       "rotulo": "Mi mirada",
       "titulo": "Mi *conclusión*",
       "parrafos": [
-        "Son departamentos nuevos en una zona que se mueve: cerca de la universidad, con comercio y con compradores que buscan renta.",
-        "Que sean a estrenar suma, pero en esta zona el metro tiene un techo, alrededor de USD 1.200. Más arriba, el comprador ya mira Los Olmos, San Cayetano o el centro.",
-        "Por eso hay que cuidar el valor del metro: a ese valor, tus departamentos son los primeros que mira quien busca en la zona."
+        "Son departamentos nuevos, mejor construidos que los de la zona, en un lugar que se mueve: cerca de la universidad, con comercio y con compradores que buscan renta.",
+        "Esa diferencia de calidad es la que permite llegar al techo de la zona, alrededor de USD 1.200 el metro. Estamos en el límite: más arriba, el comprador ya mira Los Olmos, San Cayetano o el centro."
       ],
-      "frase": "En esta zona, *cuidar el metro* es lo que hace que se vendan."
+      "frase": "La calidad los lleva *al techo de la zona*: desde ahí escuchamos ofertas."
+    },
+    {
+      "tipo": "precios",
+      "rotulo": "El valor",
+      "titulo": "Los tres *precios*",
+      "publicacion": 56000,
+      "cierre": 53000,
+      "neto": 51410,
+      "moneda": "USD",
+      "como": "Es el mismo para los cinco departamentos: entre USD 1.060 y 1.145 el metro, según la superficie para tasar de cada uno."
+    },
+    {
+      "tipo": "staging",
+      "rotulo": "El primer paso",
+      "titulo": "Cómo preparar *tus departamentos*",
+      "texto": "Sin obra. Un cambio que puede sumar compradores.",
+      "items": [
+        {
+          "titulo": "Dejar el ambiente abierto",
+          "puntos": [
+            "Donde todavía no está la división de durlock, no hacerla: que quede tipo monoambiente.",
+            "Así quien compra decide si la hace, a su gusto."
+          ]
+        }
+      ]
     },
     {
       "tipo": "tiempo",
