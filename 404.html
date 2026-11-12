@@ -374,12 +374,14 @@ const BLOQUES = {
       <div class="cinta" data-cinta>${una}${una}</div></section>`; },
 
   // Los tres precios. "como" (opcional) explica en una línea de dónde sale el de cierre.
-  precios: (b) => { const u = e(b.moneda || "USD"), p = (v) => `<div class="precio"><small>${u}</small><span data-cuenta="${v}">${plata(v)}</span></div>`;
+  // "nota" (opcional) reemplaza la nota de abajo; si no viene, queda la de siempre.
+  precios: (b) => { const u = e(b.moneda || "USD"), p = (v) => `<div class="precio"><small>${u}</small><span data-cuenta="${v}">${plata(v)}</span></div>`,
+      nota = b.nota ?? "Aparte, si corresponde: la verificación del estado parcelario, a cargo de un agrimensor. Los gastos de escritura, en General Roca, los paga el comprador.";
     return `<section class="precios"><div class="ancho">${cabeza(b, b.rotulo)}${intro(b)}<div class="grilla-auto">
       <div class="tarjeta entra"><h3>1 · Valor de publicación sugerido</h3>${p(b.publicacion)}<p>Con este valor sale a la venta. Deja un margen para negociar.</p></div>
       <div class="tarjeta medio entra" style="--i:1"><h3>2 · Precio de cierre esperado</h3>${p(b.cierre)}<p>Es la tasación: en lo que espero que se venda.${b.como ? " " + e(b.como) : ""}</p></div>
       <div class="tarjeta entra" style="--i:2"><h3>3 · Lo que te queda</h3>${p(b.neto)}<p>El precio de cierre menos el 3 % de honorarios.</p></div></div>
-      <p class="nota entra">Aparte, si corresponde: la verificación del estado parcelario, a cargo de un agrimensor. Los gastos de escritura, en General Roca, los paga el comprador.</p></div></section>`; },
+      ${nota ? `<p class="nota entra">${e(nota)}</p>` : ""}</div></section>`; },
 
   texto: (b) => `<section><div class="ancho">${cabeza(b, b.rotulo)}${(b.parrafos || []).map((p) => `<p class="texto entra">${mix(p)}</p>`).join("")}</div></section>`,
 
