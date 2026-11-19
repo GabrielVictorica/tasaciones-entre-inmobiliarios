@@ -24,7 +24,9 @@
           "numero": "90",
           "texto": "días de venta promedio, desde que se publica"
         }
-      ]
+      ],
+      "foto": "fotos/gabriel-victorica.webp",
+      "foto_pie": "Gabriel Victorica"
     },
     {
       "tipo": "escribe",
