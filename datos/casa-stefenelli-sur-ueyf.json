@@ -286,25 +286,34 @@
       "tipo": "staging",
       "rotulo": "El primer paso",
       "titulo": "Cómo preparar *tu casa*",
-      "texto": "Sin obra. Tu casa ya está en muy buen estado: estos detalles la hacen lucir todavía mejor en las fotos y en la visita.",
+      "texto": "Sin obra. Tu casa ya está en muy buen estado: son cuatro puntos para que luzca en las fotos y en la visita.",
       "items": [
+        {
+          "titulo": "Iluminar",
+          "puntos": [
+            "Cortinas abiertas y luces prendidas, en las fotos y en cada visita.",
+            "Con más luz, los ambientes se ven más amplios y cálidos."
+          ]
+        },
         {
           "titulo": "Limpiar y ordenar",
           "puntos": [
-            "Despejar los ladrillos, los tanques y las maderas que están junto a la parrilla.",
-            "Dejar la mesada del lavadero libre."
+            "Ambientes despejados y limpios, adentro y afuera.",
+            "Así, quien visita mira la casa y no lo que hay en ella."
           ]
         },
         {
           "titulo": "Reparar",
           "puntos": [
-            "Pintar la pared blanca del costado de la pileta."
+            "Antes de las fotos, revisar que todo funcione: luces, manijas, canillas.",
+            "Lo chico también se nota en la visita."
           ]
         },
         {
           "titulo": "Despersonalizar",
           "puntos": [
-            "Ordenar el segundo dormitorio: la cama libre y los objetos personales guardados."
+            "Guardar fotos y objetos personales.",
+            "Así, quien visita se imagina viviendo ahí."
           ]
         }
       ]
