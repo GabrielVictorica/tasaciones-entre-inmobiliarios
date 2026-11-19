@@ -83,6 +83,8 @@ section{padding:clamp(64px,10vh,120px) 0;position:relative}
 .escribe .grande{font-weight:500;font-size:clamp(42px,8vw,118px);line-height:.96;letter-spacing:-.05em;max-width:13ch;text-wrap:balance}
 .escribe .grande em{color:var(--acento)}
 .escribe .medio{font-weight:500;font-size:clamp(27px,4.2vw,56px);line-height:1.06;letter-spacing:-.04em;max-width:23ch;text-wrap:balance}
+.escribe .yo{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:end}
+.escribe .retrato img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
 .cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,3.4vw,40px);border-top:1px solid var(--linea);padding-top:30px;margin-top:48px}
 .cifra b{display:block;font-weight:500;font-size:clamp(40px,13vw,104px);line-height:.9;letter-spacing:-.055em;font-variant-numeric:tabular-nums;white-space:nowrap}
 .cifra span{display:block;margin-top:12px;font-size:clamp(12.5px,1.5vw,14px);line-height:1.4;color:var(--suave);max-width:22ch}
@@ -255,6 +257,7 @@ section{padding:clamp(64px,10vh,120px) 0;position:relative}
   .foda .tres{grid-template-columns:1fr}.foda .medio{display:none}
   .foda .lado.izq{text-align:left}.foda .lado{gap:36px}
   .ficha dl div{grid-template-columns:1fr;gap:4px}
+  .escribe .yo{grid-template-columns:1fr;gap:28px}.escribe .retrato{order:-1;max-width:260px}
   /* en el celular los comparables siguen siendo una tabla (pedido de Gabriel, 19/11/2026): más chica, sin leer de costado */
   .tabla th,.tabla td{padding:13px 5px;font-size:14px}
   .tabla thead th{font-size:9.5px;letter-spacing:.03em;padding:8px 5px}
@@ -310,8 +313,10 @@ const BLOQUES = {
       <div class="base"><h1>${mix(d.titulo)}</h1><div class="tira"><span>${e(d.tipo)}</span><span>${e(lugar || "")}</span><span>${e(fecha || "")}</span></div></div></section>`; },
 
   // Un texto grande. "grande: true" para una frase corta. Puede llevar cifras, párrafos y un caso.
-  escribe: (b) => `<section class="escribe"><div class="ancho">${b.rotulo ? `<p class="rotulo entra">${e(b.rotulo)}</p>` : ""}<p class="${b.grande ? "grande" : "medio"} entra">${mix(b.texto)}</p>
-    ${b.cifras ? cifras(b.cifras) : ""}${b.parrafos || b.caso ? `<div class="desarrollo">${(b.parrafos || []).map((p) => `<p class="entra">${mix(p)}</p>`).join("")}${b.caso ? `<p class="caso entra">${e(b.caso)}</p>` : ""}</div>` : ""}</div></section>`,
+  // "foto" (opcional): un retrato al lado del texto; en el celular va arriba. Se usa en «Quién soy».
+  escribe: (b) => { const f = archivo(b.foto), cab = `${b.rotulo ? `<p class="rotulo entra">${e(b.rotulo)}</p>` : ""}<p class="${b.grande ? "grande" : "medio"} entra">${mix(b.texto)}</p>`;
+    return `<section class="escribe"><div class="ancho">${f ? `<div class="yo"><div>${cab}</div><div class="retrato entra"><img src="${f}" alt="${e(b.foto_pie || "")}"></div></div>` : cab}
+    ${b.cifras ? cifras(b.cifras) : ""}${b.parrafos || b.caso ? `<div class="desarrollo">${(b.parrafos || []).map((p) => `<p class="entra">${mix(p)}</p>`).join("")}${b.caso ? `<p class="caso entra">${e(b.caso)}</p>` : ""}</div>` : ""}</div></section>`; },
 
   destacado: (b) => `<section class="destacado"><div class="ancho"><div class="caja"><div><h2 class="cita entra">${mix(b.cita)}</h2><p class="texto entra" style="--i:1">${e(b.texto)}</p></div>
     ${b.numero ? `<div class="entra" style="--i:2"><div class="numero" data-cuenta="${e(b.numero)}">${e(b.numero)}</div><p class="pie">${e(b.pie)}</p></div>` : ""}</div></div></section>`,
