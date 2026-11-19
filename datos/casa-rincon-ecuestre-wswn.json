@@ -276,11 +276,11 @@
       "rotulo": "Mi mirada",
       "titulo": "Mi *conclusión*",
       "parrafos": [
-        "Tu casa se distingue por cómo está hecha, y el terreno la acompaña: es lo que más va a valorar quien la visite.",
-        "En la venta, lo que se va a hablar no es la casa: es la ubicación.",
-        "Por eso el valor tiene que dejarla bien parada en la comparación. A este valor, y con una comercialización fuerte, es una de las primeras que mira quien busca calidad y espacio."
+        "Hay dos referencias claras. Las casas quinta de la zona se piden cerca de USD 1.000 el metro: ese es el piso, y la tuya las supera en calidad. Los barrios privados, más cerca del centro, rondan los USD 1.200: ese es el techo.",
+        "A USD 1.200, tu casa compite de igual a igual con los barrios privados, y ahí quien compara elige la cercanía. En tu mismo barrio, una casa a ese valor lleva más de 300 días sin venderse.",
+        "Las dos ventas cercanas muestran que este tipo de propiedad se vende: unos USD 750 el metro en la zona y más de USD 1.400 en un barrio privado. Por eso la propuesta es salir en el medio, cerca de USD 1.100 el metro."
       ],
-      "frase": "Cuando el valor acompaña, la calidad *se nota*."
+      "frase": "En el medio está el valor que *la hace ver*."
     },
     {
       "tipo": "precios",
@@ -290,7 +290,7 @@
       "cierre": 104000,
       "neto": 100880,
       "moneda": "USD",
-      "como": "Son 100 m² a USD 1.040 el metro. En tu mismo barrio, una casa con pileta y quincho lleva más de 300 días publicada a USD 120.000."
+      "como": "Son 100 m² a USD 1.040 el metro: entre el piso de las casas quinta y el techo de los barrios privados."
     },
     {
       "tipo": "staging",
