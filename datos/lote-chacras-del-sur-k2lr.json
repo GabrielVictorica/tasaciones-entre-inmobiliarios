@@ -1,0 +1,302 @@
+{
+  "tipo": "Tasación",
+  "titulo": "Lote en *Chacras del Sur*",
+  "bajada": "General Roca · Noviembre 2026",
+  "foto": "fotos/lote-chacras-del-sur-k2lr.jpg",
+  "foto_foco": "25% 50%",
+  "bloques": [
+    {
+      "tipo": "portada"
+    },
+    {
+      "tipo": "escribe",
+      "rotulo": "Quién soy",
+      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Acompaño a propietarios a vender su propiedad *a valor de mercado.*",
+      "cifras": [
+        {
+          "numero": "+4",
+          "texto": "años en el rubro, en Roca"
+        },
+        {
+          "numero": "+20",
+          "texto": "propiedades vendidas en 12 meses"
+        },
+        {
+          "numero": "90",
+          "texto": "días de venta promedio, desde que se publica"
+        }
+      ]
+    },
+    {
+      "tipo": "escribe",
+      "grande": true,
+      "texto": "Estar en venta no es lo mismo que *vender.*",
+      "parrafos": [
+        "El problema es que valor de mercado hay uno solo. No existe otro.",
+        "Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
+      ]
+    },
+    {
+      "tipo": "ficha",
+      "nombre": "Tu lote",
+      "rotulo": "La propiedad",
+      "titulo": "Tu *lote*",
+      "texto": "Los datos con los que se hizo esta tasación.",
+      "datos": [
+        {
+          "que": "Superficie",
+          "valor": "600 m²"
+        },
+        {
+          "que": "Medidas",
+          "valor": "s/d"
+        },
+        {
+          "que": "Orientación",
+          "valor": "s/d"
+        },
+        {
+          "que": "Ubicación",
+          "valor": "Barrio privado Chacras del Sur, General Roca"
+        },
+        {
+          "que": "Servicios",
+          "valor": "Luz, gas y agua"
+        },
+        {
+          "que": "Papeles",
+          "valor": "Escriturado"
+        }
+      ],
+      "foto": "ninguna"
+    },
+    {
+      "tipo": "foda",
+      "rotulo": "Análisis",
+      "titulo": "Tu lote y el mercado *que lo rodea*",
+      "texto": "Lo que juega a favor y lo que conviene tener en cuenta.",
+      "fortalezas": [
+        "Es un barrio lindo y tranquilo por dentro.",
+        "Es privado y tiene seguridad."
+      ],
+      "debilidades": [
+        "No tiene cloacas.",
+        "Queda lejos del centro.",
+        "Se entra por un kilómetro de calle de tierra que, cuando llueve, se embarra y complica el ingreso."
+      ],
+      "oportunidades": [
+        "Quien busca lote en el barrio compara precios: el más competitivo es el que recibe las primeras consultas."
+      ],
+      "amenazas": [
+        "Hay muchos lotes en venta en el barrio, y son parecidos entre sí."
+      ]
+    },
+    {
+      "tipo": "metodo",
+      "rotulo": "El método",
+      "titulo": "Cómo se *tasó*",
+      "texto": "Hay dos formas de saber cuánto vale una propiedad. Para tu lote se usó la primera.",
+      "items": [
+        {
+          "titulo": "Método de *comparables*",
+          "parrafos": [
+            "Se buscan propiedades parecidas a la tuya, en la misma zona, y se mira a cuánto están publicadas o en cuánto se vendieron.",
+            "El valor de la tuya sale de compararla con ellas: si es mejor, vale un poco más; si tiene algo en contra, un poco menos."
+          ],
+          "usado": true
+        },
+        {
+          "titulo": "Método de *recupero*",
+          "parrafos": [
+            "Se mira la propiedad como una inversión: cuánto deja por año si se alquila, comparado con lo que cuesta.",
+            "Responde una pregunta: ¿en cuántos años quien la compra recupera lo que puso?"
+          ],
+          "usado": false,
+          "uso": "No se usó: un lote no se alquila"
+        }
+      ]
+    },
+    {
+      "tipo": "comparables",
+      "rotulo": "El barrio",
+      "titulo": "Los *comparables*",
+      "texto": "Los lotes que hoy están en venta en Chacras del Sur.",
+      "ayuda": "Cada renglón es un lote publicado hoy en el barrio. Como no todos miden lo mismo, se comparan por el precio de cada metro: el precio dividido por la superficie. Abajo, la suma de esos valores dividida por la cantidad de lotes da el promedio del barrio. Con «Ver el aviso» abrís la publicación.",
+      "por_m2": true,
+      "moneda": "USD",
+      "grupos": [
+        {
+          "titulo": "Chacras *del Sur*",
+          "texto": "El mismo barrio que tu lote.",
+          "items": [
+            {
+              "titulo": "Lote 02",
+              "m2": 800,
+              "precio": 18000,
+              "dias": 175,
+              "fuente": "Zonaprop",
+              "nota": "20 × 40 m · 50 % de entrega y el resto en 3 cuotas",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/vecltrin-venta-de-terreno-en-b-chacras-del-sur-gral.-roca-59237387.html"
+            },
+            {
+              "titulo": "Lote 63",
+              "m2": 600.98,
+              "precio": 19000,
+              "fuente": "Marketplace",
+              "nota": "19,90 × 30,20 m · Escriturado",
+              "link": "https://www.facebook.com/marketplace/item/1054885320766497/"
+            },
+            {
+              "titulo": "Lote 38",
+              "m2": 600,
+              "precio": 19000,
+              "fuente": "Marketplace",
+              "nota": "20 × 30 m · USD 10.000 de entrega y 6 cuotas de USD 1.500",
+              "link": "https://www.facebook.com/marketplace/item/1643255517596217/"
+            },
+            {
+              "titulo": "Lote de 600 m²",
+              "m2": 600,
+              "precio": 19000,
+              "fuente": "Marketplace",
+              "nota": "50 % de entrega y el resto hasta en 12 cuotas",
+              "link": "https://www.facebook.com/marketplace/item/933395826381078/"
+            },
+            {
+              "titulo": "Lote 53",
+              "m2": 602,
+              "precio": 20000,
+              "fuente": "Marketplace",
+              "nota": "El aviso dice 698 m²; por sus medidas (19,90 × 30,26 m) son 602 m²",
+              "link": "https://www.facebook.com/marketplace/item/2295654977920612/"
+            },
+            {
+              "titulo": "Lote de 20 × 30 m",
+              "m2": 600,
+              "precio": 20000,
+              "dias": 6,
+              "fuente": "Zonaprop",
+              "nota": "Dueño directo · Vende o permuta",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/vecltrpa-lote-en-barrio-cerrado-chacras-del-sur-60694718.html"
+            },
+            {
+              "titulo": "Lote 49",
+              "m2": 600.98,
+              "precio": 22000,
+              "fuente": "Marketplace",
+              "nota": "Escriturado",
+              "link": "https://www.facebook.com/marketplace/item/1751499732839220/"
+            }
+          ]
+        }
+      ],
+      "conclusion": "Casi todos los lotes de 600 m² se piden entre *USD 19.000 y 20.000.*",
+      "nota": "Son precios publicados, no de venta. Tres de estos lotes se venden en cuotas, y eso suma compradores que no tienen todo el dinero junto."
+    },
+    {
+      "tipo": "conclusion",
+      "rotulo": "Mi mirada",
+      "titulo": "Mi *conclusión*",
+      "parrafos": [
+        "Chacras del Sur es un barrio lindo por dentro, privado y con los servicios para construir. Lo que pesa es la distancia y el ingreso, sobre todo cuando llueve.",
+        "Un lote compite por precio: no hay otra cosa que lo diferencie de los demás del barrio. A este valor, el tuyo es el primero que mira quien busca ahí."
+      ],
+      "frase": "En un lote, el *valor justo* es la mejor ventaja."
+    },
+    {
+      "tipo": "precios",
+      "rotulo": "El valor",
+      "titulo": "Los tres *precios*",
+      "publicacion": 18500,
+      "cierre": 18000,
+      "neto": 17460,
+      "moneda": "USD",
+      "como": "Son 600 m² a USD 30 el metro. El promedio del barrio es de USD 31,5, y los lotes de 600 m² a USD 19.000 llevan meses publicados sin venderse."
+    },
+    {
+      "tipo": "staging",
+      "rotulo": "El primer paso",
+      "titulo": "Cómo preparar *tu lote*",
+      "texto": "Sin obra. Un lote limpio se ve mejor en las fotos y en la visita.",
+      "items": [
+        {
+          "titulo": "Limpiar",
+          "puntos": [
+            "Pasto corto y parejo.",
+            "Sin restos de poda ni escombros a la vista."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "tiempo",
+      "nombre": "Cómo trabajo",
+      "rotulo": "Cómo trabajo",
+      "titulo": "Qué pasa con tu lote, *desde hoy*",
+      "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
+      "items": [
+        {
+          "cuando": "Hoy",
+          "titulo": "Firmamos la autorización de venta",
+          "texto": "Con eso empiezo a trabajar tu lote."
+        },
+        {
+          "cuando": "Día 1 al 3",
+          "titulo": "Relevamiento y estrategia comercial",
+          "texto": "Fotos, videos y todo lo necesario para las primeras dos semanas."
+        },
+        {
+          "cuando": "Publicación",
+          "titulo": "Sale a la venta",
+          "texto": "A valor de mercado, en Instagram y Facebook, con fotos, videos y pauta. Sin carteles ni portales."
+        },
+        {
+          "cuando": "A las 2 semanas de publicada",
+          "titulo": "Tu primer informe",
+          "texto": "Cuántas personas consultaron, cuántas lo visitaron y qué dijeron."
+        },
+        {
+          "cuando": "Cada dos semanas",
+          "titulo": "Contenido nuevo e informe",
+          "texto": "Siempre recibís un informe, haya o no resultados, y se renuevan las fotos y los videos para que siga activo."
+        },
+        {
+          "cuando": "A los 90 días de publicada",
+          "titulo": "Nuestro promedio de venta",
+          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+        }
+      ]
+    },
+    {
+      "tipo": "videos",
+      "rotulo": "Resultados",
+      "titulo": "Lo que *vendimos* trabajando así",
+      "nombre": "Lo que vendimos"
+    },
+    {
+      "tipo": "lista",
+      "rotulo": "El acuerdo",
+      "titulo": "Condiciones de *trabajo*",
+      "items": [
+        {
+          "titulo": "Valor de mercado",
+          "texto": "El valor lo define el mercado; esta tasación es mi lectura de ese valor. Si los compradores muestran otra cosa, lo revisamos juntos con los datos. Y si en algún momento no coincidimos, lo hablamos a tiempo y vemos juntos cómo seguir."
+        },
+        {
+          "titulo": "Exclusividad por 120 días",
+          "texto": "Contados desde la firma: dan tiempo para vender y para escriturar."
+        },
+        {
+          "titulo": "Honorarios: 3 %",
+          "texto": "A través del martillero."
+        }
+      ],
+      "nombre": "Condiciones de trabajo"
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "¿*Avanzamos?*",
+      "texto": "Si estás de acuerdo con el valor y con la forma de trabajo, hoy firmamos la autorización de venta."
+    }
+  ]
+}
