@@ -1,0 +1,393 @@
+{
+  "tipo": "Tasación",
+  "titulo": "Casa en *Stefenelli Sur*",
+  "bajada": "General Roca · Noviembre 2026",
+  "foto": "fotos/casa-stefenelli-sur-ueyf.jpg",
+  "foto_foco": "50% 65%",
+  "bloques": [
+    {
+      "tipo": "portada"
+    },
+    {
+      "tipo": "escribe",
+      "rotulo": "Quién soy",
+      "texto": "Soy Gabriel Victorica, asesor inmobiliario en General Roca. Acompaño a propietarios a vender su propiedad *a valor de mercado.*",
+      "cifras": [
+        {
+          "numero": "+4",
+          "texto": "años en el rubro, en Roca"
+        },
+        {
+          "numero": "+20",
+          "texto": "propiedades vendidas en 12 meses"
+        },
+        {
+          "numero": "90",
+          "texto": "días de venta promedio, desde que se publica"
+        }
+      ],
+      "foto": "fotos/gabriel-victorica.webp",
+      "foto_pie": "Gabriel Victorica"
+    },
+    {
+      "tipo": "escribe",
+      "grande": true,
+      "texto": "Estar en venta no es lo mismo que *vender.*",
+      "parrafos": [
+        "El problema es que valor de mercado hay uno solo. No existe otro.",
+        "Publicar, puede cualquiera. Las que se venden son las que están a valor de mercado y bien comercializadas."
+      ]
+    },
+    {
+      "tipo": "ficha",
+      "nombre": "Tu casa",
+      "rotulo": "La propiedad",
+      "titulo": "Tu *casa*",
+      "texto": "Los datos con los que se hizo esta tasación.",
+      "datos": [
+        {
+          "que": "Ubicación",
+          "valor": "Stefenelli Sur, zona Apycar, General Roca"
+        },
+        {
+          "que": "Terreno",
+          "valor": "1.167,77 m² (24 × 48,74 m)"
+        },
+        {
+          "que": "Superficie cubierta",
+          "valor": "74,40 m²"
+        },
+        {
+          "que": "Semicubierta",
+          "valor": "13,60 m² de galería"
+        },
+        {
+          "que": "Ambientes",
+          "valor": "2 dormitorios, 1 baño, lavadero y living, cocina y comedor integrados"
+        },
+        {
+          "que": "Pileta",
+          "valor": "Sí"
+        },
+        {
+          "que": "Galpón",
+          "valor": "De chapa, 12,5 × 6,5 m (81 m²), con luz y agua"
+        },
+        {
+          "que": "Orientación",
+          "valor": "Frente al este"
+        },
+        {
+          "que": "Servicios",
+          "valor": "Luz, agua, gas y biodigestor"
+        },
+        {
+          "que": "Antigüedad",
+          "valor": "3 años"
+        },
+        {
+          "que": "Estado",
+          "valor": "Muy bueno"
+        },
+        {
+          "que": "Papeles",
+          "valor": "Escritura"
+        }
+      ],
+      "parrafos": [
+        "Se construyó como quincho y después se dividió por dentro: hoy es una casa con todo integrado, con pisos de porcelanato."
+      ],
+      "foto": "fotos/casa-stefenelli-sur-ueyf-frente.jpg"
+    },
+    {
+      "tipo": "foda",
+      "rotulo": "Análisis",
+      "titulo": "Tu casa y el mercado *que la rodea*",
+      "texto": "Lo que juega a favor y lo que conviene tener en cuenta.",
+      "fortalezas": [
+        "Está muy bien construida y se diferencia de las casas quinta de la zona.",
+        "Tiene un parque con árboles grandes, algo que en los loteos nuevos ya no se encuentra.",
+        "Se llega por asfalto: solo la última cuadra es de ripio."
+      ],
+      "debilidades": [
+        "Queda lejos del centro. Para una familia con chicos que van y vienen varias veces al día, es lo primero que va a preguntar."
+      ],
+      "oportunidades": [
+        "Es apta crédito hipotecario en algunos bancos, aun con los planos por actualizar: eso suma compradores que no tienen todo el dinero junto.",
+        "Hoy casi no hay en Roca una casa así, con calidad, terreno y verde."
+      ],
+      "amenazas": [
+        "Las casas de los barrios privados, más cerca del centro, compiten por el mismo comprador, y él compara el valor del metro."
+      ]
+    },
+    {
+      "tipo": "metodo",
+      "rotulo": "El método",
+      "titulo": "Cómo se *tasó*",
+      "texto": "Para tu casa se usó el método de comparables.",
+      "items": [
+        {
+          "titulo": "Método de *comparables*",
+          "parrafos": [
+            "Se buscan propiedades parecidas a la tuya, en la misma zona, y se mira a cuánto están publicadas o en cuánto se vendieron.",
+            "El valor de la tuya sale de compararla con ellas: si es mejor, vale un poco más; si tiene algo en contra, un poco menos.",
+            "El galpón suma valor, pero no entra en los metros cubiertos. Por eso, a los 74,40 m² de la casa se les sumó un tercio del galpón."
+          ],
+          "usado": true
+        }
+      ]
+    },
+    {
+      "tipo": "comparables",
+      "rotulo": "El mercado",
+      "titulo": "Los *comparables*",
+      "texto": "Las casas quinta de la zona y las casas de los barrios privados, con las que tu casa compite.",
+      "ayuda": "Cada renglón es una casa publicada o vendida. Como no todas miden lo mismo, se comparan por el precio de cada metro cubierto: el precio dividido por los metros cubiertos. Abajo, la suma de esos valores dividida por la cantidad de casas da el promedio de cada grupo. Con «Ver el aviso» abrís la publicación.",
+      "por_m2": true,
+      "moneda": "USD",
+      "grupos": [
+        {
+          "titulo": "Casas quinta *de la zona*",
+          "texto": "Stefenelli Sur, Apycar, Rincón Ecuestre y Peumayén.",
+          "items": [
+            {
+              "titulo": "Quincho con pileta · Peumayén",
+              "fuente": "Venta propia",
+              "m2": 69,
+              "precio": 52000,
+              "vendida": true,
+              "nota": "Lote de 1.200 m² en esquina · se vendió con permuta",
+              "link": "https://www.facebook.com/marketplace/item/1293097539536580/"
+            },
+            {
+              "titulo": "Casa quinta · Stefenelli Sur",
+              "fuente": "Indexa",
+              "m2": 195,
+              "precio": 165000,
+              "dias": "más de 284",
+              "nota": "Casa de 120 m² + quincho de 75 m² · lote de 800 m² · pileta · 10 años · la página la marca como vendida, sin precio de venta",
+              "link": "https://www.indexaprop.com.ar/propiedad/198714_casa-quinta-con-pileta-y-quincho-stefenelli-sur-230m2/"
+            },
+            {
+              "titulo": "Casa quinta · Lago Escondido (Apycar)",
+              "fuente": "Zonaprop",
+              "m2": 90,
+              "precio": 85000,
+              "dias": "más de 130",
+              "nota": "Lote de 1.477 m² · a estrenar · bajó de USD 90.000",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcain-casa-2-hab-a-estrenar-zona-apicar-60690437.html"
+            },
+            {
+              "titulo": "Casa quinta · Lago Traful",
+              "fuente": "Zonaprop",
+              "m2": 121,
+              "precio": 140000,
+              "dias": 20,
+              "nota": "Lote de 2.500 m² · 3 dormitorios · 10 años",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcain-casa-quinta-de-3-dorm-60590688.html"
+            },
+            {
+              "titulo": "Casa quinta · Rincón Ecuestre",
+              "fuente": "Inmobiliaria Fontana",
+              "m2": 95,
+              "precio": 120000,
+              "dias": "más de 305",
+              "nota": "Lote de 1.650 m² · pileta y quincho · 2 baños",
+              "link": "https://www.inmobiliariafontana.com.ar/propiedad/194612_casa-quinta-rincon-ecuestre-120m%c2%b2-c-2-dormitorios-pileta-cochera/"
+            },
+            {
+              "titulo": "Casa quinta · Rincón Ecuestre (La Constancia)",
+              "fuente": "Marketplace",
+              "m2": 100,
+              "precio": 120000,
+              "dias": "más de 85",
+              "nota": "Lote de 2.500 m² · el precio figura en la descripción del aviso",
+              "link": "https://www.facebook.com/marketplace/item/1758130532178375/"
+            }
+          ]
+        },
+        {
+          "titulo": "Barrios *privados*",
+          "texto": "Casas más cerca del centro, con las que tu casa compite por calidad.",
+          "items": [
+            {
+              "titulo": "Casa · Don Emilio",
+              "fuente": "Zonaprop",
+              "m2": 100,
+              "precio": 140000,
+              "dias": "más de 365",
+              "nota": "Lote de 600 m² · 2 dormitorios · a estrenar",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcain-venta-casa-a-estrenar-en-barrio-don-emilio-c096-57158076.html"
+            },
+            {
+              "titulo": "Casa · Don Emilio",
+              "fuente": "Zonaprop",
+              "m2": 126,
+              "precio": 165000,
+              "dias": 41,
+              "nota": "3 dormitorios · 15 años",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcain-casa-en-venta-60409407.html"
+            },
+            {
+              "titulo": "Casa · Grand Parc",
+              "fuente": "Zonaprop",
+              "m2": 151,
+              "precio": 150000,
+              "dias": 183,
+              "nota": "3 dormitorios",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcain-venta-casa-apta-credito-en-barrio-privado-grand-parc-59178463.html"
+            },
+            {
+              "titulo": "Casa · Sol del Valle",
+              "fuente": "Zonaprop",
+              "m2": 170,
+              "precio": 200000,
+              "dias": 126,
+              "nota": "3 dormitorios · 3 años",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcain-venta-casa-barrio-privado-general-roca-59636925.html"
+            },
+            {
+              "titulo": "Casa · Sol del Valle",
+              "fuente": "Zonaprop",
+              "m2": 180,
+              "precio": 195000,
+              "dias": 44,
+              "nota": "3 dormitorios · pileta · 10 años",
+              "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclcain-casa-en-venta-de-3-dorm-con-pileta-b.-bodega-sol-del-60376713.html"
+            }
+          ]
+        }
+      ],
+      "conclusion": "En la zona, las casas quinta se piden a unos USD 1.000 el metro; en los barrios privados, a unos *USD 1.200.*",
+      "nota": "Son precios publicados, salvo Peumayén, que se vendió. Los metros son los cubiertos que figuran en cada aviso."
+    },
+    {
+      "tipo": "conclusion",
+      "rotulo": "Mi mirada",
+      "titulo": "Mi *conclusión*",
+      "parrafos": [
+        "Tu casa no se parece a lo que hoy se ofrece en la zona. Está muy bien construida y muy bien cuidada, y un parque con árboles grandes como el tuyo ya no se encuentra en los loteos nuevos.",
+        "Por eso no la comparo solo con las casas quinta de alrededor: por calidad, compite con las casas de los barrios privados. Y frente a ellas suma terreno, pileta y galpón.",
+        "Quien busca una casa así mira todas las opciones de Roca. El valor que te propongo la deja a la par de lo que se pide por metro en un barrio privado, sin pasarse. Es el punto en el que la pueden elegir."
+      ],
+      "frase": "Una casa así se vende cuando el comprador *la compara y la elige.*"
+    },
+    {
+      "tipo": "precios",
+      "rotulo": "El valor",
+      "titulo": "Los tres *precios*",
+      "publicacion": 118650,
+      "cierre": 113000,
+      "neto": 109610,
+      "moneda": "USD",
+      "como": "Son 74,40 m² cubiertos más un tercio del galpón: 101,5 m² a USD 1.113 el metro, a la par de los barrios privados. En Rincón Ecuestre, una casa con pileta pide USD 1.263 el metro y lleva más de 300 días sin venderse."
+    },
+    {
+      "tipo": "staging",
+      "rotulo": "El primer paso",
+      "titulo": "Cómo preparar *tu casa*",
+      "texto": "Sin obra. Tu casa ya está en muy buen estado: estos detalles la hacen lucir todavía mejor en las fotos y en la visita.",
+      "items": [
+        {
+          "titulo": "Limpiar y ordenar",
+          "puntos": [
+            "Despejar los ladrillos, los tanques y las maderas que están junto a la parrilla.",
+            "Dejar la mesada del lavadero libre."
+          ]
+        },
+        {
+          "titulo": "Reparar",
+          "puntos": [
+            "Pintar la pared blanca del costado de la pileta."
+          ]
+        },
+        {
+          "titulo": "Despersonalizar",
+          "puntos": [
+            "Ordenar el segundo dormitorio: la cama libre y los objetos personales guardados."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "tiempo",
+      "nombre": "Cómo trabajo",
+      "rotulo": "Cómo trabajo",
+      "titulo": "Qué pasa con tu casa, *desde hoy*",
+      "texto": "Trabajo entre 5 y 10 propiedades a la vez, para dedicarle a cada una el tiempo que necesita.",
+      "items": [
+        {
+          "cuando": "Viernes 20 de noviembre",
+          "titulo": "Firmamos la autorización de venta",
+          "texto": "Con eso empiezo a trabajar tu casa."
+        },
+        {
+          "cuando": "Del 21 al 24 de noviembre",
+          "titulo": "Relevamiento y estrategia comercial",
+          "texto": "Muchas fotos y videos, para usar a lo largo de las semanas."
+        },
+        {
+          "cuando": "Miércoles 25 de noviembre",
+          "titulo": "Sale a la venta",
+          "texto": "A valor de mercado, en Instagram y Facebook, con fotos, videos y pauta. Sin carteles ni portales."
+        },
+        {
+          "cuando": "Miércoles 9 de diciembre",
+          "titulo": "Tu primer informe",
+          "texto": "Cuántas personas consultaron, cuántas la visitaron y qué dijeron."
+        },
+        {
+          "cuando": "Miércoles 23 de diciembre",
+          "titulo": "Tu informe",
+          "texto": "Siempre recibís un informe, haya o no resultados."
+        },
+        {
+          "cuando": "Viernes 15 de enero",
+          "titulo": "Fotos y videos nuevos, y una devolución a fondo",
+          "texto": "Junto con el informe, vemos cómo seguimos: si mantenemos el precio y la comercialización o si hace falta ajustar algo."
+        },
+        {
+          "cuando": "Viernes 29 de enero",
+          "titulo": "Tu informe",
+          "texto": "De ahí en adelante, cada dos semanas. Las fotos y los videos se renuevan cada mes."
+        },
+        {
+          "cuando": "Martes 23 de febrero",
+          "titulo": "Nuestro promedio de venta",
+          "texto": "Es lo que tardan, en promedio, las propiedades que trabajamos a valor de mercado."
+        }
+      ]
+    },
+    {
+      "tipo": "videos",
+      "rotulo": "Resultados",
+      "titulo": "Lo que *vendimos* trabajando así",
+      "nombre": "Lo que vendimos"
+    },
+    {
+      "tipo": "lista",
+      "rotulo": "El acuerdo",
+      "titulo": "Condiciones de *trabajo*",
+      "nombre": "Condiciones de trabajo",
+      "items": [
+        {
+          "titulo": "Valor de mercado",
+          "texto": "El valor lo define el mercado; esta tasación es mi lectura de ese valor. Si los compradores muestran otra cosa, lo revisamos juntos con los datos. Y si en algún momento no coincidimos, lo hablamos a tiempo y vemos juntos cómo seguir."
+        },
+        {
+          "titulo": "Exclusividad por 120 días",
+          "texto": "Contados desde la firma: dan tiempo para vender y para escriturar."
+        },
+        {
+          "titulo": "Honorarios: 3 %",
+          "texto": "A través del martillero."
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "titulo": "¿*Avanzamos?*",
+      "texto": "Si estás de acuerdo con el valor y con la forma de trabajo, hoy firmamos la autorización de venta."
+    }
+  ]
+}
