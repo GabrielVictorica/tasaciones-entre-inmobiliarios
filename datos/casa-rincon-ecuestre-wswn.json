@@ -94,7 +94,7 @@
           "valor": "Escritura"
         }
       ],
-      "foto": "fotos/casa-rincon-ecuestre-wswn-terreno.jpg"
+      "foto": "ninguna"
     },
     {
       "tipo": "foda",
@@ -117,8 +117,7 @@
       "amenazas": [
         "El comprador también mira casas en barrios privados más cerca del centro, y compara.",
         "Es poca la gente que busca tan lejos, y compra cuando el valor es el de mercado."
-      ],
-      "foto": "fotos/casa-rincon-ecuestre-wswn-barrio.jpg"
+      ]
     },
     {
       "tipo": "metodo",
@@ -140,11 +139,26 @@
       "tipo": "comparables",
       "rotulo": "El mercado",
       "titulo": "Los *comparables*",
-      "texto": "Casas parecidas a la tuya: las que se vendieron cerca y las que hoy están en venta.",
+      "texto": "Casas parecidas a la tuya: en tu barrio, las que se vendieron cerca y las que hoy están en venta.",
       "ayuda": "Cada renglón es una propiedad. Como no todas miden lo mismo, se comparan por el precio de cada metro cuadrado cubierto: el precio dividido por los metros. Abajo de cada grupo, la suma de esos valores dividida por la cantidad da el promedio. Con «Ver el aviso» abrís la publicación.",
       "por_m2": true,
       "moneda": "USD",
       "grupos": [
+        {
+          "titulo": "En tu *barrio*",
+          "texto": "En venta hoy, en Rincón Ecuestre.",
+          "items": [
+            {
+              "titulo": "Casa quinta · Rincón Ecuestre",
+              "fuente": "Fontana",
+              "m2": 95,
+              "precio": 120000,
+              "dias": "+304",
+              "nota": "Lote de 1.650 m² · pileta y quincho · 3 años · la descripción dice 120 m² cubiertos",
+              "link": "https://www.inmobiliariafontana.com.ar/propiedad/194612_casa-quinta-rincon-ecuestre-120m%c2%b2-c-2-dormitorios-pileta-cochera/"
+            }
+          ]
+        },
         {
           "titulo": "Vendidas *cerca*",
           "texto": "Precios reales de venta.",
@@ -276,7 +290,7 @@
       "cierre": 104000,
       "neto": 100880,
       "moneda": "USD",
-      "como": "Son 100 m² a USD 1.040 el metro: entre las casas quinta y los barrios privados, donde una casa de Don Emilio del mismo tamaño lleva más de un año publicada a USD 1.400."
+      "como": "Son 100 m² a USD 1.040 el metro. En tu mismo barrio, una casa con pileta y quincho lleva más de 300 días publicada a USD 120.000."
     },
     {
       "tipo": "staging",
