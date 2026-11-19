@@ -125,7 +125,8 @@ section{padding:clamp(64px,10vh,120px) 0;position:relative}
 
 /* FICHA DE LA PROPIEDAD */
 .ficha .dos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,5vw,64px);align-items:start;margin-top:44px}
-.ficha img{width:100%;display:block;border:1px solid var(--linea);background:#0d0d0b}
+/* La foto de la ficha se funde con el fondo, como el retrato de «Quién soy» (pedido de Gabriel, 19/11/2026) */
+.ficha .foto img{width:100%;display:block;-webkit-mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent),linear-gradient(transparent,#000 14%,#000 72%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent),linear-gradient(transparent,#000 14%,#000 72%,transparent);mask-composite:intersect}
 .ficha dl{display:grid;grid-template-columns:1fr}
 .ficha dl div{display:grid;grid-template-columns:minmax(110px,.8fr) 1.6fr;gap:16px;padding:16px 0;border-top:1px solid var(--linea);align-items:baseline}
 .ficha dl div:last-child{border-bottom:1px solid var(--linea)}
@@ -265,6 +266,11 @@ section{padding:clamp(64px,10vh,120px) 0;position:relative}
   .foda .tres{grid-template-columns:1fr}.foda .medio{display:none}
   .foda .lado.izq{text-align:left}.foda .lado{gap:36px}
   .ficha dl div{grid-template-columns:1fr;gap:4px}
+  /* en el celular la foto va arriba de los datos, de borde a borde, y se desvanece hacia ellos */
+  .ficha .dos{grid-template-columns:1fr;gap:0;margin-top:26px}
+  .ficha .foto{order:-1;margin-inline:-20px}
+  .ficha .foto img{height:min(80vw,360px);object-fit:cover;-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 55%,transparent);mask-image:linear-gradient(transparent,#000 12%,#000 55%,transparent)}
+  .ficha .dos>div:not(.foto){position:relative;margin-top:-64px}
   .escribe .yo{grid-template-columns:1fr;min-height:0;margin-top:96px;border-radius:24px}
   .escribe .retrato{order:-1;height:300px}
   .escribe .retrato img{right:auto;left:50%;transform:translateX(-50%);height:calc(100% + 96px);-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
@@ -343,7 +349,7 @@ const BLOQUES = {
     return `<section class="ficha"><div class="ancho">${cabeza(b, b.rotulo)}${intro(b)}<div class="dos">
       <div><dl>${(b.datos || []).map((x, i) => `<div class="entra" style="--i:${Math.min(i, 5)}"><dt>${e(x.que)}</dt><dd>${e(x.valor)}</dd></div>`).join("")}</dl>
         ${b.parrafos ? `<div class="descripcion">${b.parrafos.map((p) => `<p class="entra">${e(p)}</p>`).join("")}</div>` : ""}</div>
-      ${f ? `<div class="entra"><img src="${f}" alt="${e(b.foto_pie || "")}"></div>` : ""}</div></div></section>`; },
+      ${f ? `<div class="foto entra"><img src="${f}" alt="${e(b.foto_pie || "")}"></div>` : ""}</div></div></section>`; },
 
   // Cómo se tasó: cada método explicado en simple. "usado: false" lo muestra apagado, con el motivo en "uso".
   // "cuenta" (opcional) es una lista de pares rótulo/valor: por ejemplo, el alquiler, el precio y los años de recupero.
