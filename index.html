@@ -498,6 +498,13 @@ async function iniciar() {
     const r = await fetch(`datos/${codigo}.json`, { cache: "no-store" });
     if (!r.ok) throw new Error("no está");
     const d = await r.json();
+    // Informe dado de baja (pedido de Gabriel, 24/11/2026): si los datos traen "baja", en lugar del informe se ve solo un
+    // mensaje de agradecimiento con el botón de WhatsApp. "baja" puede traer su propio "titulo" y "texto".
+    if (d.baja) { const m = typeof d.baja === "object" ? d.baja : {};
+      document.title = "Gabriel Victorica"; document.getElementById("barra").style.display = "none";
+      caja.innerHTML = `<div class="aviso"><div><h2 class="titulo" style="margin:0 auto 18px">${mix(m.titulo || "Gracias por la confianza *y el tiempo*")}</h2><p>${e(m.texto || "Si necesitás algo, escribime por WhatsApp.")}</p>
+        <div class="botones"><a class="llamada" href="https://wa.me/${WHATSAPP}" target="_blank" rel="noopener">Escribime por WhatsApp</a></div></div></div>`;
+      return; }
     document.title = `${d.tipo} · ${liso(d.titulo)}`;
     // Valor tapado: si los datos traen "clave", los precios se ven solo abriendo la dirección con ?ver=<clave>
     const tapado = d.clave && q.get("ver") !== String(d.clave);
